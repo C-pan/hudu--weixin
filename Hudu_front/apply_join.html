@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
+  <meta name="viewport" content="width=device-width,initial-scale=0.5, maximum-scale=0.6, user-scalable=no" />
+  <title>申请加入微商会</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/apply_join.css">
+</head>
+<body>
+  <header class="apply_join_header">
+    <ul>
+      <li>
+        <img src="img/logo.jpg" alt="logo"/>
+      </li>
+      <li>
+        <span>狐度商协会</span>
+        <p>
+          <img src="img/shangbiao.png" alt="商标"/>
+          助力商协会抱团发展
+        </p>
+      </li>
+    </ul>
+    <p>
+      <img src="img/shangbiao.png" alt="商标"/>
+      众里寻狐 千百度
+    </p>
+  </header>
+  
+  <section class="apply_join_section">
+    <ul>
+      <li>
+        <label for="association">
+          <img src="img/association.jpg" alt="社团类型"/>
+        </label>
+        <input type="text" placeholder="社团类型" id="association"/>
+      </li>
+      <li>
+        <label for="Business_Association">
+          <img src="img/Business_Association.jpg" alt="商协会全称"/>
+        </label>
+        <input type="text" placeholder="商协会全称" id="Business_Association"/>
+      </li>
+      <li>
+        <label for="mailbox">
+          <img src="img/mailbox.jpg" alt="商协会专用邮箱"/>
+        </label>
+        <input type="text" placeholder="商协会专用邮箱" id="mailbox"/>
+      </li>
+      <li>
+        <label for="Contacts">
+          <img src="img/Contacts.jpg" alt="联系人"/>
+        </label>
+        <input type="text" placeholder="联系人" id="Contacts"/>
+      </li>
+      <li>
+        <label for="phone">
+          <img src="img/phone.jpg" alt="联系方式"/>
+        </label>
+        <input type="text" placeholder="联系方式" id="phone"/>
+      </li>
+      <li>
+        <label for="address">
+          <img src="img/address.jpg" alt="商会地址"/>
+        </label>
+        <input type="text" placeholder="商会地址" id="address"/>
+      </li>
+      <li>
+        <label>
+          <img src="img/register.jpg" alt="上传商协会登记证书"/>
+        </label>
+        <span>上传商协会登记证书</span>
+        <img src="img/upload.jpg" alt="上传"/>
+        <input type="file" accept="image/*" id='upload_img'>
+        <i class="upload_img"></i>
+      </li>
+    </ul>
+    <div>
+      <label for="agree" class="agree">
+        <img src="img/notSelect.png" alt="未选中" class="agree_img"/>
+      </label>
+      <input type="checkbox" id="agree"/>
+      <label for="agree" class="agree">
+        同意注册协议
+      </label>
+      <a href="#">《狐度商协通支付协议》</a>
+    </div>
+    <p>
+      <button>
+        注<span class="_em"></span>册<span class="_em"></span>微<span class="_em"></span>商<span class="_em"></span>会
+      </button>
+    </p>
+  </section>
+
+  <script src="js/zepto.js"></script>
+  <script src="js/public.js"></script>
+  <script>
+    $('.upload_img').on('click',function(){
+      $('#upload_img').click()
+    })
+    $('#upload_img').on('change',function(e){
+      var inp = e.target.files[0]
+      var reader = new FileReader()
+      reader.onload = function (e) {
+        var img = e.target.result  //放在本地 src 进行本地浏览的
+        var imgUlr = inp      // 上传至后台数据进行保存的
+      }
+      reader.readAsDataURL(inp)
+    })
+
+    $('.agree').on('click', function(){
+      if( !$('#agree')[0].checked ){
+        $('.agree_img').attr({src: 'img/select.png', alt: '已选中'})
+      }else{
+        $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue',Roboto,'Segoe UI',sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    color: #333;
+}
+ul,li{
+    list-style: none;
+}
+body,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f0f0f2;
+}
+
+#header{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+#header img{
+    width: 20%;
+}
+#header ul{
+    display: inline-block;
+    padding-left: 10px;
+    width: 75%;
+}
+#header ul li:last-child span{
+    display: inline-block;
+    margin-top: 5px;
+    color: #888;
+}
+#header ul li:last-child b{
+    float: right;
+    font-weight: normal;
+    color: #ff711b;
+    font-size: 23px;
+}
+#main{
+    background: #fff;
+    padding-right: 5px;
+}
+#main ul li span{
+    display: inline-block;
+    width: 5%;
+    text-align: center;
+    color: red;
+}
+#main ul li div{
+    display: inline-block;
+    width: 90%;
+    padding: 10px 0;
+}
+#main ul li:first-child div{
+    border-bottom: 1px solid #ccc;
+}
+#main ul li div input{
+    width: 80%;
+    border: none;
+    outline: none;
+}
+.warning{
+    padding: 10px;
+    font-size: 11px;
+    color: #888;
+}
+.warning span{
+    color: red;
+}
+.submit{
+    padding: 0 15px;
+}
+.submit button{
+    width: 100%;
+    height: 44px;
+    margin-top: 5px;
+    background: #ffa404;
+    line-height: 44px;
+    border-radius: 2px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+}
+.submit p{
+    margin-top: 5px;
+}

@@ -1,0 +1,94 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue',Roboto,'Segoe UI',sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    color: #333;
+}
+ul,li{
+    list-style: none;
+}
+body,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f0f0f2;
+}
+#header{
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    background: #fff;
+}
+#nav ul{
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+}
+#nav ul li{
+    float: left;
+    width: 33%;
+    padding-top: 5px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+#nav ul li:last-child{
+    border: none;
+}
+#nav ul li span{
+    display: block;
+    margin-bottom: 5px;
+}
+#main{
+    width: 100%;
+    margin-top: 10px;
+}
+#main ul{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background: #fff;
+}
+#main ul li{
+    padding: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid #ccc;
+}
+#main ul li:last-child{
+    border: none;
+}
+#main ul li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#main ul li i{
+    float: right;
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    margin-right: 5px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    transform: rotate(45deg);
+}
+#main ul li span{
+    float: right;
+    margin-right: 3px;
+}
+#main ul li input{
+    float: right;
+    margin-right: 16px;
+}
+#main div{
+    padding: 10px;
+    text-align: center;
+}
+#main div>button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    background: red;
+    color: #fff;
+}

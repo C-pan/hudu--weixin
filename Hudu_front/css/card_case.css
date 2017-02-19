@@ -1,0 +1,145 @@
+
+/* ÁÄÌì header*/
+.card_case_header {
+  height: 0.8rem;
+  width: 100%;
+  background: #f0f0f2;
+}
+.card_case_header .search_from{
+  width: 95%;
+  height: 0.8rem;
+  margin: 0 auto;
+  padding: 0 .15rem;
+}
+.card_case_header .input_box{
+  float: left;
+  margin-top: 0.13rem;
+  height: 0.56rem;
+  width: 90%;
+  border:1px solid #dededf;
+  background: #fff;
+  border-radius: 0.08rem;
+}
+.input_box>input{
+  float: left;
+  height: 0.56rem;
+  width: 85%;
+  font-size: 0.3rem;
+}
+.card_case_header .input_box .search_bnt{
+  float: left;
+  width: 0.7rem;
+  height: 0.56rem;
+  overflow: hidden;
+}
+.card_case_header .input_box .search_bnt img{
+  display: inline-block;
+  width: 0.45rem;
+  padding-left: 0.1rem;
+  margin-top: .05rem;
+  overflow: hidden;
+}
+.card_case_header .add_contacts{
+  float: left;
+  height: 0.8rem;
+  text-align: center;
+}
+.card_case_header .add_contacts a{
+  float: left;
+
+  text-align: center;
+}
+.card_case_header .add_contacts img{
+  margin-top: .18rem;
+  margin-left: .17rem;
+  width: 0.45rem;
+  overflow: hidden;
+}
+
+.nav {
+  width: 7rem;
+  margin: 0 auto;
+  margin-top: .1rem;
+}
+.nav > ul > li .nav-title {
+  position: relative;
+  padding: .3rem;
+  border-bottom: .1px solid #ccc;
+  background: #fff;
+}
+.nav > ul > li .nav-title > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.nav > ul > li .nav-title > img {
+  width: .3rem;
+  vertical-align: text-top;
+}
+.nav > ul > li .nav-title .nav-spanlist {
+  color: #ccc;
+}
+.nav > ul > li .section {
+  display: none;
+}
+.nav > ul > li .section-list p {
+  padding-left: .2rem;
+  color: #ccc;
+  background: #f0f0f2;
+}
+.nav > ul > li .section-list > ul {
+  overflow: hidden;
+  padding: .1rem .3rem;
+  background: #fff;
+  margin-bottom: .04rem;
+}
+.nav > ul > li .section-list > ul > li {
+  float: left;
+}
+.nav > ul > li .section-list > ul > li:first-child {
+  margin-right: .2rem;
+  margin-top: .13rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(2) ul {
+  margin-right: .4rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child img {
+  width: .2rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(2) {
+  font-size: .23rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(3) {
+  font-size: .15rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(3) {
+  float: right;
+  margin-top: .2rem;
+  margin-right: .1rem;
+}
+.nav > ul > li .section-list > ul > li:nth-child(3) img {
+  width: .5rem;
+  vertical-align: middle;
+}
+.nav > ul > li .section-list > ul > li:nth-child(3) a {
+  display: inline-block;
+}
+.nav > ul > li .section-list > ul > li:nth-child(3) a:first-child {
+  margin-right: .3rem;
+}
+.nav-right {
+  position: fixed;
+  right: 0;
+  top: 1.1rem;
+  color: #ccc;
+  z-index: 10000;
+  font-size: .25rem;
+}
+.nav-right-ul li:first-child a img{
+  width: .33rem;
+  position: relative;
+  right: .07rem;
+}
