@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a94b1345-6e09-4cb1-ab06-66da184ba595" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_21.html" afterPath="$PROJECT_DIR$/name_card/business_card_21.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_22.html" afterPath="$PROJECT_DIR$/name_card/business_card_22.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_23.html" afterPath="$PROJECT_DIR$/name_card/business_card_23.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_24.html" afterPath="$PROJECT_DIR$/name_card/business_card_24.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_31.html" afterPath="$PROJECT_DIR$/name_card/business_card_31.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_32.html" afterPath="$PROJECT_DIR$/name_card/business_card_32.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_33.html" afterPath="$PROJECT_DIR$/name_card/business_card_33.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_34.html" afterPath="$PROJECT_DIR$/name_card/business_card_34.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_4.html" afterPath="$PROJECT_DIR$/name_card/business_card_4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_41.html" afterPath="$PROJECT_DIR$/name_card/business_card_41.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_42.html" afterPath="$PROJECT_DIR$/name_card/business_card_42.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_43.html" afterPath="$PROJECT_DIR$/name_card/business_card_43.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_44.html" afterPath="$PROJECT_DIR$/name_card/business_card_44.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/name_card/business_card_45.html" afterPath="$PROJECT_DIR$/name_card/business_card_45.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hudu_front/css/card_case.css" afterPath="$PROJECT_DIR$/Hudu_front/css/card_case.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hudu_front/party_activi.html" afterPath="$PROJECT_DIR$/Hudu_front/party_activi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hudu_front/sign_up.html" afterPath="$PROJECT_DIR$/Hudu_front/sign_up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a94b1345-6e09-4cb1-ab06-66da184ba595" name="Default" comment="" />
     <ignored path="Hudu.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,8 +83,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="821" />
-    <option name="y" value="249" />
+    <option name="x" value="557" />
+    <option name="y" value="98" />
     <option name="width" value="1163" />
     <option name="height" value="844" />
   </component>
@@ -260,7 +241,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="821" y="249" width="1163" height="844" extended-state="1" />
+    <frame x="557" y="98" width="1163" height="844" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21422222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
