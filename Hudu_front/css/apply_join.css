@@ -104,6 +104,7 @@ body {
 }
 .apply_join_section div img {
   width: .25rem;
+	vertical-align: text-bottom;
 }
 .apply_join_section div > a {
   color: #fd7e29;

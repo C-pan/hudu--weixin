@@ -101,11 +101,11 @@ body{
 .nav > ul > li .section-list > ul > li {
   float: left;
 }
+.nav > ul > li .section-list > ul > li:first-child>img{
+	width: 1.3rem;
+}
 .nav > ul > li .section-list > ul > li:nth-child(2){
   padding: 0.15rem;
-}
-.nav > ul > li .section-list > ul > li:nth-child(2) ul {
-  margin-right: .4rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child img {
   width: .2rem;

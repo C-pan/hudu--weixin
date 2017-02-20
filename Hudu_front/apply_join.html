@@ -102,6 +102,10 @@
     $('#upload_inp').on('change',function(e){
     	var target = e.target
   		var reg = /(\.jpg|\.png|\.jpeg)$/ig
+  		if(!/image\/\w+/.test(target.files[0].type)){  
+        alert("这个需要图片！");  
+        return false;  
+    	} 
   		if(!reg.test(target.value)){
   			alert('请选择JPG或者PNG格式的图片！')
   			return

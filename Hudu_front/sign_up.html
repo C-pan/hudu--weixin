@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>我要报名</title>
+    <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/sign_up.css"/>
 </head>
 <body>
@@ -40,13 +41,26 @@
     </div>
     <p class="warning">带"<span>*</span>"为必填项目</p>
     <div class="submit">
-        <button>提交</button>
+        <a>提<span class="_em"></span>交</a>
         <p>
-            <input type="checkbox" name="focus" id="focus"/>
-            <label for="focus">关注该活动组织者</label>
+        	<img src="img/notSelect.png" alt="未选中" class="focus focus_img">
+          <input type="checkbox" name="focus" id="focus"/>
+          <label for="focus" class="focus">关注该活动组织者</label>
         </p>
     </div>
-<script src="js/zepto.min.js"></script>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+		$('.focus').on('click', function(e){
+			var tar = e.target
+			if(!$(tar).siblings('input')[0].checked){
+				$('.focus_img').attr('src', 'img/select.png')
+			}else{
+				$('.focus_img').attr('src', 'img/notSelect.png')
+			}
+		})
+	</script>
 <script>
 
 
