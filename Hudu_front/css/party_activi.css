@@ -14,25 +14,26 @@ body{
     text-align: center;
     background: #fff;
 }
-#nav{
-	width: 7rem;
-	margin: 0 auto;
+.section{
+    width: 7rem;
+    margin: 0 auto;
 }
 #nav ul{
     width: 100%;
     background: #fff;
 }
 #nav ul li{
-	float: left;
+    float: left;
   width: 33%;
 }
 #nav ul li:last-child a{
   border-right: none;
 }
 #nav ul li a{
+    display: block;
 	width: 100%;
 	height: 100%;
-	display: block;
+    padding-top: 0.05rem;
   text-align: center;
   border-right: 1px solid #ccc;
 }
@@ -41,19 +42,19 @@ body{
 }
 #nav ul li span{
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.05rem;
 }
 #main{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.1rem;
 }
 #main ul{
-    margin-bottom: 10px;
-    padding-left: 10px;
+    margin-bottom: 0.1rem;
+    padding-left: 0.2rem;
     background: #fff;
 }
 #main ul li{
-    padding: 10px;
+    padding: 0.2rem;
     padding-left: 0;
     border-bottom: 1px solid #ccc;
 }
@@ -61,24 +62,26 @@ body{
     border: none;
 }
 #main ul li img{
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: .3rem;
+    height: .3rem;
+    margin-right: .05rem;
+    margin-bottom: .1rem;
     vertical-align: middle;
 }
 #main ul li i{
     float: right;
-    width: 8px;
-    height: 8px;
-    margin-top: 6px;
-    margin-right: 5px;
+    width: .2rem;
+    height: .2rem;
+    margin-top: .13rem;
+    margin-right: .08rem;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
     transform: rotate(45deg);
 }
 #main ul li span{
     float: right;
-    margin-right: 3px;
+    margin-right: .1rem;
+    margin-top: .05rem;
 }
 #main ul li input{
     float: right;
@@ -88,11 +91,13 @@ body{
     padding: 10px;
     text-align: center;
 }
-#main div>button{
+#main div>a{
+    display: block;
     width: 100%;
-    height: 35px;
+    height: .7rem;
+    line-height: .7rem;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     background: red;
     color: #fff;
 }

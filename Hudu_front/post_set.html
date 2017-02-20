@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>职务会费设置</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/post_set.css"/>
+</head>
+<body>
+    <section class="section">
+        <nav class="nav">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">职务设置</a>
+                    <i></i>
+                </li>
+                <li></li>
+                <li>
+                    <img src="img/sort_post.png" alt="排序"/>
+                    <a href="#">分组排序</a>
+                </li>
+            </ul>
+            <p class="nav_title">添加删除分组、职务设置</p>
+        </nav>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="list-menu clearfix">
+                        <span>
+                            <img src="img/nav.png" alt="菜单"/>
+                            会领导
+                        </span>
+                        <span>
+                            01
+                            <img src="img/menu.png" alt="菜单"/>
+                        </span>
+                        <i data-open="false"></i>
+                    </div>
+                    <div class="list-submenu">
+                        <ul>
+                            <li>
+                                <span>
+                                    会长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    秘书长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    监事长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    理事长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    高级顾问
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-menu clearfix">
+                        <span>
+                            <img src="img/nav.png" alt="菜单"/>
+                            顾问专家
+                        </span>
+                        <span>
+                            01
+                            <img src="img/menu.png" alt="菜单"/>
+                        </span>
+                        <i data-open="false"></i>
+                    </div>
+                    <div class="list-submenu">
+                        <ul>
+                            <li>
+                                <span>
+                                    会长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    秘书长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-menu clearfix">
+                        <span>
+                            <img src="img/nav.png" alt="菜单"/>
+                            理事会
+                        </span>
+                        <span>
+                            01
+                            <img src="img/menu.png" alt="菜单"/>
+                        </span>
+                        <i data-open="false"></i>
+                    </div>
+                    <div class="list-submenu">
+                        <ul>
+                            <li>
+                                <span>
+                                    会长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    秘书长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-menu clearfix">
+                        <span>
+                            <img src="img/nav.png" alt="菜单"/>
+                            秘书处
+                        </span>
+                        <span>
+                            01
+                            <img src="img/menu.png" alt="菜单"/>
+                        </span>
+                        <i data-open="false"></i>
+                    </div>
+                    <div class="list-submenu">
+                        <ul>
+                            <li>
+                                <span>
+                                    <i></i>
+                                    会长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <i></i>
+                                    秘书长
+                                </span>
+                                <span>
+                                    5000元/年
+                                    <img src="img/next_level.png" alt="下一级"/>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+    <script>
+        $('.list-menu i').on('click',function(e){
+            var tar = e.target
+            if( $(tar).attr('data-open') == 'false'){
+                $(tar).attr('data-open', 'true')
+                $(tar).parent('.list-menu').next().css('display', 'block')
+                $(tar).prev().prev().children('img').attr('src', 'img/nav_xuanzhong.png')
+            }else{
+                $(tar).attr('data-open', 'false')
+                $(tar).parent('.list-menu').next().css('display', 'none')
+                $(tar).prev().prev().children('img').attr('src', 'img/nav.png')
+            }
+        })
+    </script>
+<script>
+
+
+</script>
+</body>
+</html>
