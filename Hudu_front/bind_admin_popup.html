@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>绑定管理员</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/bind_admin_popup.css">
+    <script src="js/public.js"></script>
+</head>
+<body>
+	<div id="bind_amdin_mask">
+        <div class="popup">
+             <form action="" method="get"> 
+                <div class="user_rights">
+                    <label>
+                        <img src="img/radiot_noselect.png" alt="未选中" class="user_rights_close"/>
+                        <input name="" type="radio" value="" class="user_rights_input"/>
+                        <span class="user_rights_close">普通权限</span>
+                    </label> 
+                    <label>
+                        <img src="img/radiot_select.png" alt="未选中" class="user_rights_close"/>
+                        <input name="" type="radio" value="" class="user_rights_input"/>
+                        <span class="user_rights_close">高级权限</span>
+                    </label>
+                </div>
+                <div class="inp_admin_name">
+                     <label class="admin_name_label" for="admin_name">姓名 </label> <input name="admin_name" id="admin_name" type="text" value="" />
+                </div>
+                <div class="inp_admin_passw">
+                     <label class="admin_passw_label" for="inp_admin_passw">密码 </label> <input name="inp_admin_passw" id="inp_admin_passw" type="text" value="" />
+                </div>
+                <div class="bind_admin_tips">绑定管理员后，被绑定人登录服务平台也要绑定手机才能正常使用后台</div>
+                <div class="bind_admin_btn_box">
+                    <a href="" class="cancel_bind_btn">取消</a>
+                    <a href="" class="bind_btn">绑定</a>
+                </div>
+            </form> 
+        </div>
+    </div>
+
+    <script src="js/zepto.js"></script>
+    <script>
+        $('.user_rights_close').on('click',function(e){
+            var dom = e.target
+            var checked = $(dom).siblings('.user_rights_input')[0].checked
+            if( !checked ){
+                if( dom.nodeName == 'SPAN' ){
+                    $(dom).addClass('active').siblings('img').attr('src', 'img/radiot_select.png')
+                }else if( dom.nodeName == 'IMG'){
+                    $(dom).attr('src', 'img/radiot_select.png').siblings('span').addClass('active')
+                }
+                $(dom).parent('label').siblings().children('img').attr('src', 'img/radiot_noselect.png')
+                $(dom).parent('label').siblings().children('span').removeClass('active')
+            }
+        })
+    </script>
+</body>
+</html>

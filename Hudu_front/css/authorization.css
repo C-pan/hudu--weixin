@@ -1,0 +1,64 @@
+
+/*公众助手授权登录*/
+.authorized_log_warp{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fefefe;
+	position: relative;
+	text-align:center;
+}
+.logo_box{
+	position: absolute;
+	left: 50%;
+	top: 24%;
+	width: 2.5rem;
+	height: 2.1rem;
+	margin-left: -1.25rem;
+	text-align: center;
+}
+.logo_box>.hudy_logo{
+	width: 1.5rem;
+	height: 1.5rem;
+	overflow: hidden;
+}
+.logo_box>.company_name{
+	font-size: 0.36rem;
+	font-family: "微软雅黑";
+	color: #332c2b;
+	text-align: center;
+}
+.authorized_log_btn{
+	position: absolute;
+	left: 50%;
+	bottom: 36.264%;
+	font-size: 0.26rem;
+	font-family: "微软雅黑";
+	color: #fff;
+	text-align: center;
+	background: #ffa304;
+	width: 4.6rem;
+	height: 0.6rem;
+	margin-left: -2.3rem;
+	line-height: 0.6rem;
+	border-radius: 0.08rem;
+}
+.authorized_log_btn a{
+	font-size: 0.26rem;
+	font-family: "微软雅黑";
+	color: #fff;
+	text-align: center;
+	height: 0.6rem;
+}
+.footer_tips{
+	position: absolute;
+	left: 50%;
+	bottom: 4%;
+	margin: 0 auto;
+	color: #c9caca;
+	width: 4.4rem;
+	margin-left: -2.2rem;
+	font-family: "微软雅黑";
+	font-size: 0.18rem;
+	
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>附近商会地图</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/nearby_commerce_map.css" />
+    <script src="js/public.js"></script>
+
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+<body>
+	<header class="header">
+	    <ul class="nav_list">
+			<li>
+				<a href="#">
+					<img src="img/search_btn.png" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					 省份<i class="list_ioc"></i> 
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					 城市 <i class="list_ioc"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					 行业 <i class="list_ioc"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/map_btn.png" alt="保存">
+				</a>
+			</li>
+		</ul>
+    </header>
+    <section class="wrap_tow">
+    	 
+
+
+
+
+	<!-- 百度地图代码加入地方 -->
+		
+		<!--百度地图容器-->
+	  <div style="width:100%;height:1000px;border:#ccc solid 1px;" id="dituContent"></div>
+
+	<script type="text/javascript">
+	    //创建和初始化地图函数：
+	    function initMap(){
+	        createMap();//创建地图
+	        setMapEvent();//设置地图事件
+	        addMapControl();//向地图添加控件
+	    }
+	    
+	    //创建地图函数：
+	    function createMap(){
+	        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+	        var point = new BMap.Point(114.075908,22.546295);//定义一个中心点坐标
+	        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+	        window.map = map;//将map变量存储在全局
+	    }
+	    
+	    //地图事件设置函数：
+	    function setMapEvent(){
+	        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+	        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+	        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+	        map.enableKeyboard();//启用键盘上下左右键移动地图
+	    }
+	    
+	    //地图控件添加函数：
+	    function addMapControl(){
+	                        //向地图中添加比例尺控件
+		var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+		map.addControl(ctrl_sca);
+	    }
+	    
+	    
+	    initMap();//创建和初始化地图
+	</script>
+
+	<!-- 百度地图代码加入结束 -->
+
+
+
+
+
+
+    	
+   </section>
+    <footer class="my_activity_footer">
+    	<!-- <div style="display: absolute;height: 0.8rem; width: 7rem;  left: 50%"> -->
+			<div class="my_activity_btn">
+				<a href="#">
+					<i class="my_activity_icon"></i>
+					<span>我的活动</span>
+				</a>
+			</div>
+            <div class="export_emall">
+            		<!-- <i class="export_emall_icon"></i>
+            		<span>导出到邮箱</span>	  -->
+            		<a href="">注册为商会</a>
+            </div>
+        <!-- </div>     -->
+    </footer>
+</body>
+</html>

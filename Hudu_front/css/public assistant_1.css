@@ -1,0 +1,180 @@
+/*公众号助手—弹出层*/
+/*主内容区域*/
+.assistant_wrap{
+	/*box-sizing: border-box;*/
+	height: 1500px;
+	width: 7rem;
+	margin: 0rem auto 1.04rem;
+	background: #fefefe;
+}
+ /*遮罩层*/
+ #mask{
+ 	position: fixed;
+ 	background: rgba(0,0,0,0.76);
+ 	height: 100%;
+ 	width: 100%;
+ 	z-index: 1200;
+ }
+  #mask .popup{
+ 	box-sizing: border-box;
+ 	width: 5.9rem;
+ 	background: #fff;
+ 	position: absolute;
+ 	margin-top: -1.8rem;
+ 	top: 50%;
+ 	margin-left: -2.95rem;
+ 	left: 50%;
+ 	z-index: 1300;
+ 	padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+ }
+ .del_menu{
+	text-align: right;
+	margin-top: -0.4rem;
+	margin-left: -0.2rem;
+	padding-bottom: 0.2rem;
+}
+ .del_menu a{
+	font-size: 0.12rem;
+	font-family: "微软雅黑";
+	color: rgb( 255, 164, 4 );
+}
+.label_name{
+	display: inline-block;
+	font-size: 0.32rem;
+	font-family: "微软雅黑";
+	color: #332c2b;
+	text-align: left;
+	height: 0.56rem;
+	line-height: 0.56rem;
+	padding-left: 0.18rem;
+	padding-top: 0.1rem;
+	vertical-align: middle;
+}
+.input_form .popup_inp{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 3.20rem;
+	height: 0.56rem;
+	border:1px solid #e3e3e3;
+	background: #fff;
+	vertical-align: middle;
+}
+.popup_btn_box{
+	padding: 0.3rem 0;
+	text-align: center;
+}
+.popup_btn_box .preserved_btn{
+	display: inline-block;
+	padding: 0.03rem 0.3rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	background: #ffa404;
+	color: #fff;
+	font-size: 0.12rem;
+	font-family: "微软雅黑";
+	border-radius: 0.04rem;
+	border:1px solid #ffa404;
+}
+.popup_btn_box .preview_btn{
+	display: inline-block;
+	width: 1.2rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	background: #fefefe;
+	color: #332c2b	;
+	font-size: 0.12rem;
+	font-family: "微软雅黑";
+	border-radius: 0.04rem;
+	border:1px solid #dcdcdd;
+	padding: 0.03rem 0;
+}
+.input_tips{
+	font-family: "微软雅黑";
+	font-size: 0.10rem;
+	color: #a1a1a1;
+	padding:0.03rem 0 0.03rem 1.6rem;
+}
+/*footer*/
+.assistant_footer{ 
+	font-family: "微软雅黑";
+	bottom: 0;
+    left: 0;
+    height: 1.04rem;
+    width: 100%;
+    position: fixed;
+    background: #eeeeef;
+    font-size: 0.26rem;
+    z-index: 1000;
+}
+.assistant_list>li{
+	box-sizing: border-box;
+	line-height: 1.04rem;
+	font-size: 0.28rem;
+	text-align: center;
+	border:1px solid #dcdcdd;
+}
+.assistant_list>li a{
+	color: #332c2b;
+}
+.keyboard_btn{
+	width: 13.25%;
+	height: 1.04rem;
+	float: left;
+}
+.keyboard_btn img{
+	width: 70%;
+	vertical-align: middle;
+}
+.add_nav_bnt img{
+	width: 0.6rem;
+	vertical-align: middle;
+}
+.shopping_mall,.shanghui_catalog,.add_nav_bnt{
+	width: 28.91%;
+	height: 1.04rem;
+	float: left;
+}
+.assistant_list .active{
+	color: #ffa404;
+    border: 1px solid #ffa404;
+}
+.assistant_list .active a{
+	color: #ffa404;
+}
+.shopping_mall{
+	position: relative;
+}
+.shopping_mall>.sub_list{
+	position: absolute;
+	bottom: 1.3rem;
+	width: 100%;
+	background: #fff;
+	z-index: 900;
+	text-align: center;
+}
+.shopping_mall>.sub_list>li{
+	height: 0.92rem;
+	width: 100%;
+	border: 1px solid #dcdcdd;
+	color: #332c2b;
+}
+.shopping_mall>.sub_list>li img{
+	width: 0.5rem;
+	vertical-align: middle;
+}
+.shopping_mall>.sub_list>.sub_list_triangle{
+	display: block;
+	position: absolute;
+	bottom: -0.14rem;
+	left: 50%;
+	margin-left: -0.13rem;
+	margin-bottom:1px;
+	height: 0.14rem;
+	width: 0.26rem;
+	background: #f00;
+	background: url(../img/sub_list_triangle.png) center bottom no-repeat;
+	-webkit-background-size: 0.26rem 0.14rem;
+	background-size: 0.26rem 0.14rem;
+	z-index: 995;
+}
+
