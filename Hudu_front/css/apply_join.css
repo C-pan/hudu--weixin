@@ -82,6 +82,7 @@ body {
   top: .15rem;
   right: .34rem;
   width: .71rem;
+  height: .71rem;
 }
 .apply_join_section ul li:last-child > i {
   position: absolute;

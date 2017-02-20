@@ -71,8 +71,8 @@
           <img src="img/register.jpg" alt="上传商协会登记证书"/>
         </label>
         <span>上传商协会登记证书</span>
-        <img src="img/upload.jpg" alt="上传"/>
-        <input type="file" accept="image/*" id='upload_img'>
+        <img src="img/upload.jpg" id="upload_img" alt="上传"/>
+        <input type="file" accept="image/*" id='upload_inp'>
         <i class="upload_img"></i>
       </li>
     </ul>
@@ -97,16 +97,24 @@
   <script src="js/public.js"></script>
   <script>
     $('.upload_img').on('click',function(){
-      $('#upload_img').click()
+      $('#upload_inp').click()
     })
-    $('#upload_img').on('change',function(e){
-      var inp = e.target.files[0]
-      var reader = new FileReader()
-      reader.onload = function (e) {
-        var img = e.target.result  //放在本地 src 进行本地浏览的
-        var imgUlr = inp      // 上传至后台数据进行保存的
-      }
-      reader.readAsDataURL(inp)
+    $('#upload_inp').on('change',function(e){
+    	var target = e.target
+  		var reg = /(\.jpg|\.png|\.jpeg)$/ig
+  		if(!reg.test(target.value)){
+  			alert('请选择JPG或者PNG格式的图片！')
+  			return
+  		}
+  		if (target.files[0]) {
+  			var reader = new FileReader()
+  			reader.onload = function(e){
+  				var img = e.target.result
+  				var imgURL = target.files[0]
+  				$('#upload_img').attr('src', img)
+  			}
+  		}
+  		reader.readAsDataURL(target.files[0])
     })
 
     $('.agree').on('click', function(){
