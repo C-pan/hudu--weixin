@@ -1,5 +1,5 @@
 body{
-  font-size: 0.3rem;
+  font-size: 0.28rem;
 }
 /* адлЛ header*/
 .card_case_header {
@@ -142,7 +142,7 @@ body{
   top: 1.1rem;
   color: #ccc;
   z-index: 10000;
-  font-size: .25rem;
+  font-size: .22rem;
 }
 .nav-right-ul li:first-child a img{
   width: .33rem;
