@@ -1,4 +1,28 @@
 /*公众号助手—弹出层*/
+
+.public_header{
+	height: 0.85rem;
+	font-family: "微软雅黑";
+	top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background: #ffa504;
+    font-size: 0.28rem;
+    z-index: 1001;
+}
+.public_header .public_head_release_bnt{
+	float: right;
+	margin-right: 0.2rem;
+	width: 1rem;
+	height: 0.5rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.5rem;
+	margin-top: 0.18rem;
+	border:1px solid #fff;
+	border-radius: 0.08rem;
+}
 /*主内容区域*/
 .assistant_wrap{
 	/*box-sizing: border-box;*/
