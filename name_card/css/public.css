@@ -14,7 +14,7 @@
   min-height: 100%;
   position: absolute;
   top: 0;
-  background: url(../images/box_background.jpg) no-repeat center center;
+  background: url(../img/box_background.jpg) no-repeat center center;
   background-size: 100% 100%;
   z-index: 10;
 
@@ -121,7 +121,7 @@
   top: 0.27343741rem;
   width: 0.34999989rem;
   height: 0.26249992rem;
-  background: url(../images/dow_ico.png) center no-repeat;
+  background: url(../img/dow_ico.png) center no-repeat;
   background-size: 0.34999989rem 0.27343741rem;
 }
 .banner_li3 a{
@@ -140,7 +140,7 @@
   bottom: 0;
   height: 85%;
   width: 100%;
-  background: url('../images/se_background1.png') no-repeat center bottom;
+  background: url('../img/se_background1.png') no-repeat center bottom;
   background-size: 100% 100%;
   z-index: 100;
   right: -100%;

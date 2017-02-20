@@ -109,7 +109,12 @@
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child img {
   width: .2rem;
 }
+.nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child span:last-child {
+  color: red;
+  font-size: .2rem;
+}
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(2) {
+  color: #ccc;
   font-size: .23rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(3) {
