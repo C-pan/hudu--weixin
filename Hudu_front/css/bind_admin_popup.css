@@ -1,0 +1,106 @@
+    /*绑定管理员弹出层*/
+     /*遮罩层*/
+ #bind_amdin_mask{
+    position: fixed;
+    background: rgba(0,0,0,0.76);
+    height: 100%;
+    width: 100%;
+    z-index: 1200;
+    
+ }
+  #bind_amdin_mask .popup{
+    box-sizing: border-box;
+    width: 5.9rem;
+    background: #fff;
+    position: absolute;
+    top: 30%;
+    margin-left: -2.95rem;
+    left: 50%;
+    z-index: 1300;
+    padding: 0.5rem 0.3rem 0.2rem 0.3rem;
+ }
+
+#bind_amdin_mask .user_rights{
+    font-size: 0.22rem;
+    height:0.74rem;
+    color:#3c3635;
+    border-bottom:1px solid #ededed;
+    text-align: center;
+}
+#bind_amdin_mask .user_rights label{
+    font-size: .3rem;
+}
+#bind_amdin_mask .user_rights label input{
+    display: none;
+}
+#bind_amdin_mask .user_rights label img{
+    vertical-align: text-bottom;
+}
+#bind_amdin_mask .user_rights label:first-child{
+    margin-right: .5rem;
+}
+#bind_amdin_mask .user_rights input{
+  cursor: pointer;
+}
+#bind_amdin_mask .bind_admin_tips{
+    margin-top: .2rem;
+    font-size: 0.2rem;
+    color: #dfe0e0;
+    text-align: center;
+}
+/*输入用户名*/
+#bind_amdin_mask .popup .inp_admin_name, #bind_amdin_mask .popup .inp_admin_passw{
+    font-size: 0.26rem;
+    color:#cfcdcd;
+    border-bottom:1px solid #ededed;
+    padding: .2rem .1rem;
+}
+#bind_amdin_mask .popup .inp_admin_name .admin_name_label{
+    display: inline-block;
+    width: 0.70rem;
+    padding-left: 0.48rem;
+    background: url(../img/admin_user_bg.png) left center no-repeat;
+    -webkit-background-size: contain;
+    background-size:0.45rem;
+}
+#bind_amdin_mask .popup .inp_admin_name input, #bind_amdin_mask .popup .inp_admin_passw input{
+    display: inline-block;
+    font-size: 0.3rem;
+    width: 3.5rem;
+    color:#cfcdcd;
+}
+#bind_amdin_mask .popup .inp_admin_passw .admin_passw_label{
+    color:#cfcdcd;
+    font-size: 0.26rem;
+    display: inline-block;
+    width: 0.70rem;
+    padding-left: 0.48rem;
+    background: url(../img/admin_phone_ico.png) left center no-repeat;
+    -webkit-background-size: contain;
+    background-size:0.45rem;
+}
+
+#bind_amdin_mask .user_rights label span.active{
+    color: #56aab7;
+}
+#bind_amdin_mask .bind_admin_btn_box{
+    height: 0.56rem;
+    text-align: center;
+    font-size: 0.28rem;
+    margin-top: .4rem;
+}
+#bind_amdin_mask .bind_admin_btn_box a{
+    border: 1px solid #ffa304;
+    border-radius: 0.08rem;
+    padding: 0.12rem 0.5rem;
+}
+#bind_amdin_mask .bind_admin_btn_box .cancel_bind_btn{
+    color: #ffa304;
+    background: #fff;
+    margin-right: .4rem;
+}
+#bind_amdin_mask .bind_admin_btn_box .bind_btn{
+    color: #fff;
+    background: #ffa304;
+    /*margin:0rem 0.12rem;*/
+}

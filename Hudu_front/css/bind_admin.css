@@ -1,0 +1,146 @@
+/*bind_admin header*/
+.bind_admin_header{
+  position: fixed;
+  z-index: 1000;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #d8d7dc;
+  background: #fefefe;
+   font-family: "微软雅黑";
+}
+
+.bind_admin_header .shanghui_box{
+	float: left;
+	width: 76%;
+	height: 1.5rem;
+	background: #f0f0f1;
+}
+.bind_admin_header .bind_admin_btn{
+	float: left;
+	width: 24%;
+	height: 1.5rem;
+	background: #ffa304;
+	font-size: 0.22rem;
+	color: #fff;
+}
+ 
+.bind_admin_header .shanghui_box .left_img{
+    width: 0.92rem;
+    height: 100%;
+    float: left;
+    padding-left: 0.3rem;
+    padding-right: 0.25rem;
+}
+.bind_admin_header .shanghui_box .left_img>img{
+    width: 0.92rem;
+    height: 0.92rem;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+}
+.bind_admin_header .shanghui_box .middle_content{
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.5rem;
+    padding-top: 0.42rem;
+    box-sizing: border-box;
+}
+.bind_admin_header .shanghui_box .middle_content .tit{
+    box-sizing: border-box;
+    font-size: 0.26rem;
+    color: #332c2b;
+    font-weight: normal;
+}
+.bind_admin_header .shanghui_box .middle_content .address{
+    box-sizing: border-box;
+    margin-top: 0.1rem;
+    padding-left: 0.25rem;
+    background: url(../img/address_ico.png) -0.02rem center no-repeat;
+    background-size: 0.30rem 0.30rem;
+    font-size: 0.18rem;
+    color: #a5a5a5;
+}
+.bind_admin_header .shanghui_box .certification{
+    float: right;
+    margin-top: 1rem;
+    width: 1.1rem;
+    height: 0.3rem;
+    font-size: 0.26rem;
+    color: #feb800;
+    padding-left: 0.3rem;
+    background: url(../img/v_ico.png) left .05rem no-repeat;
+    background-size: 0.25rem 0.25rem;
+}
+.bind_admin_header .bind_admin_btn img{
+	width: 0.5rem;
+	height: 0.5rem;
+
+}
+.bind_admin_header .bind_admin_btn a{
+	box-sizing: border-box;
+	width: 100%;
+	height: 1.5rem;
+	display: block;
+	text-align: center;
+	color: #fff;
+	padding-top: 0.36rem;
+}
+/*内容区域*/
+.bind_admin_wrap{
+    /*box-sizing: border-box;*/
+    width: 7rem;
+    margin:0 auto;
+    padding-top: 1.5rem;
+    background: #fff;
+}
+
+.bind_admin_wrap .admin_list{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+.bind_admin_wrap .admin_list>li{
+    box-sizing: border-box;
+    width: 32.3%;
+    background: #fff;
+    float: left;
+}
+.bind_admin_wrap .admin_list .admin_photo{
+    display: block;
+    width:0.98rem;
+    height: 0.98rem;
+    margin: 0.4rem auto 0.1rem ;
+    background: #fff;
+    text-align: center;
+}
+.bind_admin_wrap .admin_list .admin_photo>img{
+    display: block;
+    width: 100%;
+}
+.bind_admin_wrap .admin_list .admin_name{
+    display: inline-block;
+    font-size: 0.22rem;
+    text-align: center;
+    margin: 0.1rem auto 0.3rem;
+    color: #393939;
+    font-family: "微软雅黑";
+}
+.bind_admin_wrap .admin_list .admin_position{
+	display: inline-block;
+	color: #413a39;
+	font-size: 0.16rem;
+	margin-left: 0.01rem;
+	padding-left: 0.16rem;
+	background: url(../img/v_ico.png) left center no-repeat;
+	-webkit-background-size: 0.15rem;
+	background-size: 0.16rem;
+}

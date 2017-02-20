@@ -1,0 +1,103 @@
+@charset "utf-8";
+.header{ 
+        top: 0;
+        left: 0;
+        height: 0.8rem;
+        width: 100%;
+        position: relative;
+        position: fixed;
+        background: #f6ae45;
+        font-size: 0.26rem;
+        z-index: 1;
+        border-bottom: 1px solid #d8d7dc;
+    }
+    .backstage_tit{
+        position: absolute;
+        left: 50%;
+        margin-left: -1.8rem;
+        color: #fff;
+        font-size:0.3rem;
+        line-height:0.8rem;
+        height: 0.8rem;
+        width: 3.6rem;
+        text-align: center;
+        font-family: "微软雅黑";
+    }
+    .backstage_tit2{
+        position: absolute;
+        left: 50%;
+        margin-left: -1.8rem;
+        color: #332c2b;
+        font-size:0.3rem;
+        line-height:0.8rem;
+        height: 0.8rem;
+        width: 3.6rem;
+        text-align: center;
+        font-family: "微软雅黑";
+    }
+    .set_box{
+        box-sizing: border-box;
+        position: absolute;
+        height: 0.9rem;
+        overflow: hidden;
+        width:1.2rem;
+        right: 0.1rem;
+        top: 0;
+        text-align: center;
+    }
+    .set_box span{
+        position: relative;
+        display: block;
+        color: #000;
+        font-size: 0.12rem;
+        /*font-weight: bold;*/
+    }
+    .set_box .set_ico{ 
+        box-sizing: border-box;
+        margin: 0.05rem auto 0.01rem;
+        display: block;
+        width: 0.42rem;
+        height: 0.42rem;
+        text-align: center;
+        background: url(shimg/set_ico.png) center center no-repeat;
+        background-size: 100% 100%; 
+    }
+    .wrap{
+        /*box-sizing: border-box;*/
+        height: 1500px;;
+        width: 7rem;
+        margin: 0.85rem auto 0rem;
+        background: #eeeeef;
+    }
+    .backstage_list{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0.03rem auto;
+        padding: 0rem 0.02rem;
+        text-align: center;
+    }
+    .backstage_list>li{
+        box-sizing: border-box;
+        width: 32.5%;
+        background: #fff;
+        margin:0.4%;
+        float: left;
+    }
+    .backstage_list .fun_ico{
+        display: block;
+        width:0.55rem;
+        height: 0.55rem;
+        margin: 0.3rem auto 0.1rem ;
+        background: #fff;
+        text-align: center;
+    }
+    .backstage_list .fun_ico>img{
+        display: block;
+        width: 100%;
+    }
+    .backstage_list .fun_name{
+        display: block;
+        font-size: 0.24rem;
+        text-align: center;
+        margin: 0.1rem auto 0.3rem;
+    }

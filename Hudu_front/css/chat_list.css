@@ -1,0 +1,320 @@
+
+/* 聊天 header*/
+.chat_header {
+  position: fixed;
+  z-index: 1000;
+  height: 0.8rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f0f0f2;
+}
+.chat_header .search_from{
+	width: 95%;
+	height: 0.8rem;
+	margin: 0 auto;
+}
+.chat_header .input_box{
+	float: left;
+	margin-top: 0.13rem;
+	height: 0.56rem;
+	width: 90%;
+	border:1px solid #dededf;
+	background: #fff;
+	border-radius: 0.08rem;
+}
+.input_box>input{
+	float: left;
+	height: 0.56rem;
+	width: 85%;
+	font-size: 0.2rem;
+}
+.chat_header .input_box .search_bnt{
+	float: left;
+	width: 0.7rem;
+	height: 0.56rem;
+	overflow: hidden;
+}
+.chat_header .input_box .search_bnt img{
+	display: inline-block;
+	width: 0.45rem;
+	height: 0.45rem;
+	padding-left: 0.1rem;	
+	overflow: hidden;
+}
+.chat_header .add_contacts{
+	float: left;
+	width: 8.4%;
+	height: 0.8rem;
+	text-align: center;
+}
+.chat_header .add_contacts a{
+	float: left;
+	width: 6.4%;
+	height: 0.8rem;
+	text-align: center;
+}
+.chat_header .add_contacts img{
+	padding-top: 0.16rem;
+	padding-left: 0.10rem;
+	width: 0.45rem;
+	height: 0.45rem;
+	overflow: hidden;
+}
+
+/*内容区域*/
+.chat_list_wrap{
+    /*box-sizing: border-box;*/
+    width: 7rem;
+    margin: 0.8rem auto 0.75rem;
+    background: #fff;
+    min-height: 100%;
+}
+/*内容列表*/
+.shanghui_list{
+    width: 100%;
+}
+.shanghui_list .top_content{
+    box-sizing: border-box;
+    height: 1.1rem;
+    padding-left: 0.14rem;
+    position: relative;
+    border-bottom: 1px solid #c7c7c7;
+    font-family: "微软雅黑";
+    background: #fff;
+    margin-top:0.1rem;
+}
+ 
+.shanghui_list .top_content .left_img{
+    width: 1.12rem;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 0.2rem;
+    position: relative;
+}
+.shanghui_list .top_content .left_img .prompt_box{
+    min-width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    background: #f00;
+    text-align: center;
+    line-height: 0.2rem;
+    font-size: 0.2rem;
+    top: 0.06rem;
+    right: 0.04rem;
+    border-radius: 50%;
+    color: #fff;
+    padding: 0.03rem;
+    font-style:normal;
+}
+.shanghui_list .top_content .left_img>img{
+    width: 0.78rem;
+    height: 0.78rem;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+}
+.shanghui_list .left_content{
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.1rem;
+    padding-left: 0.1rem;
+    box-sizing: border-box;
+}
+.shanghui_list .left_content .tit{
+    box-sizing: border-box;
+    padding-top: 0.23rem;
+    font-size: 0.26rem;
+    color: #332c2b;
+    font-weight: normal;
+}
+.shanghui_list .left_content .address{
+    box-sizing: border-box;
+    padding-top: 0.02rem;
+    padding-left: 0.18rem;
+    background: url(../img/address_ico.png) -0.02rem center no-repeat;
+    background-size: 0.20rem 0.20rem;
+    font-size: 0.18rem;
+    color: #a5a5a5;
+}
+.shanghui_list .left_content .company{
+    box-sizing: border-box;
+    padding-top: 0.06rem;
+    font-size: 0.18rem;
+    color: #a5a5a5;
+}
+.shanghui_list  .right_content{
+    box-sizing: border-box;
+    float: right;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.1rem;
+    padding-left: 0.26rem;
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: 0.25rem;
+}
+.shanghui_list  .right_content .certification{
+    margin-top: 0.16rem;
+    font-size: 0.24rem;
+    color: #feb800;
+    padding-left: 0.28rem;
+    background: url(../img/v_ico.png) left center no-repeat;
+    background-size: 0.3rem 0.3rem;
+}
+.shanghui_list  .right_content .chat_time{
+    margin-top: 0.24rem;
+    font-size: 0.22rem;
+    color: #b6b6b7;
+    padding-left: 0.28rem;
+}
+.shanghui_list .right_content .visiting_card{
+    padding:0.015rem;
+    margin-top: 0.1rem;
+    font-size: 0.18rem;
+    width: 1.1rem;
+    color: #fff;
+    background: #feb800;
+    border-radius: 0.04rem;
+}
+.shanghui_list .bottom_content{
+    box-sizing: border-box;
+    height: 0.40rem;
+    background: #fefefe;
+    text-align: right;
+    padding-right:0.40rem;
+    color: #999999;
+    font-size: 0.12rem;
+    padding-top:0.1rem;
+}
+.shanghui_list .bottom_content>span{
+    padding-left: 0.26rem;
+    margin-left: 0.2rem;
+}
+.shanghui_list .bottom_content .shanghui_address{
+    background: url(../img/home_ico.png) left center no-repeat;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem;
+    
+}
+.shanghui_list .bottom_content .member{
+    background: url(../img/member_ico.png) left center no-repeat;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem;
+}
+.shanghui_list .bottom_content .watch{
+    background: url(../img/watch_ico.png) left center no-repeat;
+    -webkit-background-size: 0.22rem;
+    background-size: 0.22rem;
+}
+ /*chat_footer*/
+#chat_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #cfd0d0;
+  background: #fefefe;
+  z-index: 1000;
+ height: 0.75rem;
+}
+#chat_footer ul{
+	height: 0.75rem;
+	overflow: hidden;
+}
+#chat_footer ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+#chat_footer ul li a{
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+}
+#chat_footer ul li a span {
+  position: relative;
+  bottom: 0.055rem;
+  /*top: 0.00rem;*/
+  display: block;
+  font-size: 0.16rem;
+  color: #c9caca;
+}
+#chat_footer ul li a img {
+  box-sizing: border-box;
+  padding-top: 0.01rem;
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+
+/*公众助手授权登录*/
+.authorized_log_warp{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fefefe;
+	position: relative;
+	text-align:center;
+}
+.logo_box{
+	position: absolute;
+	left: 50%;
+	top: 24%;
+	width: 2.5rem;
+	height: 2.1rem;
+	margin-left: -1.25rem;
+	text-align: center;
+}
+.logo_box>.hudy_logo{
+	width: 1.5rem;
+	height: 1.5rem;
+	overflow: hidden;
+}
+.logo_box>.company_name{
+	font-size: 0.36rem;
+	font-family: "微软雅黑";
+	color: #332c2b;
+	text-align: center;
+}
+.authorized_log_btn{
+	position: absolute;
+	left: 50%;
+	bottom: 36.264%;
+	font-size: 0.26rem;
+	font-family: "微软雅黑";
+	color: #fff;
+	text-align: center;
+	background: #ffa304;
+	width: 4.6rem;
+	height: 0.6rem;
+	margin-left: -2.3rem;
+	line-height: 0.6rem;
+	border-radius: 0.08rem;
+}
+.authorized_log_btn a{
+	font-size: 0.26rem;
+	font-family: "微软雅黑";
+	color: #fff;
+	text-align: center;
+	height: 0.6rem;
+}
+.footer_tips{
+	position: absolute;
+	left: 50%;
+	bottom: 4%;
+	margin: 0 auto;
+	color: #c9caca;
+	width: 4.4rem;
+	margin-left: -2.2rem;
+	font-family: "微软雅黑";
+	font-size: 0.18rem;
+	
+}

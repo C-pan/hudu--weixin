@@ -1,0 +1,239 @@
+/*header*/
+.header {
+  position: fixed;
+  z-index: 1000;
+  height: 0.8rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #d8d7dc;
+  background: #fefefe;
+}
+.nav_list li{
+  height: 0.8rem;
+  float: left;
+  width: 20%;
+
+}
+.nav_list li a{
+  box-sizing: border-box;
+  display: block;
+  font-size: 0.28rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #c9caca;
+  font-family: "微软雅黑";
+}
+.nav_list li a .list_ioc{
+  width: 0.18rem;
+  height: 0.18rem;
+  display: inline-block;
+  background: url(../img/list_dow.png) center center no-repeat;
+  background-size: 0.18rem 0.18rem;
+}
+.nav_list li a img {
+    box-sizing: border-box;
+    margin-top:-0.1rem;
+  width: 0.45rem;
+  vertical-align: middle;
+}
+    /*内容区域*/
+.wrap_tow{
+    /*box-sizing: border-box;*/
+    width: 7rem;
+    margin: 0.84rem auto 0.94rem;
+    background: #f0f0f2;
+}
+.shanghui_list{
+    width: 100%;
+}
+.shanghui_list .top_content{
+    box-sizing: border-box;
+    height: 1.1rem;
+    padding-left: 0.14rem;
+    position: relative;
+    border-bottom: 1px solid #d8d7dc;
+    font-family: "微软雅黑";
+    background: #fff;
+    margin-top:0.1rem;
+}
+ 
+.left_img{
+    width: 0.78rem;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 0.2rem;
+}
+.left_img>img{
+    width: 0.78rem;
+    height: 0.78rem;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+}
+.left_content{
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.1rem;
+    padding-left: 0.3rem;
+    box-sizing: border-box;
+}
+.left_content .tit{
+    box-sizing: border-box;
+    padding-top: 0.22rem;
+    font-size: 0.26rem;
+    color: #332c2b;
+    font-weight: normal;
+}
+.left_content .address{
+    box-sizing: border-box;
+    padding-top: 0.02rem;
+    padding-left: 0.18rem;
+    background: url(../img/address_ico.png) -0.02rem center no-repeat;
+    background-size: 0.20rem 0.20rem;
+    font-size: 0.18rem;
+    color: #a5a5a5;
+}
+.right_content{
+    box-sizing: border-box;
+    float: right;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.1rem;
+    padding-left: 0.26rem;
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: 0.25rem;
+}
+.right_content .certification{
+    margin-top: 0.16rem;
+    font-size: 0.24rem;
+    color: #feb800;
+    padding-left: 0.28rem;
+    background: url(../img/v_ico.png) left center no-repeat;
+    background-size: 0.3rem 0.3rem;
+}
+.right_content .visiting_card{
+    padding:0.015rem;
+    margin-top: 0.1rem;
+    font-size: 0.18rem;
+    width: 1.1rem;
+    color: #fff;
+    background: #feb800;
+    border-radius: 0.04rem;
+}
+.bottom_content{
+    box-sizing: border-box;
+    height: 0.40rem;
+    background: #fefefe;
+    text-align: right;
+    padding-right:0.40rem;
+    color: #999999;
+    font-size: 0.12rem;
+    padding-top:0.1rem;
+}
+.bottom_content>span{
+    padding-left: 0.26rem;
+    margin-left: 0.2rem;
+}
+.bottom_content .shanghui_address{
+    background: url(../img/home_ico.png) left center no-repeat;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem;
+    
+}
+.bottom_content .member{
+    background: url(../img/member_ico.png) left center no-repeat;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem;
+}
+.bottom_content .watch{
+    background: url(../img/watch_ico.png) left center no-repeat;
+    -webkit-background-size: 0.22rem;
+    background-size: 0.22rem;
+}
+    /*footer*/
+.my_activity_footer{
+    border-top: 1px solid #bebebe;
+    height: 0.9rem;
+    background: #fff;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+.my_activity_btn{
+    display: block;
+    background: #f0f0f0;
+    width: 15%;
+    height: 0.9rem;
+    float: left;
+    text-align: center;
+    font-size: 0.18rem;
+}
+.my_activity_btn a{
+    height: 0.9rem;
+    width: 100%;
+    display: block;
+}
+.my_activity_btn .my_activity_icon{
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0.08rem auto 0.05rem;
+    background: url(../img/my_activity_ico.png) center no-repeat;
+    background-size: contain;
+}
+.my_activity_btn span{
+    padding-top: 0.08rem;
+    font-size: 0.16rem; 
+}
+.export_emall{
+    float: right;
+    width: 85%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    position: relative;
+    font-size: 0.28rem;
+    color: #fff;
+    text-align:center;
+    background: #ffa404;
+}
+.export_emall_content{
+    /*width: 0.4rem;*/
+}
+.export_emall>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+}
+.export_emall .export_emall_icon{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 0.40rem;
+    height: 0.40rem;
+    background:url(img/export_emall_icon.png) center  no-repeat;
+    background-size: contain;
+    margin-top: 0.25rem;
+    margin-left: 2.32rem;
+    margin-right: 0.07rem;
+    float: left;
+}
+.export_emall span{
+    display: inline-block;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+    margin-top: 0.31rem;
+    float: left;
+}
