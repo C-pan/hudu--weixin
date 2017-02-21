@@ -1,0 +1,43 @@
+/*公众号助手—弹出层*/
+ /*遮罩层*/
+#mask{
+	position: fixed;
+	background: rgba(0,0,0,0.76);
+	height: 100%;
+	width: 100%;
+	z-index: 1200;
+}
+#mask .popup{
+	box-sizing: border-box;
+	width: 5.9rem;
+	background: #fff;
+	position: absolute;
+	top: 34%;
+	margin-left: -2.95rem;
+	left: 50%;
+	z-index: 1300;
+	border-radius: 0.25rem;
+	padding: 0.8rem 0.3rem 0.5rem 0.3rem;
+}
+#mask .popup .add_groud_input{
+	width: 5.1rem;
+	height: 0.58rem;
+	border:1px solid #ffa404;
+	border-radius: 0.1rem;
+	padding-left: 0.2rem;
+	font-size: 0.34rem;
+	color: #231815;	
+}
+#mask .popup .add_groud_bnt{
+	display:block;
+	width: 3rem;
+	height: 0.55rem;
+	line-height: 0.55rem;
+	background: #ffa404;
+	color: #fff;
+	font-size: 0.30rem;
+	font-family: "微软雅黑";
+	border-radius: 0.04rem;
+	text-align: center;
+	margin: 0.55rem auto 0.1rem;
+}

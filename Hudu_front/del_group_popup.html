@@ -1,0 +1,30 @@
+	<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>公众号助手</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/del_group_popup.css" />
+    <script src="js/public.js"></script>
+</head>
+<body>
+	
+	<div id="mask">
+		<div class="popup">
+			<div class="del_tips">确定删除“<em>会领导</em>”分组吗？</div>
+			<div class="del_tips">如果删除，分组里的职务会变成“<em>其他</em>”分组！</div>
+			<div class="popup_btn_box">
+				<a href="#" class="del_cencel_bnt">取消</a>
+				<a href="#" class="confirm_delete_bnt">确定</a>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="js/zepto.js"></script>
+	<script>	
+		$('.del_cencel_bnt').on('click',function () {
+			$('#mask').css('display','none');
+		});	
+	</script>
+</html>	
