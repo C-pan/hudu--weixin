@@ -29,6 +29,10 @@ body {
 	background: #ffa304;
 	color: #fff;
 }
+.position_dues_section{
+  width: 7rem;
+  margin: 0 auto;
+}
 .position_dues_section .position_dues_ipn_list li{
   width: 100%;
   height: 0.95rem;
