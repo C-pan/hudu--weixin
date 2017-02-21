@@ -56,7 +56,7 @@ body {
 .section .list ul li .list-menu div i{
   top: -13%;
   right: 6%;
-  border: .2rem solid #bbbbbd;
+  border: .2rem solid #484949;
   border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -102,13 +102,10 @@ body {
 	top: 132%;
 	right: 0;
 	width: 320%;
-	background: #bbbbbd;
+	background: #484949;
 	border-radius: 5px;
 	z-index: 100;
 	display: none;
-}
-.section .list ul li .list-menu div i{
-
 }
 .section .list ul li .list-menu div ul{
 	padding: 0 .15rem;
