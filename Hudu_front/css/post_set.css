@@ -3,6 +3,7 @@ body {
 }
 .section {
   width: 7rem;
+  height: 100%;
   margin: 0 auto;
 }
 .section .nav {
@@ -37,17 +38,27 @@ body {
   left: 0;
   top: 0.1rem;
 }
-.section .nav ul li:first-child i {
+.section .nav ul li:first-child i,.section .list ul li .list-menu div i{
   display: inline-block;
   width: 0;
   height: 0;
+  position: absolute;
+}
+.section .nav ul li:first-child i{
+  top: 100%;
+  left: 40%;
   border: .2rem solid #f6ad3c;
   border-right-color: transparent;
   border-left-color: transparent;
   border-bottom-color: transparent;
-  position: absolute;
-  top: 100%;
-  left: 40%;
+}
+.section .list ul li .list-menu div i{
+  top: -13%;
+  right: 6%;
+  border: .2rem solid #bbbbbd;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
 }
 .section .nav p {
   padding: .22rem 0;
@@ -70,20 +81,50 @@ body {
 }
 .section .list ul li .list-menu span:nth-child(2) {
   float: right;
-  font-size: .2rem;
   color: #f6ad3c;
+  position: relative;
 }
 .section .list ul li .list-menu span:nth-child(2) img {
   width: .6rem;
   vertical-align: middle;
 }
-.section .list ul li .list-menu i {
+.section .list ul li .list-menu>i{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 88%;
   height: 100%;
 }
+
+.section .list ul li .list-menu div{
+	position: absolute;
+	top: 132%;
+	right: 0;
+	width: 320%;
+	background: #bbbbbd;
+	border-radius: 5px;
+	z-index: 100;
+	display: none;
+}
+.section .list ul li .list-menu div i{
+
+}
+.section .list ul li .list-menu div ul{
+	padding: 0 .15rem;
+}
+.section .list ul li .list-menu div ul li{
+	padding: .05rem .125rem;
+	border-bottom: 1px solid #fff;
+	text-align: center;
+}
+.section .list ul li .list-menu div ul li:last-child{
+	border: none;
+}
+.section .list ul li .list-menu div ul li a{
+	color: #fff;
+}
+
+
 .section .list ul li .list-submenu {
   display: none;
   padding-left: .2rem;

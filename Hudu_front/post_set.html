@@ -32,8 +32,16 @@
                             会领导
                         </span>
                         <span>
-                            01
-                            <img src="img/menu.png" alt="菜单"/>
+                            <img src="img/xiugai.png" alt="菜单" class="open_editor"/>
+		                        <div>
+		                        	<i></i>
+		                        	<ul>
+		                        		<li><a href="#">添加分组</a></li>
+		                        		<li><a href="#">删除分组</a></li>
+		                        		<li><a href="#">修改分组</a></li>
+		                        		<li><a href="#">添加职务</a></li>
+		                        	</ul>
+		                        </div>
                         </span>
                         <i data-open="false"></i>
                     </div>
@@ -94,8 +102,16 @@
                             顾问专家
                         </span>
                         <span>
-                            01
-                            <img src="img/menu.png" alt="菜单"/>
+                            <img src="img/xiugai.png" alt="菜单" class="open_editor"/>
+		                        <div>
+		                        	<i></i>
+		                        	<ul>
+		                        		<li><a href="#">添加分组</a></li>
+		                        		<li><a href="#">删除分组</a></li>
+		                        		<li><a href="#">修改分组</a></li>
+		                        		<li><a href="#">添加职务</a></li>
+		                        	</ul>
+		                        </div>
                         </span>
                         <i data-open="false"></i>
                     </div>
@@ -129,8 +145,16 @@
                             理事会
                         </span>
                         <span>
-                            01
-                            <img src="img/menu.png" alt="菜单"/>
+                            <img src="img/xiugai.png" alt="菜单" class="open_editor"/>
+		                        <div>
+		                        	<i></i>
+		                        	<ul>
+		                        		<li><a href="#">添加分组</a></li>
+		                        		<li><a href="#">删除分组</a></li>
+		                        		<li><a href="#">修改分组</a></li>
+		                        		<li><a href="#">添加职务</a></li>
+		                        	</ul>
+		                        </div>
                         </span>
                         <i data-open="false"></i>
                     </div>
@@ -164,8 +188,16 @@
                             秘书处
                         </span>
                         <span>
-                            01
-                            <img src="img/menu.png" alt="菜单"/>
+                            <img src="img/xiugai.png" alt="菜单" class="open_editor"/>
+		                        <div>
+		                        	<i></i>
+		                        	<ul>
+		                        		<li><a href="#">添加分组</a></li>
+		                        		<li><a href="#">删除分组</a></li>
+		                        		<li><a href="#">修改分组</a></li>
+		                        		<li><a href="#">添加职务</a></li>
+		                        	</ul>
+		                        </div>
                         </span>
                         <i data-open="false"></i>
                     </div>
@@ -212,6 +244,20 @@
                 $(tar).parent('.list-menu').next().css('display', 'none')
                 $(tar).prev().prev().children('img').attr('src', 'img/nav.png')
             }
+        })
+
+        $('.open_editor').on('click', function(e){
+        	if($(e.target).next().css('display') == 'none'){
+        		$('.open_editor').next().css({display: 'none'})
+        		$(e.target).next().css({display: 'block'})
+        	}else{
+        		$(e.target).next().css({display: 'none'})
+        	}
+        })
+        $('body').on('click', function(e){
+        	if($(e.target).attr('class') != 'open_editor'){
+        		$('.open_editor').next().css({display: 'none'})
+        	}
         })
     </script>
 <script>
