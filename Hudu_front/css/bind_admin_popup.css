@@ -1,12 +1,11 @@
     /*绑定管理员弹出层*/
-     /*遮罩层*/
+/*遮罩层*/
  #bind_amdin_mask{
     position: fixed;
     background: rgba(0,0,0,0.76);
     height: 100%;
     width: 100%;
     z-index: 1200;
-    
  }
   #bind_amdin_mask .popup{
     box-sizing: border-box;
