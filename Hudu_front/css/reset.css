@@ -58,12 +58,34 @@ textarea{
   width: .05rem;
 }
 
+/*定义文字颜色*/
+/*主色 橘黄色*/
+.colory{
+  color: #f49e00;
+}
 
+/*黑色*/
+.colorb{
+  color: #231815;
+}
+/*灰色*/
+.colorg{
+  color: #bbbbbd;
+}
 
-
-
-
-
+/*定义背景颜色*/
+/*主色 橘黄色*/
+.bgy{
+  background: #f49e00;
+}
+/*黑色*/
+.bgb{
+  background: #231815;
+}
+/*灰色*/
+.bgg{
+  background: #bbbbbd;
+}
 
 
 

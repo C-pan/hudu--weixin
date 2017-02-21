@@ -1,0 +1,70 @@
+
+body {
+  background: #fff;
+  font-size: 0.3rem;
+}
+.add_member_header{
+	/*position: fixed;*/
+	width: 100%;
+	height: 0.75rem;
+}
+.add_member_header .add_member_nav{
+	width: 100%
+	height: 0.75rem;
+	color: #636363;
+}
+.add_member_header .add_member_nav li{
+	width: 50%;
+	float: left;
+}
+.add_member_header .add_member_nav li a{
+	width: 100%
+	height: 0.75rem;
+	line-height: 0.75rem;
+	background: #e6e6e6;
+	display: block;
+	text-align: center;
+}
+.add_member_header .add_member_nav li .active{
+	background: #ffa304;
+	color: #fff;
+}
+.position_dues_section{
+  width: 7rem;
+  margin: 0 auto;
+}
+.position_dues_section .import_excel_tip{
+  margin: 2rem auto;
+  padding:0.4rem;
+  width: 5.2rem;
+  font-size: 0.28rem;
+  color: #999999;
+  border: 2px dashed #999999;
+}
+.position_dues_section .position_dues_btn{
+  margin: 0.25rem auto;
+  width: 90%;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 0.08rem;
+  background: #ffa304;
+  border:1px solid #ffa304;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.position_dues_section .position_dues_btn a{
+  height: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.35rem;
+  font-family: "微软雅黑";
+}
+.position_dues_section .del_posotion{
+   background: transparent;
+  border:1px solid #ffa304;
+  color: #ffa304;
+}
+.position_dues_section .del_posotion a{
+  color: #ffa304;
+}

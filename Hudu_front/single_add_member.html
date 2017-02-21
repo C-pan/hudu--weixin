@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
+  <meta name="viewport" content="width=device-width,initial-scale=0.5, maximum-scale=0.6, user-scalable=no" />
+  <title>添加会员</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/single_add_member.css">
+</head>
+<body>
+  <header class="add_member_header">
+    <ul class="add_member_nav">
+      <li><a class="active"  href="">添加会员</a></li>
+      <li><a href="">批量添加</a></li>
+    </ul>
+  </header>
+  
+  <section class="position_dues_section">
+      <ul class="position_dues_ipn_list">
+        <li>
+          <img src="img/association.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="姓名">
+        </li>
+        <li>
+          <img src="img/Business_Association.jpg" class="position_ico" alt="">
+          <span>性别</span>
+          <select name="" id="" class="position_select">
+            <option value="">男</option>
+            <option value="">女</option>
+          </select>
+        </li>
+        <li>
+          <img src="img/mailbox.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="职务">
+        </li>
+        <li>
+          <img src="img/phone.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="手机">
+        </li>
+        <li>
+          <img src="img/Contacts.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="单位名称">
+        </li>
+        <li>
+          <img src="img/address.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="地址">
+        </li>
+        <li>
+          <img src="img/position_dues_ico_02.png" class="position_ico" alt="">
+          <span>商会职务</span>
+          <select name="" id="" class="position_select">
+            <option value="">500/届</option>
+            <option value="">600/届</option>
+          </select>
+        </li>
+        <li>
+          <img src="img/photo_cio.png" class="position_ico" alt="">
+          <span>证件上传</span>
+          
+        </li>
+        <li>
+          <img src="img/position_dues_ico_03.png" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="简单描述为何加入我们商会">
+        </li>
+      </ul>
+      <div class="position_dues_btn">
+        <a href="">下一步</a>
+      </div>
+  </section>
+  <script src="js/public.js"></script>
+</body>
+<script src="js/zepto.js"></script>
+  <script src="js/public.js"></script>
+  <script>
+    $('.upload_img').on('click',function(){
+      $('#upload_inp').click()
+    })
+    $('#upload_inp').on('change',function(e){
+      var target = e.target
+      var reg = /(\.jpg|\.png|\.jpeg)$/ig
+      if(!/image\/\w+/.test(target.files[0].type)){  
+        alert("这个需要图片！");  
+        return false;  
+      } 
+      if(!reg.test(target.value)){
+        alert('请选择JPG或者PNG格式的图片！')
+        return
+      }
+      if (target.files[0]) {
+        var reader = new FileReader()
+        reader.onload = function(e){
+          var img = e.target.result
+          var imgURL = target.files[0]
+          $('#upload_img').attr('src', img)
+        }
+      }
+      reader.readAsDataURL(target.files[0])
+    })
+
+    $('.agree').on('click', function(){
+      if( !$('#agree')[0].checked ){
+        $('.agree_img').attr({src: 'img/select.png', alt: '已选中'})
+      }else{
+        $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
+      }
+    })
+    // 弹出层
+    $('.agree_btn').on('click',function () {
+      $('#mask').css('display','none');
+    }); 
+    $('.read_agreement').on('click',function () {
+      $('#mask').css('display','block');
+    }); 
+  </script>
+</html>
