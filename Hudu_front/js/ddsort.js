@@ -1,164 +1,122 @@
-;(function( $ ){
-    /**
-     * Author: https://github.com/Barrior
-     *
-     * DDSort: drag and drop sorting.
-     * @param {Object} options
-     *        target[string]: 		可选，jQuery事件委托选择器字符串，默认'li'
-     *        cloneStyle[object]: 	可选，设置占位符元素的样式
-     *        floatStyle[object]: 	可选，设置拖动元素的样式
-     *        down[function]: 		可选，鼠标按下时执行的函数
-     *        move[function]: 		可选，鼠标移动时执行的函数
-     *        up[function]: 		可选，鼠标抬起时执行的函数
-     */
-    $.fn.DDSort = function( options ){
-        var $doc = $( document ),
-            fnEmpty = function(){},
+/**
+ * @author RubaXa <trash@rubaxa.org>
+ * @licence MIT
+ */
+angular.module('ng-sortable', [])
+	.constant('$version', '0.3.3')
+	.directive('ngSortable', ['$parse', function ($parse) {
+		'use strict';
 
-            settings = $.extend( true, {
+		var removed;
 
-                down: fnEmpty,
-                move: fnEmpty,
-                up: fnEmpty,
+		function getSource(el) {
+			var scope = angular.element(el).scope();
+			var ngRepeat = [].filter.call(el.childNodes, function (node) {
+				return (
+						(node.nodeType === 8) &&
+						(node.nodeValue.indexOf('ngRepeat:') !== -1)
+					);
+			})[0];
+			
+			// tests: http://jsbin.com/kosubutilo/1/edit?js,output
+			ngRepeat = ngRepeat.nodeValue.match(/ngRepeat:\s*(?:\(.*?,\s*)?([^\s)]+)[\s)]+in\s+([^\s|]+)/);
 
-                target: 'li',
-                cloneStyle: {
-                    'background-color': '#eee'
-                },
-                floatStyle: {
-                    //用固定定位可以防止定位父级不是Body的情况的兼容处理，表示不兼容IE6，无妨
-                    'position': 'fixed',
-                    'box-shadow': '10px 10px 20px 0 #eee',
-                    'webkitTransform': 'rotate(4deg)',
-                    'mozTransform': 'rotate(4deg)',
-                    'msTransform': 'rotate(4deg)',
-                    'transform': 'rotate(4deg)'
-                }
+			var itemExpr = $parse(ngRepeat[1]);
+			var itemsExpr = $parse(ngRepeat[2]);
 
-            }, options );
+			return {
+				item: function (el) {
+					return itemExpr(angular.element(el).scope());
+				},
+				items: function () {
+					return itemsExpr(scope);
+				}
+			};
+		}
 
-        return this.each(function(){
 
-            var that = $( this ),
-                height = 'height',
-                width = 'width';
+		// Export
+		return {
+			restrict: 'AC',
+			link: function (scope, $el, attrs) {
+				var el = $el[0],
+					ngSortable = attrs.ngSortable,
+					options = scope.$eval(ngSortable) || {},
+					source = getSource(el),
+					sortable
+				;
 
-            if( that.css( 'box-sizing' ) == 'border-box' ){
-                height = 'outerHeight';
-                width = 'outerWidth';
-            }
 
-            that.on( 'mousedown.DDSort', settings.target, function( e ){
-                //只允许鼠标左键拖动
-                if( e.which != 1 ){
-                    return;
-                }
+				'Start End Add Update Remove Sort'.split(' ').forEach(function (name) {
+					options['on' + name] = options['on' + name] || function () {};
+				});
 
-                //防止表单元素失效
-                var tagName = e.target.tagName.toLowerCase();
-                if( tagName == 'input' || tagName == 'textarea' || tagName == 'select' ){
-                    return;
-                }
 
-                var THIS = this,
-                    $this = $( THIS ),
-                    offset = $this.offset(),
-                    disX = e.pageX - offset.left,
-                    disY = e.pageY - offset.top,
+				function _sync(evt) {
+					var oldIndex = evt.oldIndex,
+						newIndex = evt.newIndex,
+						items = source.items();
 
-                    clone = $this.clone()
-                        .css( settings.cloneStyle )
-                        .css( 'height', $this[ height ]() )
-                        .empty(),
+					if (el !== evt.from) {
+						var prevSource = getSource(evt.from),
+							prevItems = prevSource.items();
 
-                    hasClone = 1,
+						oldIndex = prevItems.indexOf(prevSource.item(evt.item));
+						removed = prevItems.splice(oldIndex, 1)[0];
 
-                //缓存计算
-                    thisOuterHeight = $this.outerHeight(),
-                    thatOuterHeight = that.outerHeight(),
+						items.splice(newIndex, 0, removed);
 
-                //滚动速度
-                    upSpeed = thisOuterHeight,
-                    downSpeed = thisOuterHeight,
-                    maxSpeed = thisOuterHeight * 3;
+						evt.from.appendChild(evt.item); // revert element
+					} else {
+						items.splice(newIndex, 0, items.splice(oldIndex, 1)[0]);
+					}
 
-                settings.down.call( THIS );
+					scope.$apply();
+				}
 
-                $doc.on( 'mousemove.DDSort', function( e ){
-                    if( hasClone ){
-                        $this.before( clone )
-                            .css( 'width', $this[ width ]() )
-                            .css( settings.floatStyle )
-                            .appendTo( $this.parent() );
 
-                        hasClone = 0;
-                    }
+				sortable = Sortable.create(el, Object.keys(options).reduce(function (opts, name) {
+					opts[name] = opts[name] || options[name];
+					return opts;
+				}, {
+					onStart: function () {
+						options.onStart(source.items());
+					},
+					onEnd: function () {
+						options.onEnd(source.items());
+					},
+					onAdd: function (evt) {
+						_sync(evt);
+						options.onAdd(source.items(), removed);
+					},
+					onUpdate: function (evt) {
+						_sync(evt);
+						options.onUpdate(source.items(), source.item(evt.item));
+					},
+					onRemove: function () {
+						options.onRemove(source.items(), removed);
+					},
+					onSort: function () {
+						options.onSort(source.items());
+					}
+				}));
 
-                    var left = e.pageX - disX,
-                        top = e.pageY - disY,
+				$el.on('$destroy', function () {
+					sortable.destroy();
+					sortable = null;
+				});
 
-                        prev = clone.prev(),
-                        next = clone.next().not( $this );
-
-                    $this.css({
-                        left: left,
-                        top: top
-                    });
-
-                    //向上排序
-                    if( prev.length && top < prev.offset().top + prev.outerHeight()/2 ){
-
-                        clone.after( prev );
-
-                        //向下排序
-                    }else if( next.length && top + thisOuterHeight > next.offset().top + next.outerHeight()/2 ){
-
-                        clone.before( next );
-
-                    }
-
-                    /**
-                     * 处理滚动条
-                     * that是带着滚动条的元素，这里默认以为that元素是这样的元素（正常情况就是这样），如果使用者事件委托的元素不是这样的元素，那么需要提供接口出来
-                     */
-                    var thatScrollTop = that.scrollTop(),
-                        thatOffsetTop = that.offset().top,
-                        scrollVal;
-
-                    //向上滚动
-                    if( top < thatOffsetTop ){
-
-                        downSpeed = thisOuterHeight;
-                        upSpeed = ++upSpeed > maxSpeed ? maxSpeed : upSpeed;
-                        scrollVal = thatScrollTop - upSpeed;
-
-                        //向下滚动
-                    }else if( top + thisOuterHeight - thatOffsetTop > thatOuterHeight ){
-
-                        upSpeed = thisOuterHeight;
-                        downSpeed = ++downSpeed > maxSpeed ? maxSpeed : downSpeed;
-                        scrollVal = thatScrollTop + downSpeed;
-                    }
-
-                    that.scrollTop( scrollVal );
-
-                    settings.move.call( THIS );
-
-                })
-                    .on( 'mouseup.DDSort', function(){
-
-                        $doc.off( 'mousemove.DDSort mouseup.DDSort' );
-
-                        //click的时候也会触发mouseup事件，加上判断阻止这种情况
-                        if( !hasClone ){
-                            clone.before( $this.removeAttr( 'style' ) ).remove();
-                            settings.up.call( THIS );
-                        }
-                    });
-
-                return false;
-            });
-        });
-    };
-
-})( jQuery );
+				if (!/{|}/.test(ngSortable)) { // todo: ugly
+					angular.forEach(['sort', 'disabled', 'draggable', 'handle', 'animation'], function (name) {
+						scope.$watch(ngSortable + '.' + name, function (value) {
+							if (value !== void 0) {
+								options[name] = value;
+								sortable.option(name, value);
+							}
+						});
+					});
+				}
+			}
+		};
+	}])
+;
