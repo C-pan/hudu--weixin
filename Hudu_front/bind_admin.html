@@ -9,6 +9,37 @@
     <script src="js/public.js"></script>
 </head>
 <body>
+	<!-- 弹出层 -->
+	<div class="bind_amdin_mask" style="display: none;">
+        <div class="popup">
+             <form action="" method="get"> 
+                <div class="user_rights">
+                    <label>
+                        <img src="img/radiot_noselect.png" alt="未选中" class="user_rights_close"/>
+                        <input name="" type="radio" value="" class="user_rights_input"/>
+                        <span class="user_rights_close">普通权限</span>
+                    </label> 
+                    <label>
+                        <img src="img/radiot_select.png" alt="未选中" class="user_rights_close"/>
+                        <input name="" type="radio" value="" class="user_rights_input"/>
+                        <span class="user_rights_close">高级权限</span>
+                    </label>
+                </div>
+                <div class="inp_admin_name">
+                     <label class="admin_name_label" for="admin_name">姓名 </label> <input name="admin_name" id="admin_name" type="text" value="" />
+                </div>
+                <div class="inp_admin_passw">
+                     <label class="admin_passw_label" for="inp_admin_passw">密码 </label> <input name="inp_admin_passw" id="inp_admin_passw" type="text" value="" />
+                </div>
+                <div class="bind_admin_tips">绑定管理员后，被绑定人登录服务平台也要绑定手机才能正常使用后台</div>
+                <div class="bind_admin_btn_box">
+                    <a href="" class="cancel_bind_btn">取消</a>
+                    <a href="" class="bind_btn">绑定</a>
+                </div>
+            </form> 
+        </div>
+    </div>
+	<!-- 页面部分 -->
 	<header class="bind_admin_header">
 		<div class="shanghui_box">
 				<div class="left_img">
@@ -21,10 +52,10 @@
 				<div class="certification">已认证</div>
 		</div>
 		<div class="bind_admin_btn">
-			<a href="">
+			<div class="bind_admin_b">
 				<img src="img/bing_admin_add.png" class="bing_admin_addimg" alt="">
 				<div>绑定管理员</div>
-			</a>
+			</div>
 		</div>
     </header>
     <section class="bind_admin_wrap">
@@ -51,4 +82,26 @@
    </section>
     
 </body>
+	<script src="js/zepto.js"></script>
+    <script>
+        $('.user_rights_close').on('click',function(e){
+            var dom = e.target
+            var checked = $(dom).siblings('.user_rights_input')[0].checked
+            if( !checked ){
+                if( dom.nodeName == 'SPAN' ){
+                    $(dom).addClass('active').siblings('img').attr('src', 'img/radiot_select.png')
+                }else if( dom.nodeName == 'IMG'){
+                    $(dom).attr('src', 'img/radiot_select.png').siblings('span').addClass('active')
+                }
+                $(dom).parent('label').siblings().children('img').attr('src', 'img/radiot_noselect.png')
+                $(dom).parent('label').siblings().children('span').removeClass('active')
+            }
+        })
+        $('.bind_admin_btn').on('click',function () {
+        	$('.bind_amdin_mask').show();
+        });
+        $('.cancel_bind_btn,.bind_btn').on('click',function () {
+        	$('.bind_amdin_mask').css('display','none');
+        });
+    </script>
 </html>
