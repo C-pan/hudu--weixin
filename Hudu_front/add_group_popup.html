@@ -12,9 +12,16 @@
 	
 	<div id="mask">
 		<div class="popup">
+			<div class="cloce_popup"><img src="img/close_popup_btn.png" alt=""></div>
 			<input type="text" class="add_groud_input" value="会领导">
 			<a href="#" class="add_groud_bnt">添加分组</a>
 		</div>
 	</div>
 </body>
+	<script src="js/zepto.js"></script>
+	<script>
+		$('.cloce_popup').on('click',function () {
+			$('#mask').hide();
+		})
+	</script>
 </html>	
