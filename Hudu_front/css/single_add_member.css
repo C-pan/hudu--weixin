@@ -126,3 +126,13 @@ body {
 .position_dues_section .del_posotion a{
   color: #ffa304;
 }
+.position_dues_section .position_dues_ipn_list_upload input{
+  display: none;
+}
+.position_dues_section .position_dues_ipn_list_upload img{
+  width: .55rem;
+  height: .55rem;
+  padding: .2rem 0;
+  float: right;
+  margin-right: .3rem;
+}

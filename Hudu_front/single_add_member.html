@@ -54,10 +54,12 @@
             <option value="">600/届</option>
           </select>
         </li>
-        <li>
+        <li class="position_dues_ipn_list_upload">
           <img src="img/photo_cio.png" class="position_ico" alt="">
           <span>证件上传</span>
-          
+          <img src="img/upload.jpg" id="upload_img" alt="上传"/>
+          <input type="file" accept="image/*" id='upload_inp'>
+          <i class="upload_img"></i>
         </li>
         <li>
           <img src="img/position_dues_ico_03.png" class="position_ico" alt="">
@@ -70,10 +72,11 @@
   </section>
   <script src="js/public.js"></script>
 </body>
-<script src="js/zepto.js"></script>
+  <script src="js/zepto.js"></script>
   <script src="js/public.js"></script>
   <script>
-    $('.upload_img').on('click',function(){
+    $('#upload_img').on('click',function(){
+      console.log(2)
       $('#upload_inp').click()
     })
     $('#upload_inp').on('change',function(e){
