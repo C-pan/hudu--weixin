@@ -58,11 +58,34 @@ body {
 .apply_join_section ul li label {
   float: left;
 }
-.apply_join_section ul li input,
-.apply_join_section ul li span {
+.apply_join_section ul li input {
   width: 80%;
   padding: 0.1rem .12rem;
   font-size: .3rem;
+}
+.apply_join_section ul li span {
+  width: 50%;
+  padding: 0.1rem .12rem;
+  font-size: .3rem;
+}
+.apply_join_section ul li select{
+  padding: 0.1rem .12rem;
+  font-size: .3rem;
+  color: #231815;
+  float: right;
+  font-family: "微软雅黑";
+  /*清除默认小箭头*/
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 0.26rem;
+  background: url(../img/list_dow.png) right center no-repeat;
+  -webkit-background-size: 0.24rem;
+  background-size: 0.24rem;
+
 }
 .apply_join_section ul li span {
   display: inline-block;
@@ -122,3 +145,60 @@ body {
   color: #fff;
   font-size: .26rem;
 }
+
+
+ /*遮罩层*/
+#mask{
+  position: fixed;
+  background: rgba(0,0,0,0.76);
+  height: 100%;
+  width: 100%;
+  z-index: 1200;
+  display: none;
+}
+#mask .popup{
+  box-sizing: border-box;
+  width: 5.9rem;
+  background: #fff;
+  position: absolute;
+  top: 18%;
+  margin-left: -2.95rem;
+  left: 50%;
+  z-index: 1300;
+  border-radius: 0.25rem;
+  padding: 0.8rem 0.3rem 0.5rem 0.3rem;
+}
+#mask .popup .popup_tit{
+  color: #ffa404;
+  font-size: 0.3rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+#mask .popup .popup_content{
+  color: #231815;
+  font-size: 0.20rem;
+  text-align: center;
+  font-style: normal;
+}
+#mask .popup .popup_content p{
+  text-align: left;
+  text-indent: 0.4rem;
+  margin-bottom: 0.1rem;
+}
+.popup_btn_box{
+  /*padding: 0.3rem 0;*/
+  text-align: center;
+  margin: 0.30rem auto;
+}
+.popup_btn_box .agree_btn{
+  display: inline-block;
+  padding: 0.03rem 0.6rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background: #ffa404;
+  color: #fff;
+  font-size: 0.30rem;
+  font-family: "微软雅黑";
+  border-radius: 0.04rem;
+}
+ 
