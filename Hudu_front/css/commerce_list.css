@@ -53,7 +53,6 @@
     height: 1.3rem;
     padding-left: 0.14rem;
     position: relative;
-    border-bottom: 1px solid #d8d7dc;
     font-family: "微软雅黑";
     background: #fff;
     margin-top:0.1rem;
@@ -88,8 +87,8 @@
 }
 .left_content .tit{
     box-sizing: border-box;
-    padding-top: 0.3rem;
-    font-size: 0.30rem;
+    padding-top: 0.24rem;
+    font-size: 0.35rem;
     color: #332c2b;
     font-weight: normal;
 }
@@ -99,7 +98,7 @@
     padding-left: 0.18rem;
     background: url(../img/address_ico.png) -0.02rem center no-repeat;
     background-size: 0.20rem 0.20rem;
-    font-size: 0.22rem;
+    font-size: 0.24rem;
     color: #a5a5a5;
 }
 .right_content{
@@ -115,32 +114,36 @@
     padding-right: 0.25rem;
 }
 .right_content .certification{
-    margin-top: 0.2rem;
-    font-size: 0.26rem;
+    margin-top: 0.65rem;
+    font-size: 0.28rem;
     color: #feb800;
-    padding-left: 0.28rem;
+    padding-left: 0.35rem;
     background: url(../img/v_ico.png) left center no-repeat;
-    background-size: 0.3rem 0.3rem;
+    background-size: 0.32rem 0.32rem;
 }
-.right_content .visiting_card{
-    padding:0.05rem;
-    margin-top: 0.1rem;
-    font-size: 0.22rem;
-    width: 1.1rem;
-    color: #fff;
-    background: #feb800;
-    border-radius: 0.04rem;
-}
+
 .bottom_content{
     box-sizing: border-box;
-    height: 0.60rem;
+    height: 0.80rem;
     background: #fefefe;
     text-align: right;
-    padding-right:0.40rem;
+    padding-right:0.24rem;
     color: #999999;
     font-size: 0.24rem;
     line-height: 0.50rem;
     padding-top:0.1rem;
+    border-bottom: 1px solid #d8d7dc;
+}
+.bottom_content .visiting_card{
+    font-size: 0.22rem;
+    text-align: center;
+    height: 0.43rem;
+    line-height:0.43rem;
+    width: 1.3rem;
+    color: #fff;
+    background: #ffa304;
+    border-radius: 0.04rem;
+    float: right;
 }
 .bottom_content>span{
     padding-left: 0.40rem;
@@ -150,12 +153,14 @@
     background: url(../img/home_ico.png) left center no-repeat;
     -webkit-background-size: 0.35rem;
     background-size: 0.35rem;
+    float: left;
     
 }
 .bottom_content .member{
     background: url(../img/member_ico.png) left center no-repeat;
     -webkit-background-size: 0.35rem;
     background-size: 0.35rem;
+    float: left;
 }
 .bottom_content .watch{
     background: url(../img/watch_ico.png) left center no-repeat;
@@ -237,4 +242,29 @@
     font-size: 0.28rem;
     margin-top: 0.31rem;
     float: left;
+}
+
+
+
+
+.not_certification .bottom_content .visiting_card{
+    font-size: 0.22rem;
+    text-align: center;
+    height: 0.43rem;
+    line-height:0.43rem;
+    width: 1.3rem;
+    color: #fff;
+    background: #56aab7;
+    border-radius: 0.04rem;
+    float: right;
+}
+.not_certification .top_content .right_content .certification{
+    margin-top: 0.65rem;
+    font-size: 0.28rem;
+    /*color: #feb800;*/
+    padding-left: 0.35rem;
+/*    background: url(../img/v_ico.png) left center no-repeat;*/
+    background-size: 0.32rem 0.32rem;
+    background: url(../img/v_ico2.png) left center no-repeat;
+    color: #c9caca
 }
