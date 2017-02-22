@@ -225,6 +225,9 @@
             }
         })
         
+        $('.list-menu i')[0].ontouchmove(function(){
+        	console.log(1)
+        })
       function liNumPaixu(dom){
       	for(var i = 0; i < dom.length; i++){
       		$(dom[i]).find('span').html('0'+(i+1))
