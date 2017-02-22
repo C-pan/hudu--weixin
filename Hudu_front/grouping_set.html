@@ -24,26 +24,26 @@
             <p class="nav_title">上下拖动条目进行排序</p>
         </nav>
         <div class="list">
-            <ul>
+            <ul class="list_ul">
                 <li>
                     <div class="list-menu clearfix">
                         <span>
-                            <img src="img/nav.png" alt="菜单"/>
+                            <img src="img/nav.png" class="list-menu_nav" alt="菜单"/>
                             会领导
                         </span>
-                        <span>
-                            01
+                        <span class="list_ul_menu">
+                            <span>01</span>
                             <img src="img/menu.png" alt="菜单"/>
                         </span>
                         <i data-open="false"></i>
                     </div>
                     <div class="list-submenu">
-                        <ul>
+                        <ul class="list_ul1">
                             <li>
                                 <span>
                                     会长
                                 </span>
-                                <span>
+                                <span class="list_ul1_menu">
                                     01
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -52,7 +52,7 @@
                                 <span>
                                     秘书长
                                 </span>
-                                <span>
+                                <span class="list_ul1_menu">
                                     02
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -61,7 +61,7 @@
                                 <span>
                                     监事长
                                 </span>
-                                <span>
+                                <span class="list_ul1_menu">
                                     03
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -70,7 +70,7 @@
                                 <span>
                                     理事长
                                 </span>
-                                <span>
+                                <span class="list_ul1_menu">
                                     04
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -79,7 +79,7 @@
                                 <span>
                                     高级顾问
                                 </span>
-                                <span>
+                                <span class="list_ul1_menu">
                                     05
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -90,22 +90,22 @@
                 <li>
                     <div class="list-menu clearfix">
                         <span>
-                            <img src="img/nav.png" alt="菜单"/>
+                            <img src="img/nav.png" class="list-menu_nav" alt="菜单"/>
                             顾问专家
                         </span>
-                        <span>
+                        <span class="list_ul_menu">
                             01
                             <img src="img/menu.png" alt="菜单"/>
                         </span>
                         <i data-open="false"></i>
                     </div>
                     <div class="list-submenu">
-                        <ul>
+                        <ul class="list_ul2">
                             <li>
                                 <span>
                                     会长
                                 </span>
-                                <span>
+                                <span class="list_ul2_menu">
                                     01
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -114,7 +114,7 @@
                                 <span>
                                     秘书长
                                 </span>
-                                <span>
+                                <span class="list_ul2_menu">
                                     02
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -125,22 +125,22 @@
                 <li>
                     <div class="list-menu clearfix">
                         <span>
-                            <img src="img/nav.png" alt="菜单"/>
+                            <img src="img/nav.png" class="list-menu_nav" alt="菜单"/>
                             理事会
                         </span>
-                        <span>
+                        <span class="list_ul_menu">
                             01
                             <img src="img/menu.png" alt="菜单"/>
                         </span>
                         <i data-open="false"></i>
                     </div>
                     <div class="list-submenu">
-                        <ul>
+                        <ul class="list_ul3">
                             <li>
                                 <span>
                                     会长
                                 </span>
-                                <span>
+                                <span class="list_ul3_menu">
                                     01
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -149,7 +149,7 @@
                                 <span>
                                     秘书长
                                 </span>
-                                <span>
+                                <span class="list_ul3_menu">
                                     02
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -160,23 +160,23 @@
                 <li>
                     <div class="list-menu clearfix">
                         <span>
-                            <img src="img/nav.png" alt="菜单"/>
+                            <img src="img/nav.png" class="list-menu_nav" alt="菜单"/>
                             秘书处
                         </span>
-                        <span>
+                        <span class="list_ul_menu">
                             01
                             <img src="img/menu.png" alt="菜单"/>
                         </span>
                         <i data-open="false"></i>
                     </div>
                     <div class="list-submenu">
-                        <ul>
+                        <ul class="list_ul4">
                             <li>
                                 <span>
                                     <i></i>
                                     会长
                                 </span>
-                                <span>
+                                <span class="list_ul4_menu">
                                     01
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -186,7 +186,7 @@
                                     <i></i>
                                     秘书长
                                 </span>
-                                <span>
+                                <span class="list_ul4_menu">
                                     02
                                     <img src="img/submenu.png" alt="菜单"/>
                                 </span>
@@ -207,17 +207,50 @@
             if( $(tar).attr('data-open') == 'false'){
                 $(tar).attr('data-open', 'true')
                 $(tar).parent('.list-menu').next().css('display', 'block')
-                $(tar).prev().prev().children('img').attr('src', 'img/nav_xuanzhong.png')
+                $(tar).siblings().children('.list-menu_nav').attr('src', 'img/nav_xuanzhong.png')
+                $(tar).parents('li').siblings('li').children('.list-submenu').css('display', 'none')
+                $(tar).parents('li').siblings('li').find('.list-menu_nav').attr('src', 'img/nav.png')
+                $(tar).parents('li').siblings('li').find('i').attr('data-open', 'false')
             }else{
                 $(tar).attr('data-open', 'false')
                 $(tar).parent('.list-menu').next().css('display', 'none')
                 $(tar).prev().prev().children('img').attr('src', 'img/nav.png')
             }
         })
-        var list_ul = $('.list ul')[0];
-        Sortable.create(list_ul, { group: "omega" });
-
         
+      function liNumPaixu(dom){
+      	for(var i = 0; i < dom.length; i++){
+
+      	}
+      }
+      function paixu(ulEle, liEle){
+				new Sortable.create( $(ulEle)[0], {
+					handle: liEle,
+					animation: 150,
+					preventOnFilter: true,
+					onChoose: function (evt){
+						//console.log(evt.oldIndex)
+			      // var oldBgcolor = $(evt.target).css('background')
+			      // var start = oldBgcolor.indexOf('rgb') + 5
+			      // var end = oldBgcolor.indexOf(')') + 1
+			      // newBgcolor = oldBgcolor.slice(start, end)
+			      // var arr = newBgcolor.split(',')
+			      // var r = arr[1] + 10
+			     	// var g = arr[2] + 10
+			     	// var b = arr[3] + 10
+			      // $(evt.target).css({background: 'rgb('+r+','+g+','+b+')'})
+			    },
+			    onUpdate: function (evt){
+			      var itemEl = evt;
+			    }
+				});
+	    }
+      paixu( '.list_ul', '.list_ul_menu')
+      paixu( '.list_ul1', '.list_ul1_menu')
+      paixu( '.list_ul2', '.list_ul2_menu')
+      paixu( '.list_ul3', '.list_ul3_menu')
+      paixu( '.list_ul4', '.list_ul4_menu')
+
     </script>
 <script>
 

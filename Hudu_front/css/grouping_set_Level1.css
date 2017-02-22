@@ -25,7 +25,7 @@ body {
 .section .nav>ul>li a {
   color: #fff;
 }
-
+/*  分组排序的切换  */
 .section .nav>ul>li div{
 	position: relative;
 	z-index: 10;
@@ -87,6 +87,7 @@ body {
   padding: 0 2% 0 10%;
   line-height: .85rem;
   position: relative;
+	background: #f3f2f3;
 }
 .section .list ul li span:first-child {
   float: left;

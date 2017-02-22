@@ -10,10 +10,11 @@ body {
 .section .nav {
   width: 100%;
 }
-.section .nav ul {
+.section .nav>ul {
   width: 100%;
+  color: #fff;
 }
-.section .nav ul li {
+.section .nav>ul>li {
   float: left;
   width: 49.5%;
   height: .75rem;
@@ -21,31 +22,52 @@ body {
   text-align: center;
   position: relative;
 }
-.section .nav ul li a {
+.section .nav>ul>li a {
   color: #fff;
 }
-.section .nav ul li:nth-child(2) {
+
+/*  分组排序的切换  */
+.section .nav>ul>li div{
+	position: relative;
+	z-index: 10;
+	display: none;
+}
+.section .nav>ul>li div ul{
+	padding: 0 .2rem;
+	background: #bbbbbd;
+}
+.section .nav>ul>li div ul li {
+  height: .75rem;
+  line-height: .75rem;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+}
+.section .nav>ul>li div ul li:last-child{
+	border: none;
+}
+
+.section .nav>ul>li:nth-child(2) {
   width: 1%;
 }
-.section .nav ul li:first-child {
+.section .nav>ul>li:first-child {
   background: #f6ad3c;
 }
-.section .nav ul li:last-child {
+.section .nav>ul>li:last-child {
   background: #b5b5b6;
 }
-.section .nav ul li:last-child img {
+.section .nav>ul>li:last-child img {
   height: 80%;
   position: absolute;
   left: 0;
   top: 0.1rem;
 }
-.section .nav ul li:first-child i,.section .list ul li .list-menu div i{
+.section .nav>ul>li:first-child i,.section .list ul li .list-menu div i{
   display: inline-block;
   width: 0;
   height: 0;
   position: absolute;
 }
-.section .nav ul li:first-child i{
+.section .nav>ul>li:first-child i{
   top: 100%;
   left: 40%;
   border: .2rem solid #f6ad3c;
@@ -73,9 +95,11 @@ body {
   background: #f3f2f3;
   position: relative;
   border-bottom: 1px solid #ccc;
+  color: #595758;
 }
 .section .list ul li .list-menu span:first-child {
   float: left;
+  font-size: .4rem;
 }
 .section .list ul li .list-menu span:first-child img {
   width: .25rem;
@@ -106,6 +130,7 @@ body {
 	border-radius: 5px;
 	z-index: 100;
 	display: none;
+  font-size: .31rem;
 }
 .section .list ul li .list-menu div ul{
 	padding: 0 .15rem;
@@ -132,16 +157,74 @@ body {
   line-height: .56rem;
   overflow: hidden;
   border-bottom: 1px solid #ccc;
+  color: #a3a3a3;
 }
 .section .list ul li .list-submenu ul li span:first-child {
   float: left;
+  font-size: .36rem;
 }
 .section .list ul li .list-submenu ul li span:last-child {
   float: right;
-  font-size: .23rem;
-  color: #606060;
+  font-size: .32rem;
 }
 .section .list ul li .list-submenu ul li span:last-child img {
   width: .3rem;
   vertical-align: middle;
+}
+
+/* 弹出框 */
+#mask{
+	position: fixed;
+  top: 0;
+  left: 0;
+	background: rgba(0,0,0,0.76);
+	height: 100%;
+	width: 100%;
+	z-index: 1200;
+	display: none;
+}
+#mask .popup{
+	box-sizing: border-box;
+	width: 5.9rem;
+	background: #fff;
+	position: relative;
+	top: 34%;
+	margin-left: -2.95rem;
+	left: 50%;
+	z-index: 1300;
+	border-radius: 0.25rem;
+	padding: 0.8rem 0.3rem 0.5rem 0.3rem;
+}
+#mask .popup .cloce_popup{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.2rem;
+}
+#mask .popup .cloce_popup img{
+	width: 100%;
+}
+#mask .popup .add_groud_input{
+	margin-top: 0.1rem;
+	width: 5.1rem;
+	height: 0.58rem;
+	border:1px solid #ffa404;
+	border-radius: 0.1rem;
+	padding-left: 0.2rem;
+	font-size: 0.34rem;
+	color: #231815;	
+}
+#mask .popup .add_groud_bnt{
+	display:block;
+	width: 3rem;
+	height: 0.55rem;
+	line-height: 0.55rem;
+	background: #ffa404;
+	color: #fff;
+	font-size: 0.30rem;
+	font-family: "微软雅黑";
+	border-radius: 5px;
+	text-align: center;
+	margin: 0.5rem auto 0;
 }

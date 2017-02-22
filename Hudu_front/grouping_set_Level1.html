@@ -76,7 +76,13 @@
 
 			new Sortable.create(list_ul, {
 				handle: '.list_menu',
-				animation: 200
+				animation: 150,
+				preventOnFilter: true,
+				onStart: function (/**Event*/evt){
+	        var itemEl = evt.item; // 当前拖拽的html元素
+	        console.log(itemEl)
+	        //$(itemEl).css({opacity: 0.5})
+	    	},
 			});
 
 			$('.open_menu').on('click',function(e){

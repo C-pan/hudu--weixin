@@ -16,9 +16,16 @@
                     <i></i>
                 </li>
                 <li></li>
-                <li>
-                    <img src="img/sort_post.png" alt="排序"/>
-                    <a href="#">分组排序</a>
+                <li class="open_menu" data-open="true">
+                    <img src="img/sort_post.png" alt="排序" data-open="true"/>
+                    <span href="#" data-open="true">分组排序</span>
+                    <i></i>
+                    <div class="position_menu">
+                    	<ul>
+                    		<li><a href="./grouping_set_Level1.html">一级职务</a></li>
+                    		<li><a href="./grouping_choose_Level2.html">二级职务</a></li>
+                    	</ul>
+                    </div>
                 </li>
             </ul>
             <p class="nav_title">添加删除分组、职务设置</p>
@@ -36,7 +43,7 @@
 		                        <div>
 		                        	<i></i>
 		                        	<ul>
-		                        		<li><a href="#">添加分组</a></li>
+		                        		<li class="open_mask"><a href="#">添加分组</a></li>
 		                        		<li><a href="#">删除分组</a></li>
 		                        		<li><a href="#">修改分组</a></li>
 		                        		<li><a href="#">添加职务</a></li>
@@ -106,7 +113,7 @@
 		                        <div>
 		                        	<i></i>
 		                        	<ul>
-		                        		<li><a href="#">添加分组</a></li>
+		                        		<li class="open_mask"><a href="#">添加分组</a></li>
 		                        		<li><a href="#">删除分组</a></li>
 		                        		<li><a href="#">修改分组</a></li>
 		                        		<li><a href="#">添加职务</a></li>
@@ -149,7 +156,7 @@
 		                        <div>
 		                        	<i></i>
 		                        	<ul>
-		                        		<li><a href="#">添加分组</a></li>
+		                        		<li class="open_mask"><a href="#">添加分组</a></li>
 		                        		<li><a href="#">删除分组</a></li>
 		                        		<li><a href="#">修改分组</a></li>
 		                        		<li><a href="#">添加职务</a></li>
@@ -192,7 +199,7 @@
 		                        <div>
 		                        	<i></i>
 		                        	<ul>
-		                        		<li><a href="#">添加分组</a></li>
+		                        		<li class="open_mask"><a href="#">添加分组</a></li>
 		                        		<li><a href="#">删除分组</a></li>
 		                        		<li><a href="#">修改分组</a></li>
 		                        		<li><a href="#">添加职务</a></li>
@@ -228,6 +235,13 @@
                 </li>
             </ul>
         </div>
+        <div id="mask">
+					<div class="popup">
+						<div class="cloce_popup"><img src="img/close_popup_btn.png" alt=""></div>
+						<input type="text" class="add_groud_input" value="会领导">
+						<a href="#" class="add_groud_bnt">添加分组</a>
+					</div>
+				</div>
     </section>
 
 	<script src="js/zepto.js"></script>
@@ -258,6 +272,27 @@
         	if($(e.target).attr('class') != 'open_editor'){
         		$('.open_editor').next().css({display: 'none'})
         	}
+        })
+
+        $('.open_menu').on('click',function(e){
+					if($('.position_menu').css('display') == 'none'){
+						$('.position_menu').css({display: 'block'})
+					}else{
+						$('.position_menu').css({display: 'none'})
+					}
+				})
+
+				$('.section').on('click', function(e){
+					if(!$(e.target).attr('data-open')){
+						$('.position_menu').css({display: 'none'})
+					}
+				})
+
+        $('.open_mask').on('click', function(){
+        	$('#mask').css({display : 'block'})
+        })
+        $('.cloce_popup').on('click', function(){
+        	$('#mask').css({display : 'none'})
         })
     </script>
 <script>
