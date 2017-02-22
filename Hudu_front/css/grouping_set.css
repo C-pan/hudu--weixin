@@ -64,19 +64,19 @@ body {
 .section .list ul li.sortable-fallback .list-menu{
 	background: rgba(0,0,0,0.22);
 }
-.section .list ul li .list-menu>span:first-child {
+.section .list ul li .list-menu>div:first-child {
   float: left;
   font-size: .4rem;
 }
-.section .list ul li .list-menu>span:first-child img {
+.section .list ul li .list-menu>div:first-child img {
   width: .25rem;
 }
-.section .list ul li .list-menu>span:nth-child(2) {
+.section .list ul li .list-menu>div:nth-child(2) {
   float: right;
   font-size: .25rem;
   color: #f6ad3c;
 }
-.section .list ul li .list-menu>span:nth-child(2) img {
+.section .list ul li .list-menu>div:nth-child(2) img {
   width: .6rem;
   vertical-align: middle;
 }
@@ -101,15 +101,15 @@ body {
 .section .list ul li .list-submenu ul li.sortable-fallback{
 	background: rgba(0,0,0,0.06);
 }
-.section .list ul li .list-submenu ul li>span:first-child {
+.section .list ul li .list-submenu ul li>div:first-child {
   float: left;
   font-size: .36rem;
 }
-.section .list ul li .list-submenu ul li>span:last-child {
+.section .list ul li .list-submenu ul li>div:last-child {
   float: right;
   font-size: .25rem;
 }
-.section .list ul li .list-submenu ul li>span:last-child img {
+.section .list ul li .list-submenu ul li>div:last-child img {
   width: .6rem;
   vertical-align: middle;
 }
