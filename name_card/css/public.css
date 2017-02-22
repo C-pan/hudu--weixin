@@ -1,3 +1,6 @@
+body{
+  overflow: hidden;
+}
 #section {
   /*width: 7rem;*/
   height: 100%;
@@ -18,7 +21,7 @@
   background-size: 100% 100%;
   z-index: 10;
 
-  left: -100%;
+  left: -50%;
 }
 .section_main_content{
 	position: absolute;
@@ -33,7 +36,7 @@
   height: 0.72187477rem;
   box-sizing: border-box;
   z-index: 100;
-  left: -100%;
+  left: -50%;
 }
 .section_header ul {
   overflow: hidden;
@@ -143,7 +146,7 @@
   background: url('../img/se_background1.png') no-repeat center bottom;
   background-size: 100% 100%;
   z-index: 100;
-  right: -100%;
+  right: -50%;
 }
 .section_main .info {
   padding-left: .8rem;
@@ -175,7 +178,7 @@
   position: fixed;
   bottom: 1.04999967rem;
   z-index: 1000;
-  right: 100%;
+  right: 50%;
 }
 .recommended img {
   width: 0.60156231rem;
@@ -192,7 +195,7 @@
   opacity: 0;
   display: none;
   z-index: 1000;
-  right: -100%;
+  right: -50%;
 }
 #footer ul{
 	overflow: hidden;
