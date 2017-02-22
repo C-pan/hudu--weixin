@@ -50,7 +50,7 @@
 }
 .shanghui_list .top_content{
     box-sizing: border-box;
-    height: 1.1rem;
+    height: 1.3rem;
     padding-left: 0.14rem;
     position: relative;
     border-bottom: 1px solid #d8d7dc;
@@ -64,11 +64,11 @@
     height: 100%;
     float: left;
     box-sizing: border-box;
-    padding-left: 0.2rem;
+    padding-left: 0.15rem;
 }
 .left_img>img{
-    width: 0.78rem;
-    height: 0.78rem;
+    width: 0.9rem;
+    height: 0.9rem;
     display: block;
     border-radius: 50%;
     position: relative;
@@ -82,14 +82,14 @@
     overflow: hidden;
     width: auto;
     height: 100%;
-    height: 1.1rem;
-    padding-left: 0.3rem;
+    height: 1.3rem;
+    padding-left: 0.35rem;
     box-sizing: border-box;
 }
 .left_content .tit{
     box-sizing: border-box;
-    padding-top: 0.22rem;
-    font-size: 0.26rem;
+    padding-top: 0.3rem;
+    font-size: 0.30rem;
     color: #332c2b;
     font-weight: normal;
 }
@@ -99,7 +99,7 @@
     padding-left: 0.18rem;
     background: url(../img/address_ico.png) -0.02rem center no-repeat;
     background-size: 0.20rem 0.20rem;
-    font-size: 0.18rem;
+    font-size: 0.22rem;
     color: #a5a5a5;
 }
 .right_content{
@@ -108,24 +108,24 @@
     overflow: hidden;
     width: auto;
     height: 100%;
-    height: 1.1rem;
+    height: 1.3rem;
     padding-left: 0.26rem;
     box-sizing: border-box;
     text-align: center;
     padding-right: 0.25rem;
 }
 .right_content .certification{
-    margin-top: 0.16rem;
-    font-size: 0.24rem;
+    margin-top: 0.2rem;
+    font-size: 0.26rem;
     color: #feb800;
     padding-left: 0.28rem;
     background: url(../img/v_ico.png) left center no-repeat;
     background-size: 0.3rem 0.3rem;
 }
 .right_content .visiting_card{
-    padding:0.015rem;
+    padding:0.05rem;
     margin-top: 0.1rem;
-    font-size: 0.18rem;
+    font-size: 0.22rem;
     width: 1.1rem;
     color: #fff;
     background: #feb800;
@@ -133,33 +133,34 @@
 }
 .bottom_content{
     box-sizing: border-box;
-    height: 0.40rem;
+    height: 0.60rem;
     background: #fefefe;
     text-align: right;
     padding-right:0.40rem;
     color: #999999;
-    font-size: 0.12rem;
+    font-size: 0.24rem;
+    line-height: 0.50rem;
     padding-top:0.1rem;
 }
 .bottom_content>span{
-    padding-left: 0.26rem;
-    margin-left: 0.2rem;
+    padding-left: 0.40rem;
+    margin-left: 0.35rem;
 }
 .bottom_content .shanghui_address{
     background: url(../img/home_ico.png) left center no-repeat;
-    -webkit-background-size: 0.23rem;
-    background-size: 0.23rem;
+    -webkit-background-size: 0.35rem;
+    background-size: 0.35rem;
     
 }
 .bottom_content .member{
     background: url(../img/member_ico.png) left center no-repeat;
-    -webkit-background-size: 0.23rem;
-    background-size: 0.23rem;
+    -webkit-background-size: 0.35rem;
+    background-size: 0.35rem;
 }
 .bottom_content .watch{
     background: url(../img/watch_ico.png) left center no-repeat;
-    -webkit-background-size: 0.22rem;
-    background-size: 0.22rem;
+    -webkit-background-size: 0.35rem;
+    background-size: 0.35rem;
 }
     /*footer*/
 .my_activity_footer{
