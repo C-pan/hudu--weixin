@@ -39,23 +39,21 @@ body{
   width: 0.45rem;
   padding-left: 0.1rem;
   margin-top: .05rem;
-  overflow: hidden;
 }
 .card_case_header .add_contacts{
   float: left;
+  width: 8%;
   height: 0.8rem;
   text-align: center;
 }
 .card_case_header .add_contacts a{
   float: left;
-
   text-align: center;
+  width: 100%;
+  padding: .18rem .1rem;
 }
 .card_case_header .add_contacts img{
-  margin-top: .18rem;
-  margin-left: .17rem;
-  width: 0.45rem;
-  overflow: hidden;
+  width: .5rem;
 }
 
 .nav {
@@ -94,18 +92,24 @@ body{
 }
 .nav > ul > li .section-list > ul {
   overflow: hidden;
-  padding: .15rem .3rem .1rem;
+  padding: .11rem 0 .1rem .3rem;
   background: #fff;
   margin-bottom: .04rem;
 }
 .nav > ul > li .section-list > ul > li {
   float: left;
 }
+.nav > ul > li .section-list > ul > li:first-child {
+  width: 20%;
+}
 .nav > ul > li .section-list > ul > li:first-child>img{
-	width: 1.3rem;
+	width: 100%;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2){
+  width: 50%;
+  height: 1.1rem;
   padding: 0.15rem;
+  overflow: hidden;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child img {
   width: .2rem;
@@ -122,6 +126,7 @@ body{
   font-size: .15rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(3) {
+  width: 22%;
   float: right;
   padding: .42rem 0;
   margin-right: .2rem;
@@ -134,7 +139,7 @@ body{
   display: inline-block;
 }
 .nav > ul > li .section-list > ul > li:nth-child(3) a:first-child {
-  margin-right: .3rem;
+  margin-right: .1rem;
 }
 .nav-right {
   position: fixed;
