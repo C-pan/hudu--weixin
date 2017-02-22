@@ -1,0 +1,115 @@
+
+body {
+  background: #fff;
+  font-size: 0.3rem;
+}
+.entrance_pay_header {
+  padding: .25rem .45rem;
+  position: relative;
+  background: #f0f0f1;
+}
+.entrance_pay_header ul {
+  overflow: hidden;
+}
+.entrance_pay_header ul li {
+  float: left;
+}
+.entrance_pay_header ul li .shanghui_logo{
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.05rem;
+}
+.entrance_pay_header ul li:first-child {
+  margin-right: .15rem;
+}
+.entrance_pay_header ul li:last-child {
+  margin-top: .15rem;
+}
+.entrance_pay_header ul li:last-child span {
+  font-size: .3rem;
+}
+.entrance_pay_header ul li:last-child p {
+  margin-top: .05rem;
+  font-size: .22rem;
+  color: #939393;
+}
+.entrance_pay_header ul li:last-child p img {
+  width: .22rem;
+  margin-top: 0.1rem;
+}
+.entrance_pay_header > p {
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .26rem;
+  color: #ffa304;
+}
+.entrance_pay_header > p img {
+  width: .34rem;
+  vertical-align: top;
+}
+.entrance_pay_section{
+  width: 7rem;
+  margin: 0 auto;
+}
+.entrance_pay_section .apply_throudh_notify{
+  box-sizing: border-box;
+  width: 5.3rem;
+  border: 5px solid #f0f0f1;
+  margin: 1.6rem auto 0.8rem;
+  min-height: 0.8rem;
+  color: #332C2B;
+  font-size: 0.25rem; 
+  text-align: center;
+  padding: 0.35rem 0.2rem;
+  line-height: 0.38rem;
+}
+.entrance_pay_section .apply_throudh_notify p{
+  text-align: left;
+}
+.entrance_pay_section .pay_mon{
+  height: 1.8rem;
+  color: #FFA304;
+  font-size: 0.44rem;
+  text-align: center;
+  line-height: 1rem;  
+}
+.entrance_pay_section .apply_through_btn{
+  margin: 0rem auto 0.25rem;
+  width: 90%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-radius: 0.08rem;
+  background: #ffa304;
+  border:1px solid #ffa304;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.entrance_pay_section .apply_through_btn a{
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.32rem;
+  font-family: "微软雅黑";
+}
+.entrance_pay_section .del_posotion{
+  margin: 0.25rem auto;
+  width: 90%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-radius: 0.08rem;
+  text-align: center;
+  font-family: "微软雅黑";
+  background: transparent;
+  border:1px solid #ffa304;
+  color: #ffa304;
+}
+.entrance_pay_section .del_posotion a{
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  font-size: 0.32rem;
+  font-family: "微软雅黑";
+  color: #ffa304;
+}
