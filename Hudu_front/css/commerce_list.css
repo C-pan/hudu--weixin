@@ -263,8 +263,7 @@
     font-size: 0.28rem;
     /*color: #feb800;*/
     padding-left: 0.35rem;
-/*    background: url(../img/v_ico.png) left center no-repeat;*/
-    background-size: 0.32rem 0.32rem;
     background: url(../img/v_ico2.png) left center no-repeat;
+    background-size: 0.32rem 0.32rem;
     color: #c9caca
 }
