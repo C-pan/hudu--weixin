@@ -60,6 +60,7 @@ body {
   line-height: .56rem;
   background: #f3f2f3;
   position: relative;
+  border-bottom: 1px solid #ccc;
 }
 .section .list ul li.sortable-fallback .list-menu{
 	background: rgba(0,0,0,0.22);
