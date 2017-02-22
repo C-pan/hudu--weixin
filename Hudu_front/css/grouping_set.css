@@ -55,9 +55,6 @@ body {
   color: #b0b1b0;
   font-size: .2rem;
 }
-.section .list ul li{
-	transition: all 02s linear;
-}
 .section .list ul li .list-menu {
   padding: .2rem;
   line-height: .56rem;
