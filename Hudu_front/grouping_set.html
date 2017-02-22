@@ -224,10 +224,11 @@
                 $(tar).prev().prev().children('img').attr('src', 'img/nav.png')
             }
         })
-        
-        $('.list-menu i')[0].ontouchmove(function(){
-        	console.log(1)
-        })
+
+//        console.log($('.list-menu i'))
+//        $('.list-menu i')[0].ontouchmove(function(){
+//        	console.log(1)
+//        })
       function liNumPaixu(dom){
       	for(var i = 0; i < dom.length; i++){
       		$(dom[i]).find('span').html('0'+(i+1))
@@ -235,7 +236,7 @@
       }
       function paixu(ulEle, liEle){
 				new Sortable.create( $(ulEle)[0], {
-					handle: liEle,
+//					handle: liEle,
 					animation: 150,
 					preventOnFilter: true,
 					onEnd: function (evt){
