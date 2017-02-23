@@ -79,13 +79,16 @@ body {
   left: 0;
   top: 0;
   background: transparent;
-  width: 100%;
+  width: 96%;
+  padding-left: 80%;
+  
+
   /*float: right;*/
   font-size: 0.26rem;
   color: #231815;
   height: 0.95rem;
   line-height: 0.95rem;
-  margin-right: 0.3rem;
+  /*margin-right: 0.3rem;*/
   font-family: "微软雅黑";
   /*清除默认小箭头*/
 
