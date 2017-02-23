@@ -1,0 +1,265 @@
+ 
+/*内容区域*/
+.wrap_tow{
+    /*box-sizing: border-box;*/
+    width: 7rem;
+    margin: 0.25rem auto 0.94rem;
+    background: #f0f0f2;
+}
+.making_card{
+    height: 1.7rem;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    font-size: 0.26rem;
+}
+.making_card .add_card{
+
+    height: 1rem;
+    width: 1.2rem;
+    margin: auto;
+}
+.shanghui_list{
+    width: 100%;
+}
+.shanghui_list .top_content{
+    box-sizing: border-box;
+    height: 1.7rem;
+    padding-left: 0.14rem;
+    position: relative;
+    border-bottom: 1px solid #d8d7dc;
+    font-family: "微软雅黑";
+    background: #fff;
+    margin-top:0.1rem;
+}
+ 
+.left_img{
+    width: 0.95rem;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 0.2rem;
+}
+.left_img>img{
+    width: 0.95rem;
+    height: 0.95rem;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+}
+.left_content{
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.7rem;
+    padding-left: 0.3rem;
+    box-sizing: border-box;
+}
+.left_content .company{
+    box-sizing: border-box;
+    padding-top: 0.55rem;
+    font-size: 0.3rem;
+    color: #332c2b;
+    font-weight: normal;
+}
+.left_content .name{
+    box-sizing: border-box;
+    padding-top: 0.05rem;
+    background-size: 0.20rem 0.20rem;
+    font-size: 0.22rem;
+    color: #a5a5a5;
+}
+.right_content{
+    box-sizing: border-box;
+    float: right;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    height: 1.7rem;
+    padding-left: 0.26rem;
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: 0.25rem;
+}
+.right_content .certification{
+    margin-top: 0.40rem;
+    font-size: 0.28rem;
+    color: #b3b3b3;
+    padding-left: 0.35rem;
+    background: url(../img/v_ico2.png) left center no-repeat;
+    background-size: 0.3rem 0.3rem;
+}
+.authentication_success .right_content .certification{
+     
+    color: #acce22;
+    padding-left: 0.35rem;
+    background: url(../img/v_ico.png) left center no-repeat;
+    background-size: 0.3rem 0.3rem;
+}
+.right_content .visiting_card{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    margin-top: 0.25rem;
+    font-size: 0.18rem;
+    width: 1.2rem;
+    color: #fff;
+    background: #feb800;
+    border-radius: 0.04rem;
+}
+.bottom_content{
+    box-sizing: border-box;
+    height: 0.60rem;
+    background: #fefefe;
+    text-align: right;
+    /*padding-right:0.40rem;*/
+    color: #999999;
+    font-size: 0.15rem;
+    padding-top:0.1rem;
+}
+.bottom_content .edit_card,.bottom_content .preview_card{
+    float: left;
+    box-sizing: border-box;
+    margin-left: 0.3rem;
+    display: inline-block;
+    height: 0.4rem;
+    line-height: 0.45rem;
+    font-size: 0.18rem;
+    width: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background: #feb800;
+    border-radius: 0.04rem;
+}
+.bottom_content .edit_card a,.bottom_content .preview_card a{
+    color: #fff;
+}
+
+/*认证成功的按钮*/
+.authentication_success .bottom_content .edit_card,.authentication_success .bottom_content .preview_card{
+    float: left;
+    box-sizing: border-box;
+    margin-left: 0.3rem;
+    display: inline-block;
+    height: 0.4rem;
+    line-height: 0.45rem;
+    font-size: 0.18rem;
+    width: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background: #acce22;
+    border-radius: 0.04rem;
+}
+/**/
+.bottom_content>span{
+    padding-left: 0.26rem;
+    margin-right: 0.2rem;
+    line-height: 0.42rem;
+}
+.bottom_content .message{
+    padding-left: 0.40rem;
+    background: url(../img/msg_ico.png) left center no-repeat;
+    -webkit-background-size: 0.38rem;
+    background-size: 0.38rem;
+}
+.bottom_content .message>i{
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    padding: 0.03rem 0.1rem;
+    background:#f00;
+    border-radius: 0.2rem;
+}
+.bottom_content .member{
+    background: url(../img/member_ico.png) left center no-repeat;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem;
+}
+.bottom_content .watch{
+    background: url(../img/watch_ico.png) left center no-repeat;
+    -webkit-background-size: 0.22rem;
+    background-size: 0.22rem;
+}
+    /*footer*/
+.my_activity_footer{
+    border-top: 1px solid #bebebe;
+    height: 0.9rem;
+    background: #fff;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+.my_activity_btn{
+    display: block;
+    background: #f0f0f0;
+    width: 15%;
+    height: 0.9rem;
+    float: left;
+    text-align: center;
+    font-size: 0.18rem;
+}
+.my_activity_btn a{
+    height: 0.9rem;
+    width: 100%;
+    display: block;
+}
+.my_activity_btn .my_activity_icon{
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0.08rem auto 0.05rem;
+    background: url(../img/my_activity_ico.png) center no-repeat;
+    background-size: contain;
+}
+.my_activity_btn span{
+    padding-top: 0.08rem;
+    font-size: 0.16rem; 
+}
+.export_emall{
+    float: right;
+    width: 85%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    position: relative;
+    font-size: 0.28rem;
+    color: #fff;
+    text-align:center;
+    background: #ffa404;
+}
+.export_emall_content{
+    /*width: 0.4rem;*/
+}
+.export_emall>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+}
+.export_emall .export_emall_icon{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 0.40rem;
+    height: 0.40rem;
+    background:url(img/export_emall_icon.png) center  no-repeat;
+    background-size: contain;
+    margin-top: 0.25rem;
+    margin-left: 2.32rem;
+    margin-right: 0.07rem;
+    float: left;
+}
+.export_emall span{
+    display: inline-block;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+    margin-top: 0.31rem;
+    float: left;
+}
+
+
+ 
