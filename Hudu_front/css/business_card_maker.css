@@ -3,41 +3,35 @@ body {
   background: #fff;
   font-size: 0.3rem;
 }
-.add_member_header{
-	/*position: fixed;*/
-	width: 100%;
-	height: 0.75rem;
-}
-.add_member_header .add_member_nav{
-	width: 100%
-	height: 0.75rem;
-	color: #636363;
-}
-.add_member_header .add_member_nav li{
-	width: 50%;
-	float: left;
-}
-.add_member_header .add_member_nav li a{
-	width: 100%
-	height: 0.75rem;
-	line-height: 0.75rem;
-	background: #e6e6e6;
-	display: block;
-	text-align: center;
-}
-.add_member_header .add_member_nav li .active{
-	background: #ffa304;
-	color: #fff;
-}
+
 .position_dues_section{
   width: 7rem;
   margin: 0 auto;
 }
+.position_dues_section .upload_bg{
+  height: 0.95rem;
+  width: 100%;
+  background: #f0f0f1;
+  position: relative;
+  background:#f0f0f1 url(../img/uplod_bg.png) center center no-repeat;
+  background-size: 1.9rem 0.6rem;
+}
+.position_dues_section .authentication{
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .26rem;
+  color: #ffa304;
+}
+.position_dues_section .authentication img {
+  width: .34rem;
+  vertical-align: top;
+}
 .position_dues_section .position_dues_ipn_list li{
   position: relative;
   width: 100%;
-  height: 0.95rem;
-  line-height: 0.95rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   border-bottom: 1px solid #e3e3e3;
   color: #bbbbbd;
   font-size: 0.25rem;
@@ -68,8 +62,8 @@ body {
   float: right;
   font-size: 0.26rem;
   color: #231815;
-  height: 0.95rem;
-  line-height: 0.95rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   margin-right: 0.3rem;
   font-family: "微软雅黑";
   /*清除默认小箭头*/
@@ -94,8 +88,8 @@ body {
   float: right;
   font-size: 0.26rem;
   color: #231815;
-  height: 0.95rem;
-  line-height: 0.95rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   margin-right: 0.3rem;
   font-family: "微软雅黑";
   /*清除默认小箭头*/
@@ -114,15 +108,15 @@ body {
   float: right;
   font-size: 0.26rem;
   color: #231815;
-  height: 0.95rem;
-  line-height: 0.95rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   margin-right: 0.4rem;
   font-family: "微软雅黑";
 }
 .position_dues_section .position_dues_ipn_list .position_inp{
   width:4.5rem;
-  height: 0.95rem;
-  line-height: 0.95rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   border-bottom: 1px solid #e3e3e3;
   color: #bbbbbd;
   font-size: 0.25rem;
@@ -138,8 +132,8 @@ body {
 .position_dues_section .position_dues_btn{
   margin: 0.25rem auto;
   width: 90%;
-  height: 0.75rem;
-  line-height: 0.75rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
   border-radius: 0.08rem;
   background: #ffa304;
   border:1px solid #ffa304;
@@ -147,8 +141,8 @@ body {
   font-family: "微软雅黑";
 }
 .position_dues_section .position_dues_btn a{
-  height: 0.75rem;
-  line-height: 0.75rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
   text-align: center;
   color: #fff;
   font-size: 0.35rem;
@@ -170,5 +164,8 @@ body {
   height: .55rem;
   padding: .2rem 0;
   float: right;
+  /*margin-right: .3rem;*/
+}
+.position_dues_section #upload_img{
   margin-right: .3rem;
 }
