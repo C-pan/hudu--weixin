@@ -55,10 +55,7 @@ body {
   top: 0;
   background: transparent;
   width: 96%;
-  padding-left: 80%;
-
-
-
+  direction: rtl;
   float: right;
   font-size: 0.26rem;
   color: #231815;
@@ -84,7 +81,7 @@ body {
   top: 0;
   background: transparent;
   width: 96%;
-  padding-left: 88%;
+  direction: rtl;
   float: right;
   font-size: 0.26rem;
   color: #231815;

@@ -75,7 +75,7 @@ body {
   top: 0;
   background: transparent;
   width: 96%;
-  padding-left: 78%;
+  direction: rtl;
   line-height: 1rem;
   /*padding: 0.1rem .12rem;*/
   font-size: .3rem;
