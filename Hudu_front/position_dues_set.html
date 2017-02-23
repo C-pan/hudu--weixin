@@ -43,7 +43,7 @@
           <span>商会职务</span>
           <select name="" id="" class="position_select">
             <option value="">秘书长</option>
-            <option value="">秘书长</option>
+            <option value="">秘书秘书长秘书长长</option>
           </select>
         </li>
         <li>
@@ -74,5 +74,13 @@
       <div class="position_dues_btn del_posotion"><a href="">删除职位</a></div>
   </section>
   <script src="js/public.js"></script>
+  <script src="js/zepto.js"></script>
+  <script>
+    $('.position_dues_ipn_list li').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+    }).bind('touchend',function(){
+       $(this).css('background','transparent');
+    });
+  </script>
 </body>
 </html>

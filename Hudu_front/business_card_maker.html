@@ -2,21 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
-  <meta name="viewport" content="width=device-width,initial-scale=0.5, maximum-scale=0.6, user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>添加会员</title>
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/single_add_member.css">
+  <link rel="stylesheet" href="css/business_card_maker.css">
 </head>
 <body>
-  <header class="add_member_header">
-    <ul class="add_member_nav">
-      <li><a class="active"  href="">添加会员</a></li>
-      <li><a href="">批量添加</a></li>
-    </ul>
-  </header>
+ 
   
   <section class="position_dues_section">
+      <div class="upload_bg">
+        <div class="authentication">
+          <img src="img/shangbiao.png" alt="商标"/>已认证
+        </div>
+      </div>
       <ul class="position_dues_ipn_list">
         <li>
           <img src="img/association.jpg" class="position_ico" alt="">
@@ -24,11 +23,11 @@
         </li>
         <li>
           <img src="img/Business_Association.jpg" class="position_ico" alt="">
-          <span>性别</span>
-          <select name="" id="" class="position_select_sex">
-            <option value="">男</option>
-            <option value="">女</option>
-          </select>
+          <input class="position_inp" type="text" placeholder="单位名称">
+        </li>
+        <li>
+          <img src="img/Business_Association.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="选择行业">
         </li>
         <li>
           <img src="img/mailbox.jpg" class="position_ico" alt="">
@@ -39,31 +38,31 @@
           <input class="position_inp" type="text" placeholder="手机">
         </li>
         <li>
-          <img src="img/Contacts.jpg" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="单位名称">
+          <img src="img/email_ico.png" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="邮箱">
         </li>
         <li>
           <img src="img/address.jpg" class="position_ico" alt="">
           <input class="position_inp" type="text" placeholder="地址">
         </li>
-        <li>
-          <img src="img/position_dues_ico_02.png" class="position_ico" alt="">
-          <span>商会职务</span>
-          <select name="" id="" class="position_select">
-            <option value="">500/届</option>
-            <option value="">600/届大幅度发</option>
-          </select>
-        </li>
         <li class="position_dues_ipn_list_upload">
-          <img src="img/photo_cio.png" class="position_ico" alt="">
-          <span>证件上传</span>
+          <img src="img/touch_ico.png" class="position_ico" alt="">
+          <span>上传二维码</span>
           <img src="img/upload.jpg" id="upload_img" alt="上传"/>
           <input type="file" accept="image/*" id='upload_inp'>
           <i class="upload_img"></i>
         </li>
         <li>
-          <img src="img/position_dues_ico_03.png" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="简单描述为何加入我们商会">
+          <img src="img/Contacts.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="主营范围">
+        </li>
+        <li>
+          <img src="img/web_ico.png" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="填写产品推荐链接">
+        </li>
+        <li>
+          <img src="img/photo_cio.png" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="名片模板">
         </li>
       </ul>
       <div class="position_dues_btn">
@@ -108,13 +107,6 @@
         $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
       }
     })
-    // 弹出层
-    $('.agree_btn').on('click',function () {
-      $('#mask').css('display','none');
-    }); 
-    $('.read_agreement').on('click',function () {
-      $('#mask').css('display','block');
-    }); 
     // 
     $('.position_dues_ipn_list li').bind('touchstart',function () {
       $(this).css('background','rgba(200,200,200,0.6)');

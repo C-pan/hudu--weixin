@@ -53,6 +53,7 @@ body {
   padding: .23rem .14rem;
   border-bottom: 1px solid #e3e3e3;
   overflow: hidden;
+  position: relative;
 }
 .apply_join_section ul li input,
 .apply_join_section ul li label {
@@ -69,7 +70,14 @@ body {
   font-size: .3rem;
 }
 .apply_join_section ul li select{
-  padding: 0.1rem .12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  width: 96%;
+  direction: rtl;
+  line-height: 1rem;
+  /*padding: 0.1rem .12rem;*/
   font-size: .3rem;
   color: #231815;
   float: right;
