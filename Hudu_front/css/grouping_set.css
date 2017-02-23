@@ -62,9 +62,14 @@ body {
   position: relative;
   border-bottom: 1px solid #ccc;
 }
+
+.section .list ul li.sortable-ghost .list-menu{
+  opacity: 0;
+}
 .section .list ul li.sortable-fallback .list-menu{
 	background: rgba(0,0,0,0.22);
 }
+
 .section .list ul li .list-menu>div:first-child {
   float: left;
   font-size: .4rem;
@@ -107,8 +112,11 @@ body {
   color: #a3a3a3;
   position: relative;
 }
+.section .list ul li .list-submenu ul li.sortable-ghost{
+  opacity: 0;
+}
 .section .list ul li .list-submenu ul li.sortable-fallback{
-	background: rgba(0,0,0,0.06);
+  background: rgba(0,0,0,0.06);
 }
 .section .list ul li .list-submenu ul li>div:first-child {
   float: left;
