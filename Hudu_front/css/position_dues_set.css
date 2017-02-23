@@ -60,6 +60,7 @@ body {
   color: #bbbbbd;
   font-size: 0.25rem;
   font-family: "微软雅黑";
+  position: relative;
 }
 .position_dues_section .position_dues_ipn_list  .position_ico{
   float: left;
@@ -74,7 +75,12 @@ body {
   font-family: "微软雅黑";
 }
 .position_dues_section .position_dues_ipn_list .position_select{
-  float: right;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  /*float: right;*/
   font-size: 0.26rem;
   color: #231815;
   height: 0.95rem;
