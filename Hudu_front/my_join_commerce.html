@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>我加入的商会</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/my_join_commerce.css">
+</head>
+<body>
+   
+  
+  <section class="commerce_section">
+      <div class="add_commerce_box">
+        <a href="#" class="add_commerce_btn">
+          <img src="img/add_member_ico.png" alt="">
+          <span>申请加入商协会</span>
+        </a>
+      </div>
+      <div class="import_excel_tip">
+        如果你还没有加入任何商协会组织，请点上
+        面申请加入商协会，如果还没有创建微商协
+        会，那你可以马上创建你的商协会平台，实
+        现以商养会，以会促商！
+      </div>
+      <div class="position_dues_btn"><a href="">马上创建微商会</a></div>
+      <div class="position_dues_btn del_posotion"><a href="">通知秘书长开通</a></div>
+  </section>
+  <script src="js/public.js"></script>
+  <script src="js/zepto.js"></script>
+  <script>
+  $('.add_commerce_btn').on('touchstart',function () {
+    $(this).css('background','rgba(0,0,0,0.2)');
+  });
+  $('.add_commerce_btn').on('touchend',function () {
+    $(this).css('background','rgba(255,255,255,1)');
+  });
+  </script>
+</body>
+</html>

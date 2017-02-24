@@ -1,0 +1,73 @@
+
+body {
+  font-size: 0.3rem;
+}
+
+.commerce_section{
+  width: 7rem;
+  margin: 0 auto;
+  background: rgb(240,240,242);
+}
+.commerce_section .add_commerce_box{
+  width: 100%;
+  height: 1.75rem;
+  background: #fff;
+  margin-top: 0.25rem;
+  text-align: center;
+}
+.commerce_section .add_commerce_box .add_commerce_btn{
+  display: block;
+  width: 100%;
+  height: 1.75rem;
+  margin: 0 auto;
+}
+.commerce_section .add_commerce_box .add_commerce_btn img{
+  width: 0.55rem;
+  height: 0.55rem;
+  margin: 0 auto;
+  display: block;
+  padding-top: 0.45rem;
+}
+.commerce_section .add_commerce_box .add_commerce_btn>span{
+  width: 4rem;
+  height: 0.51rem;
+  font-size: 0.28rem;
+  display: block;
+  margin: 0 auto;
+}
+.commerce_section .import_excel_tip{
+  margin: 0.75rem auto 1.5rem;
+  padding:0.4rem;
+  width: 5.2rem;
+  font-size: 0.28rem;
+  color: #999999;
+  border: 2px dashed #999999;
+}
+.commerce_section .position_dues_btn{
+  margin: 0.25rem auto;
+  width: 90%;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 0.08rem;
+  background: #ffa304;
+  border:1px solid #ffa304;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.commerce_section .position_dues_btn a{
+  height: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.35rem;
+  font-family: "微软雅黑";
+
+}
+.commerce_section .del_posotion{
+   background: transparent;
+  border:1px solid #ffa304;
+  color: #ffa304;
+}
+.commerce_section .del_posotion a{
+  color: #ffa304;
+}
