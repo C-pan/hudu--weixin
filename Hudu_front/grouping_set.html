@@ -240,19 +240,19 @@
 					animation: 150,
 					preventOnFilter: true,
 					onEnd: function (evt){
-      			console.log(evt.target)
 						var liList = $(evt.target).children('li')
 						liNumPaixu(liList)
-						//console.log(evt.oldIndex)
-			      // var oldBgcolor = $(evt.target).css('background')
-			      // var start = oldBgcolor.indexOf('rgb') + 5
-			      // var end = oldBgcolor.indexOf(')') + 1
-			      // newBgcolor = oldBgcolor.slice(start, end)
-			      // var arr = newBgcolor.split(',')
-			      // var r = arr[1] + 10
-			     	// var g = arr[2] + 10
-			     	// var b = arr[3] + 10
-			      // $(evt.target).css({background: 'rgb('+r+','+g+','+b+')'})
+                        $.ajax({
+                            type:'get',
+                            url:'index.json',
+                            success:function(data){
+                                console.log("ajax success:"+data);
+                            },
+                            error:function(data){
+                                console.log(+data);
+                            }
+                        })
+
 			    }
 				});
 	    }
