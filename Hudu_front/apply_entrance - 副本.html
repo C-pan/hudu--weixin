@@ -2,22 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>名片制作</title>
+	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
+  <meta name="viewport" content="width=device-width,initial-scale=0.5, maximum-scale=0.6, user-scalable=no" />
+  <title>申请入会</title>
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/business_card_maker.css">
+  <link rel="stylesheet" href="css/apply_entrance.css">
 </head>
 <body>
+  <header class="position_dues_header">
+    <ul>
+      <li>
+        <img src="img/shanghui_1.png" class="shanghui_logo" alt="logo"/>
+      </li>
+      <li>
+        <span>江门市电白商会</span>
+        <p>
+          <img src="img/address_ico.png" alt="商标"/>
+          广东省江门市
+        </p>
+      </li>
+    </ul>
+    <p>
+      <img src="img/shangbiao.png" alt="商标"/>
+      已认证
+    </p>
+  </header>
   <section class="position_dues_section">
-      <div class="upload_bg_box">
-        <div class="upload_bg">
-          <img src="img/uplod_bg.png" alt="" id="upload_bg_img">
-          <input type="file" accept="img/*" id='upload_bg_inp'>
-        </div>
-        <div class="authentication">
-          <img src="img/shangbiao.png" alt="商标"/>已认证
-        </div>
-      </div>
       <ul class="position_dues_ipn_list">
         <li>
           <img src="img/association.jpg" class="position_ico" alt="">
@@ -25,11 +35,11 @@
         </li>
         <li>
           <img src="img/Business_Association.jpg" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="单位名称">
-        </li>
-        <li>
-          <img src="img/Business_Association.jpg" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="选择行业">
+          <span>性别</span>
+          <select name="" id="" class="position_select_sex">
+            <option value="">男</option>
+            <option value="">地方女</option>
+          </select>
         </li>
         <li>
           <img src="img/mailbox.jpg" class="position_ico" alt="">
@@ -40,30 +50,31 @@
           <input class="position_inp" type="text" placeholder="手机">
         </li>
         <li>
-          <img src="img/email_ico.png" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="邮箱">
+          <img src="img/Contacts.jpg" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="单位名称">
         </li>
         <li>
           <img src="img/address.jpg" class="position_ico" alt="">
           <input class="position_inp" type="text" placeholder="地址">
         </li>
+        <li>
+          <img src="img/position_dues_ico_02.png" class="position_ico" alt="">
+          <span>商会职务</span>
+          <select name="" id="" class="position_select">
+            <option value="">500/届</option>
+            <option value="">600/届</option>
+          </select>
+        </li>
         <li class="position_dues_ipn_list_upload">
-          <img src="img/touch_ico.png" class="position_ico" alt="">
-          <span>上传二维码</span>
+          <img src="img/photo_cio.png" class="position_ico" alt="">
+          <span>证件上传</span>
           <img src="img/upload.jpg" id="upload_img" alt="上传"/>
           <input type="file" accept="image/*" id='upload_inp'>
+          <i class="upload_img"></i>
         </li>
         <li>
-          <img src="img/Contacts.jpg" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="主营范围">
-        </li>
-        <li>
-          <img src="img/web_ico.png" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="填写产品推荐链接">
-        </li>
-        <li>
-          <img src="img/photo_cio.png" class="position_ico" alt="">
-          <input class="position_inp" type="text" placeholder="名片模板">
+          <img src="img/position_dues_ico_03.png" class="position_ico" alt="">
+          <input class="position_inp" type="text" placeholder="简单描述为何加入我们商会">
         </li>
       </ul>
       <div class="position_dues_btn">
@@ -100,7 +111,7 @@
       }
       reader.readAsDataURL(target.files[0])
     })
-    // 单选框背景效果
+
     $('.agree').on('click', function(){
       if( !$('#agree')[0].checked ){
         $('.agree_img').attr({src: 'img/select.png', alt: '已选中'})
@@ -108,46 +119,18 @@
         $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
       }
     })
-
-
-    // 触摸焦点效果
+    // 弹出层
+    $('.agree_btn').on('click',function () {
+      $('#mask').css('display','none');
+    }); 
+    $('.read_agreement').on('click',function () {
+      $('#mask').css('display','block');
+    }); 
+    // 
     $('.position_dues_ipn_list li').bind('touchstart',function () {
       $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
        $(this).css('background','transparent');
     });
-    $('.upload_bg_box').bind('touchstart',function () {
-      $(this).css('background','rgba(200,200,200,0.6)');
-    }).bind('touchend',function(){
-       $(this).css('background','#f0f0f1');
-    });
-
-    
-    // 上传背景图   .upload_bg_box  .upload_bg  #upload_bg_inp   #upload_bg_img           cs  #upldp
-     $('#upload_bg_img').on('click',function(){
-      console.log("bg")
-      $('#upload_bg_inp').click()
-    })
-    $('#upload_bg_inp').on('change',function(e){
-      var target = e.target
-      var reg = /(\.jpg|\.png|\.jpeg)$/ig
-      if(!/image\/\w+/.test(target.files[0].type)){  
-        alert("这个需要图片！");  
-        return false;  
-      } 
-      if(!reg.test(target.value)){
-        alert('请选择JPG或者PNG格式的图片！')
-        return
-      }
-      if (target.files[0]) {
-        var reader = new FileReader()
-        reader.onload = function(e){
-          var img = e.target.result
-          var imgURL = target.files[0]
-          $('#upload_bg_img').attr('src', img)
-        }
-      }
-      reader.readAsDataURL(target.files[0])
-    })
   </script>
 </html>
