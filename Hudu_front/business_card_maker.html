@@ -11,9 +11,13 @@
  
   
   <section class="position_dues_section">
-      <div class="upload_bg">
+      <div class="upload_bg_box">
+        <div class="upload_bg">
+          <img src="img/uplod_bg.png" alt="" id="upload_mp_bg">
+          <input type="file" accept="img/*" id='upload_bg_inp'>
+        </div>
         <div class="authentication">
-          <!-- <input type="file" accept="image/*" id='upload_inp'>   -->
+         
           <img src="img/shangbiao.png" alt="商标"/>已认证
         </div>
       </div>
@@ -99,7 +103,7 @@
       }
       reader.readAsDataURL(target.files[0])
     })
-
+    // 单选框背景效果
     $('.agree').on('click', function(){
       if( !$('#agree')[0].checked ){
         $('.agree_img').attr({src: 'img/select.png', alt: '已选中'})
@@ -107,14 +111,18 @@
         $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
       }
     })
-    // 
+    // 触摸焦点效果
     $('.position_dues_ipn_list li').bind('touchstart',function () {
       $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
        $(this).css('background','transparent');
     });
-    $('.upload_bg').on('click',function () {
-      alert();
+    $('.upload_bg_box').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+    }).bind('touchend',function(){
+       $(this).css('background','#f0f0f1');
     });
+    // 上传背景图
+
   </script>
 </html>

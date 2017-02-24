@@ -8,13 +8,29 @@ body {
   width: 7rem;
   margin: 0 auto;
 }
-.position_dues_section .upload_bg{
+.position_dues_section .upload_bg_box{
   height: 0.95rem;
   width: 100%;
   background: #f0f0f1;
   position: relative;
-  background:#f0f0f1 url(../img/uplod_bg.png) center center no-repeat;
+  /*background:#f0f0f1 url(../img/uplod_bg.png) center center no-repeat;*/
   background-size: 1.9rem 0.6rem;
+}
+.position_dues_section .upload_box_bg{
+  height: 0.95rem;
+  width: 100%;
+  background: #f0f0f1;
+  position: relative;
+}
+.position_dues_section #upload_bg_inp{
+  display: none;
+}
+.position_dues_section .upload_bg_box .upload_bg img{
+  position: relative;
+  top: 0.25rem;
+  left: 24%;
+  height: 0.6rem;
+  width: 1.9rem;
 }
 .position_dues_section .authentication{
   position: absolute;
