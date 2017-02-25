@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/card_case.css">
 </head>
 <body>
+	<div class="show_box">
+		
+	</div>
 	<header class="card_case_header" id="anchor_search">
 		<div class="search_from">
 			<div class="input_box">
@@ -29,7 +32,7 @@
 					<img src="img/nav.png" alt="导航图标">
 					<span>江门市电白商会</span>
 					<span class="nav-spanlist">（200）</span>
-					<i data-open=false data-num="1"></i>
+					<i data-open=false data-num="1" class="open_i"></i>
 				</div>
 				<div class="section">
 					<div class="section-list">
@@ -219,7 +222,7 @@
 					<img src="img/nav.png" alt="导航图标">
 					<span>个人名录</span>
 					<span class="nav-spanlist">（200）</span>
-					<i data-open=false data-num="2"></i>
+					<i data-open=false data-num="2" class="open_i"></i>
 				</div>
 				<div class="section">
 					<div class="section-list">
@@ -306,7 +309,7 @@
 				<div class="nav-title">
 					<img src="img/nav.png" alt="导航图标">
 					<span>商务名录</span>
-					<i data-open=false data-num="3"></i>
+					<i data-open=false data-num="3" class="open_i"></i>
 				</div>
 				<div class="section">
 					<div class="section-list">
@@ -425,14 +428,14 @@
 
 
 	<script src="js/zepto.js"></script>
+	<script src="js/touch.js"></script>
+	<script src="js/fx.js"></script>
 	<script src="js/public.js"></script>
-	<script src="js/hammer.min.js"></script>
 	<script>
 
-				$('.nav ul li').on('click', function(e){
+				$('.open_i').on('click', function(e){
 					var tar = $(e.target)
 					$('#nav-right-ul').attr('data-anchor', tar.attr('data-num'))
-					console.log($('#nav-right-ul').attr('data-anchor'))
 					if(tar.attr('data-open') == 'false'){
 						tar.attr('data-open', true)
 						tar.siblings('img').attr('src', 'img/nav_xuanzhong.png')
@@ -446,47 +449,93 @@
 					}
 				})
 
-				$('#nav-right-ul li').on('click',function(e){
-					console.log($('#nav-right-ul').attr('data-anchor'))
+				$.fn.scrollTo =function(options){
+	        var defaults = {
+	            toT : 0,    //滚动目标位置
+	            durTime : 500,  //过渡动画时间
+	            delay : 30,     //定时器时间
+	            callback:null   //回调函数
+	        };
+	        var opts = $.extend(defaults,options),
+	            timer = null,
+	            _this = this,
+	            curTop = _this.scrollTop(),//滚动条当前的位置
+	            subTop = opts.toT - curTop,    //滚动条目标位置和当前位置的差值
+	            index = 0,
+	            dur = Math.round(opts.durTime / opts.delay),
+	            smoothScroll = function(t){
+	                index++;
+	                var per = Math.round(subTop/dur);
+	                if(index >= dur){
+	                    _this.scrollTop(t);
+	                    window.clearInterval(timer);
+	                    if(opts.callback && typeof opts.callback == 'function'){
+	                        opts.callback();
+	                    }
+	                    return;
+	                }else{
+	                    _this.scrollTop(curTop + index*per);
+	                }
+	            };
+	        timer = window.setInterval(function(){
+	            smoothScroll(opts.toT);
+	        }, opts.delay);
+	        return _this;
+		    };
+
+
+		    var clickStr = ''
+				$('#nav-right-ul li').on('click', function(e){
+					$(e.target).addClass('active').siblings('.active').removeClass('active')
 					var num = $('#nav-right-ul').attr('data-anchor')
-					console.log($('#nav-right-ul'))
-					if( num != 0){
+					var showBox = $('.show_box')
+					var navRight = $('.nav-right')
+
+					if( num != 0 && clickStr != e.target.innerHTML){
+						clickStr = e.target.innerHTML
 						var mTop = 0
 						var tar = e.target
 						if(tar.nodeName == "IMG"){
 							tar = tar.parentNode
 						}
+
 						if( $(tar).attr('data-anchor') ){
 							mTop = $('#anchor_search')[0].offsetTop
-							console.log(mTop)
+							showBox.html('<img src="img/search_btn.png" alt="弹框出现搜索">')
 						}else{
 							var idStr = tar.innerHTML
-							mTop = $('#anchor_'+idStr+num)
-							console.log(mTop)
+							showBox.html(idStr)
+							mTop = $('#anchor_'+idStr+num)[0].offsetTop
 						}
+
+						showBox.fadeIn();
+						navRight.css('background','rgba(145,145,145,0.6)');
+						$("body").scrollTop(mTop)
+						// $("body").scrollTo({toT: mTop});
 					}
 				})
 
-//				$('#nav-right-ul li').onclick = function(){
-//					console.log(33)
-//					var num = $('#nav-right-ul').attr('data-anchor')
-//					console.log($('#nav-right-ul'))
-//					if( num != 0){
-//						var mTop = 0
-//						var tar = e.target
-//						if(tar.nodeName == "IMG"){
-//							tar = tar.parentNode
-//						}
-//						if( $(tar).attr('data-anchor') ){
-//							mTop = $('#anchor_search')[0].offsetTop
-//							console.log(mTop)
-//						}else{
-//							var idStr = tar.innerHTML
-//							mTop = $('#anchor_'+idStr+num)
-//							console.log(mTop)
-//						}
-//					}
-//				}
+				$(".nav-right").on({
+					touchmove: function(event){
+						event.preventDefault()
+						$('.nav-right').addClass('hover')
+					  var a = document.elementFromPoint(event.touches[0].clientX,event.touches[0].clientY);
+					  if(a.nodeName == 'IMG'){
+					  	a = a.parentNode
+					  }
+					  a.click()
+				  },
+				  touchend: function(event){
+						event.preventDefault()
+						$('.nav-right').removeClass('hover').find('.active').removeClass('active')
+						var showBox = $('.show_box')
+						var navRight = $('.nav-right')
+						setTimeout(function(){
+		          navRight.css('background','rgba(145,145,145,0)');
+		          showBox.fadeOut();
+		        },200);
+				  }
+				});
 
 	</script>
 </body>
