@@ -486,12 +486,12 @@
 
 		    var clickStr = ''
 				$('#nav-right-ul li').on('click', function(e){
-					$(e.target).addClass('active').siblings('.active').removeClass('active')
 					var num = $('#nav-right-ul').attr('data-anchor')
 					var showBox = $('.show_box')
 					var navRight = $('.nav-right')
 
 					if( num != 0 && clickStr != e.target.innerHTML){
+						$(e.target).addClass('active').siblings('.active').removeClass('active')
 						clickStr = e.target.innerHTML
 						var mTop = 0
 						var tar = e.target
