@@ -149,8 +149,12 @@ body{
   z-index: 10000;
   font-size: .22rem;
 }
-.nav-right-ul li:first-child a img{
-  width: .33rem;
-  position: relative;
-  right: .07rem;
+#nav-right-ul li{
+  width: .4rem;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+}
+#nav-right-ul li img{
+  width: .3rem;
 }
