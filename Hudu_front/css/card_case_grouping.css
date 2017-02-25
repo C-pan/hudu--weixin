@@ -51,7 +51,7 @@ body{
   float: left;
   text-align: center;
   width: 100%;
-  padding: .18rem .1rem;
+  padding: .2rem .1rem;
 }
 .card_case_header .add_contacts img{
   width: .5rem;
@@ -81,7 +81,11 @@ body{
   vertical-align: top;
 }
 .nav > ul > li .nav-title .nav-spanlist {
+  float: right;
   color: #ccc;
+}
+.nav > ul > li .nav-title .nav-spanlist img{
+  width: .2rem;
 }
 .nav > ul > li .section {
   display: none;
@@ -190,4 +194,44 @@ body{
 .show_box img{
 	width: 78%;
   margin-top: .2rem;
+}
+
+/* µ×²¿ footer */
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+}
+.footer ul{
+  height: 100%;
+}
+.footer ul li{
+  height: 100%;
+  float: left;
+  padding: .1rem 0;
+  text-align: center;
+  color: #fff;
+}
+.footer ul li a{
+  color: #fff;
+}
+.footer ul li:first-child{
+  width: 30%;
+  background: #bbbbbd;
+}
+.footer ul li:last-child{
+  width: 70%;
+  background: #f49e00;
+}
+.footer ul li img{
+  width: .5rem;
+}
+.footer ul li span{
+  display: block;
+  text-align: center;
+}
+.footer ul li:first-child span{
+  margin-top: -.1rem;
 }
