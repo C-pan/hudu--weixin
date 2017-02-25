@@ -123,9 +123,6 @@ body{
   color: #ccc;
   font-size: .23rem;
 }
-.nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(3) {
-  font-size: .15rem;
-}
 .nav > ul > li .section-list > ul > li:nth-child(3) {
   width: 22%;
   float: right;
