@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>我的资料</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/my_info.css">
+</head>
+<body>
+   
+  <section class="my_info_section">
+      <div class="my_photo_box">
+      	<a href="#">
+	        <span class="my_photo_name">头像</span>
+	        <img src="img/my_photo.png" class="my_photo" alt="">
+        </a>
+      </div>
+      <ul class="my_info_list">
+        <li>
+          <a href="#">
+	          <span class="left_tit">名字</span>
+	          <span class="right_cntent">吴易奇</span>
+          </a>
+        </li>
+        <li>
+          <span class="left_tit">狐度号</span>
+          <span class="right_cntent">hudu13213</span>
+        </li>
+        <li>
+          <span class="left_tit">我的二维码</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+        <li>
+          <span class="left_tit">手机</span>
+          <span   id="bind_phone">绑定</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+      </ul>
+      <ul class="my_info_list">
+        <li>
+          <span class="left_tit">性别</span>
+          <span class="right_cntent">男</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+        <li>
+          <span class="left_tit">地区</span>
+          <span class="right_cntent">广东江门</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+        <li>
+          <span class="left_tit">个性签名</span>
+          <span class="right_cntent">个性签名个性签名</span>
+        </li>
+      </ul>
+      <ul class="my_info_list">
+        <li>
+          <span class="left_tit">我感兴趣的行业</span>
+          
+          <span class="right_cntent">广东江门</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+        <li>
+          <span class="left_tit">可见权限</span>
+          <span class="right_cntent">全部人可见</span>
+          <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </li>
+      </ul>
+  </section>
+  <script src="js/public.js"></script>
+  <script src="js/zepto.js"></script>
+  <script>
+  	$('.my_info_list li,.my_photo_box').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+    }).bind('touchend',function(){
+       $(this).css('background','#fff');
+    });
+  </script>
+</body>
+</html>
