@@ -468,17 +468,28 @@
 	<script src="js/public.js"></script>
 	<script>
 		$('.section-list-main ul li a').on('touchstart', function(e){
-			$(e.target).parents('a').addClass('active')
+			$(e.target).parents('a').animate({background: 'rgba(153, 153, 153, 0.5)'})
 		}).on('touchend', function(e){
-			$(e.target).parents('a').removeClass('active')
+			$(e.target).parents('a').animate({background: 'rgb(255, 255, 255)'})
 		})
 
 				$('.section-list-main ul').on('touchstart', function(e){
 					if(e.target.nodeName != 'A' && e.target.parentNode.nodeName != 'A'){
-						$(e.target).parents('.section-list-main ul').addClass('active')
+						$(e.target).parents('.section-list-main>ul').animate({
+							background: 'rgba(153, 153, 153, 0.5)'
+						})
+						$(e.target).parents('.section-list-main>ul').find('span,li').animate({
+							color: '#3d4145'
+						})
 					}
 				}).on('touchend', function(e){
-					$(e.target).parents('.section-list-main ul').removeClass('active')
+					$(e.target).parents('.section-list-main>ul').animate({
+						background: 'rgb(255, 255, 255)',
+						color: ''
+					})
+					$(e.target).parents('.section-list-main>ul').find('span,li').animate({
+						color: ''
+					})
 				})
 
 				$('.open_i').on('click', function(e){

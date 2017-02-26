@@ -149,10 +149,10 @@ body{
   right: -50%;
 }
 .section_main .info {
-  padding-left: .8rem;
+  padding-left: .5rem;
   color: #ff8b23;
   box-sizing: border-box;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.3rem;
 }
 .section_main .info .phone a{

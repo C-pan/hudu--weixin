@@ -117,6 +117,13 @@ body{
 
 .section{
   margin-top: 0.9rem;
+
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 .section .section-list p {
   padding-left: .2rem;
@@ -130,18 +137,6 @@ body{
   border-bottom: 1px solid #ccc;
   position: relative;
 
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-}
-.section .section-list > div > ul.active{
-  background: #908b88;
-}
-.section .section-list > div > ul.active{
-  background: #908b88;
 }
 .section .section-list > div > ul > li {
   float: left;
@@ -151,9 +146,6 @@ body{
 }
 .section .section-list > div > ul > li:first-child>img{
   width: 100%;
-}
-.section .section-list > div > ul.active > li:first-child>img{
-  opacity: .5;
 }
 .section .section-list > div > ul > li:nth-child(2){
   width: 51%;
@@ -189,9 +181,6 @@ body{
 .section .section-list > div > ul > li:nth-child(3) a {
   display: inline-block;
   padding: .1rem;
-}
-.section .section-list > div > ul > li:nth-child(3) a.active {
-  background: #5b524d;
 }
 /* µ×²¿ footer */
 .footer{
@@ -231,8 +220,4 @@ body{
 }
 .footer ul li:first-child span{
   margin-top: -.1rem;
-}
-
-.active{
-  background: #908b88;
 }
