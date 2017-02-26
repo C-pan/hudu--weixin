@@ -1,7 +1,7 @@
 
 body {
   background: #fff;
-  font-size: 0.3rem;
+  font-size: 28px;
 }
 .add_member_header{
 	/*position: fixed;*/
@@ -40,7 +40,7 @@ body {
   line-height: 0.95rem;
   border-bottom: 1px solid #e3e3e3;
   color: #bbbbbd;
-  font-size: 0.25rem;
+  font-size: 28px;
   font-family: "微软雅黑";
 }
 .position_dues_section .position_dues_ipn_list  .position_ico{
@@ -54,6 +54,7 @@ body {
 .position_dues_section .position_dues_ipn_list  span{
   float: left;
   font-family: "微软雅黑";
+  color: #332a29;
 }
 .position_dues_section .position_dues_ipn_list .position_select{
   position: absolute;
@@ -63,7 +64,7 @@ body {
   width: 96%;
   direction: rtl;
   float: right;
-  font-size: 0.26rem;
+  font-size: 28px;
   color: #231815;
   height: 0.95rem;
   line-height: 0.95rem;
@@ -89,7 +90,7 @@ body {
   width: 96%;
   direction: rtl;
   float: right;
-  font-size: 0.26rem;
+  font-size: 28px;
   color: #231815;
   height: 0.95rem;
   line-height: 0.95rem;
@@ -109,7 +110,7 @@ body {
 }
 .position_dues_section .position_dues_ipn_list .position_mon{
   float: right;
-  font-size: 0.26rem;
+  font-size: 28px;
   color: #231815;
   height: 0.95rem;
   line-height: 0.95rem;
@@ -121,8 +122,8 @@ body {
   height: 0.95rem;
   line-height: 0.95rem;
   border-bottom: 1px solid #e3e3e3;
-  color: #bbbbbd;
-  font-size: 0.25rem;
+  color: #332a29;
+  font-size: 28px;
   font-family: "微软雅黑";
 }
 .position_dues_section .position_dues_ipn_list  .position_ico{
@@ -148,7 +149,7 @@ body {
   line-height: 0.75rem;
   text-align: center;
   color: #fff;
-  font-size: 0.35rem;
+  font-size: 28px;
   font-family: "微软雅黑";
 }
 .position_dues_section .del_posotion{

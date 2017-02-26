@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>会员审核-未付费</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/paid.css">
+</head>
+<body>
+<!-- 主内容 -->
+	<header class="unpaid_header">
+		<ul>
+			<li>
+				<img src="img/shanghui_1.png" class="shanghui_logo" alt="logo"/>
+			</li>
+			<li>
+				<span>江门市电白商会</span>
+				<p>
+					<img src="img/address_ico.png" alt="商标"/>
+					广东省江门市
+				</p>
+			</li>
+		</ul>
+		<p>
+			<img src="img/shangbiao.png" alt="商标"/>
+			已认证
+		</p>
+	</header>
+	<section class="unpaid_section">
+			<nav class="nav">
+						<ul class="clearfix">
+								<li>
+									<a href="#">未审核</a>
+								</li>
+								<li >
+									<a href="#">
+										<label for="">
+											未付款
+										</label>
+									</a>
+									<i></i>
+								</li>
+								<li class="active">
+									<a href="#"><input type="checkbox" class="all_check"  />已付款</a>
+								</li>
+						</ul>
+				</nav>
+
+				<ul class="my_info_list">
+					<li>
+						<a href="#">
+							<input type="checkbox" class="myCheck" />
+							<span class="left_tit">吴先森</span>
+							<span class="right_cntent">常务秘书长500/届</span>
+							<span class="right_ico"><img src="img/next_level.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<input type="checkbox" class="myCheck" />
+							<span class="left_tit">吴先森</span>
+							<span class="right_cntent">常务秘书长500/届</span>
+							<span class="right_ico"><img src="img/next_level.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<input type="checkbox" class="myCheck" />
+							<span class="left_tit">吴先森</span>
+							<span class="right_cntent">常务秘书长500/届</span>
+							<span class="right_ico"><img src="img/next_level.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<input type="checkbox" class="myCheck" />
+							<span class="left_tit">吴先森</span>
+							<span class="right_cntent">常务秘书长500/届</span>
+							<span class="right_ico"><img src="img/next_level.png" alt=""></span>
+						</a>
+					</li>
+			</ul>
+			<div class="bind_admin_btn_box">
+					<span class="bind_btn">设为未付	</span>
+					<a href="" class="cancel_bind_btn">删除</a>
+			</div>
+	</section>
+	<script src="js/public.js"></script>
+</body>
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+ 		// 点击效果
+		$('.my_info_list li').bind('touchstart',function () {
+			$(this).css('background','rgba(200,200,200,0.6)');
+		}).bind('touchend',function(){
+			 $(this).css('background','transparent');
+		});
+		// 复选框
+		$(document).ready(function(){
+        $(".my_info_list input").each(function(){ //1. 用each遍列所有的input   
+            
+            $('.my_info_list li').click(function(){       //2. 判断给每个input事件click绑定方法
+
+                if( $(this).find('.myCheck').is(':checked')){
+                   $(this).find('.myCheck').addClass('myCheck_checked');
+                }else{
+                    $(this).find('.myCheck').removeClass('myCheck_checked');
+                }
+            });
+        });
+        $('.nav ul>.active').click(function(){       //2. 判断给每个input事件click绑定方法
+
+                if( $(this).find('.all_check').is(':checked')){
+                   $(this).find('.all_check').addClass('all_check_checked');
+                   $('.my_info_list').find('.myCheck').addClass('myCheck_checked');
+                    $('.my_info_list').find('.myCheck').attr('checked',true);
+                }else{
+                    $(this).find('.all_check').removeClass('all_check_checked');
+
+                    $('.my_info_list').find('.myCheck').removeClass('myCheck_checked');
+                    $('.my_info_list').find('.myCheck').attr('checked',false);
+                }
+            });
+    });
+	</script>
+</html>

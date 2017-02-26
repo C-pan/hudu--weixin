@@ -1,0 +1,319 @@
+
+body {
+  background: #fff;
+  font-size: 0.3rem;
+  font-family: "微软雅黑";
+}
+.unpaid_header {
+  padding: .25rem .45rem;
+  position: relative;
+  background: #f0f0f1;
+}
+.unpaid_header ul {
+  overflow: hidden;
+}
+.unpaid_header ul li {
+  float: left;
+}
+.unpaid_header ul li .shanghui_logo{
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.05rem;
+}
+.unpaid_header ul li:first-child {
+  margin-right: .15rem;
+}
+.unpaid_header ul li:last-child {
+  margin-top: .18rem;
+}
+.unpaid_header ul li:last-child span {
+  font-size: .3rem;
+  color: #332a29;
+}
+.unpaid_header ul li:last-child p {
+  margin-top: .04rem;
+  font-size: .26rem;
+  color: #332a29;
+}
+.unpaid_header ul li:last-child p img {
+  width: .22rem;
+  margin-top: 0.1rem;
+}
+.unpaid_header > p {
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .26rem;
+  color: #ffa304;
+}
+.unpaid_header > p img {
+  width: .34rem;
+  vertical-align: top;
+}
+.unpaid_section{
+  box-sizing: border-box;
+  width: 7rem;
+  margin: 0 auto;
+  padding-bottom: 0.3rem;
+  background: #fff;
+}
+
+.nav {
+  margin-top: 0.03rem;
+  width: 100%;
+}
+.nav ul {
+  margin-left: -1px;
+  width: 100%;
+  border:1px solid #cacacc;
+}
+.nav ul li {
+  box-sizing: border-box;
+  float: left;
+  width: 33.333%;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  border-left:1px solid #cacacc;
+}
+.nav ul li a {
+  font-size: 0.28rem;
+  color: #757475;
+}
+.nav ul li{
+  background: #ececef;
+}
+.nav ul>.active {
+  background: #ffa304;
+  position: relative;
+}
+.nav ul>.active a{
+  color:#fff;
+}
+.nav ul>.active i {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: .2rem solid #ffa304;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 98%;
+  left: 40%;
+}
+.nav p {
+  padding: .22rem 0;
+  text-align: center;
+  color: #b0b1b0;
+  font-size: .2rem;
+}
+
+
+.unpaid_section .my_info_list{
+  margin-bottom:0.25rem;
+  background: #fff;
+}
+.unpaid_section .my_info_list li{
+  position: relative;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 0.28rem;
+  font-family: "微软雅黑";
+}
+.unpaid_section .my_info_list li .left_tit{
+  float: left;
+  padding-left: 0.3rem;
+  font-size: 0.28rem;
+  color: #332C2B;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-family: "微软雅黑";
+}
+.unpaid_section .my_info_list li .right_cntent{
+  position: absolute;
+  top: 0;
+  right: 0.6rem;
+  font-size: 0.28rem;
+  color: #B6B6B7;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-family: "微软雅黑";
+}
+.unpaid_section .my_info_list li #bind_phone{
+  position: absolute;
+  top: 0.15rem;
+  right: 0.6rem;
+  color: #ffa304;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0 0.16rem;
+  border:1px solid #ffa304;
+  border-radius:0.06rem;
+}
+.unpaid_section .my_info_list li .right_ico img{
+ position: absolute;
+  top: 0;
+  right: 0.25rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  padding-top: 0.2rem;
+}
+
+.bind_admin_btn_box{
+    height: 0.6rem;
+    text-align: center;
+    font-size: 0.28rem;
+    margin-top: 1.3rem;
+}
+
+.bind_admin_btn_box a,.bind_admin_btn_box span{
+    border: 2px solid #ffa304;
+    border-radius: 0.08rem;
+    display: inline-block;
+    height:0.56rem;
+    line-height: 0.56rem;
+    width: 2.1rem;
+}
+ .bind_admin_btn_box .cancel_bind_btn{
+    color: #ffa304;
+    background: #fff;
+    margin-right: .3rem;
+}
+.bind_admin_btn_box .bind_btn{
+    color: #fff;
+    background: #ffa304;
+}
+
+.bind_admin_btn_box_popup{
+    height: 0.6rem;
+    text-align: center;
+    font-size: 0.28rem;
+    margin-top: .8rem;
+}
+.bind_admin_btn_box_popup a,.bind_admin_btn_box_popup span{
+    border: 2px solid #ffa304;
+    border-radius: 0.08rem;
+    display: inline-block;
+    height:0.56rem;
+    line-height: 0.56rem;
+    width: 2.1rem;
+}
+ .bind_admin_btn_box_popup .cancel_bind_btn{
+    color: #ffa304;
+    background: #fff;
+    margin-right: .3rem;
+}
+.bind_admin_btn_box_popup .bind_btn{
+    color: #fff;
+    background: #ffa304;
+}
+
+.myCheck{
+  float: left;
+  margin-top: 0.26rem;
+  margin-left: 0.15rem;
+  border: 1px solid #ffa304;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: #fff;
+}
+.myCheck_checked{
+  float: left;
+  margin-top: 0.26rem;
+  margin-left: 0.15rem;
+  border: 0;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../img/all_cheekbox_ico.png);
+  background-size: 0.3rem;;
+}
+.all_check{
+  float: left;
+  margin-top: 0.16rem;
+  margin-left: 0.15rem;
+  border: 1px solid #fff;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: #ffa304;
+}
+.all_check_checked{
+  float: left;
+  margin-top: 0.16rem;
+  margin-left: 0.15rem;
+  border: 0;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../img/all_cheekbox_ico2.png);
+  background-size: 0.3rem;;
+}
+
+
+
+/*遮罩层*/
+ #bind_amdin_mask{
+    position: fixed;
+    background: rgba(0,0,0,0.76);
+    height: 100%;
+    width: 100%;
+    z-index: 1200;
+    display: none;
+ }
+  #bind_amdin_mask .popup{
+    box-sizing: border-box;
+    width: 5.9rem;
+    background: #fff;
+    position: absolute;
+    top: 28%;
+    margin-left: -2.95rem;
+    left: 50%;
+    z-index: 1300;
+    padding: 0.5rem 0.3rem 0.2rem 0.3rem;
+ }
+.notice_info{
+  padding:0.3rem 0.2rem;
+  margin-top:0.4rem;
+  border:2px dashed #c7caca;
+  font-size: 0.2rem;
+}
+.mon{
+  color: #ff6200;
+  padding: 0.4rem 0;
+  text-align: center;
+  font-size: 0.3rem;
+}
+#bind_amdin_mask .user_rights{
+    font-size: 0.22rem;
+    color:#3c3635;
+    text-align: center;
+}
+#bind_amdin_mask .user_rights label{
+    font-size: .22rem;
+}
+#bind_amdin_mask .user_rights label input{
+    display: none;
+}
+#bind_amdin_mask .user_rights label img{
+  width: 0.25rem;
+  height: 0.25rem;
+    vertical-align: text-bottom;
+}
+#bind_amdin_mask .user_rights label:first-child{
+    margin-right: .5rem;
+}
+#bind_amdin_mask .user_rights input{
+  cursor: pointer;
+}
+ 
+#bind_amdin_mask .bind_admin_btn_box .cancel_bind_btn{
+    color: #ffa304;
+    background: #fff;
+    margin-right: .4rem;
+}
+#bind_amdin_mask .bind_admin_btn_box .bind_btn{
+    color: #fff;
+    background: #ffa304;
+    /*margin:0rem 0.12rem;*/
+}
