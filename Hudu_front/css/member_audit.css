@@ -1,0 +1,229 @@
+
+body {
+  background: #fff;
+  font-size: 0.3rem;
+}
+.member_audit_header {
+  padding: .25rem .45rem;
+  position: relative;
+  background: #f0f0f1;
+}
+.member_audit_header ul {
+  overflow: hidden;
+}
+.member_audit_header ul li {
+  float: left;
+}
+.member_audit_header ul li .shanghui_logo{
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.05rem;
+}
+.member_audit_header ul li:first-child {
+  margin-right: .15rem;
+}
+.member_audit_header ul li:last-child {
+  margin-top: .18rem;
+}
+.member_audit_header ul li:last-child span {
+  font-size: .3rem;
+  color: #332a29;
+}
+.member_audit_header ul li:last-child p {
+  margin-top: .04rem;
+  font-size: .26rem;
+  color: #332a29;
+}
+.member_audit_header ul li:last-child p img {
+  width: .22rem;
+  margin-top: 0.1rem;
+}
+.member_audit_header > p {
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .26rem;
+  color: #ffa304;
+}
+.member_audit_header > p img {
+  width: .34rem;
+  vertical-align: top;
+}
+.member_audit_section{
+  box-sizing: border-box;
+  width: 7rem;
+  margin: 0 auto;
+  padding-bottom: 0.3rem;
+  background: #fff;
+}
+.member_audit_section .position_dues_ipn_list li{
+  position: relative;
+  width: 100%;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  border-bottom: 1px solid #e3e3e3;
+  color: #bbbbbd;
+  font-size: 0.25rem;
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_ipn_list  .position_ico{
+  float: left;
+  margin-top:0.36rem;
+  padding:0 0.2rem;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+.member_audit_section .position_dues_ipn_list  span{
+  float: left;
+  /*color: #332a29;*/
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_ipn_list .position_select{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  width: 96%;
+  direction: rtl;
+  float: right;
+  font-size: 0.26rem;
+  color: #231815;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  margin-right: 0.3rem;
+  font-family: "微软雅黑";
+  /*清除默认小箭头*/
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 0.26rem;
+  background: url(../img/list_dow.png) right center no-repeat;
+  -webkit-background-size: 0.24rem;
+  background-size: 0.24rem;
+}
+.member_audit_section .position_dues_ipn_list .position_select_sex{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  width: 96%;
+  direction: rtl;
+  float: right;
+  font-size: 0.26rem;
+  color: #231815;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  margin-right: 0.3rem;
+  font-family: "微软雅黑";
+  /*清除默认小箭头*/
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 0.26rem;
+  background: url(../img/list_dow.png) right center no-repeat;
+  -webkit-background-size: 0.24rem;
+  background-size: 0.24rem;
+}
+.member_audit_section .position_dues_ipn_list .position_mon{
+  float: right;
+  font-size: 0.26rem;
+  color: #231815;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  margin-right: 0.4rem;
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_ipn_list .position_inp{
+  width:4.5rem;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  border-bottom: 1px solid #e3e3e3;
+  color: #332a29;
+  font-size: 0.25rem;
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_ipn_list .position_inp_describe{
+  box-sizing: border-box;
+  width:100%;
+  height: 0.95rem;
+  line-height: 0.95rem;
+  border-bottom: 1px solid #e3e3e3;
+  color: #332a29;
+  font-size: 0.25rem;
+  padding-left: 0.25rem;
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_ipn_list  .position_ico{
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  text-align: center;
+ 
+}
+.member_audit_section .position_dues_btn{
+  margin: 0.25rem auto;
+  width: 90%;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 0.08rem;
+  background: #ffa304;
+  border:1px solid #ffa304;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.member_audit_section .position_dues_btn a{
+  height: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.35rem;
+  font-family: "微软雅黑";
+}
+.member_audit_section .del_posotion{
+  background: transparent;
+  border:1px solid #ffa304;
+  color: #ffa304;
+}
+.member_audit_section .del_posotion a{
+  color: #ffa304;
+}
+.member_audit_section .position_dues_ipn_list_upload input{
+  display: none;
+}
+.member_audit_section .position_dues_ipn_list_upload img{
+  width: .55rem;
+  height: .55rem;
+  padding: .2rem 0;
+  float: right;
+  margin-right: .3rem;
+}
+.bind_admin_btn_box{
+    height: 0.6rem;
+    text-align: center;
+    font-size: 0.28rem;
+    margin-top: .4rem;
+}
+.bind_admin_btn_box a{
+    border: 2px solid #ffa304;
+    border-radius: 0.08rem;
+    display: inline-block;
+    height:0.56rem;
+    line-height: 0.56rem;
+    width: 2.1rem;
+}
+ .bind_admin_btn_box .cancel_bind_btn{
+    color: #ffa304;
+    background: #fff;
+    margin-right: .3rem;
+}
+.bind_admin_btn_box .bind_btn{
+    color: #fff;
+    background: #ffa304;
+    /*margin:0rem 0.12rem;*/
+}
