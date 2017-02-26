@@ -129,6 +129,13 @@ body{
   background: #fff;
   border-bottom: 1px solid #ccc;
   position: relative;
+
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 .section .section-list > div > ul.active{
   background: #908b88;
@@ -145,6 +152,9 @@ body{
 .section .section-list > div > ul > li:first-child>img{
   width: 100%;
 }
+.section .section-list > div > ul.active > li:first-child>img{
+  opacity: .5;
+}
 .section .section-list > div > ul > li:nth-child(2){
   width: 51%;
   padding: 0 0.15rem;
@@ -160,11 +170,11 @@ body{
 }
 .section .section-list > div > ul > li:nth-child(2) ul li:first-child span:last-child {
   color: #bbbbbd;
-  font-size: .28rem;
+  font-size: .25rem;
 }
 .section .section-list > div > ul > li:nth-child(2) ul li:nth-child(2) {
   color: #ccc;
-  font-size: .28rem;
+  font-size: .25rem;
 }
 .section .section-list > div > ul > li:nth-child(3) {
   width: 25%;
@@ -180,7 +190,7 @@ body{
   display: inline-block;
   padding: .1rem;
 }
-.section .section-list > div > ul.active > li:nth-child(3) a {
+.section .section-list > div > ul > li:nth-child(3) a.active {
   background: #5b524d;
 }
 /* µ×²¿ footer */
