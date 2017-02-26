@@ -94,8 +94,10 @@ body{
   overflow: hidden;
   padding: .11rem 0 .1rem .3rem;
   background: #fff;
-  margin-bottom: .04rem;
-  border-bottom: .1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.nav > ul > li .section-list > ul.active {
+  background: #908b88;
 }
 .nav > ul > li .section-list > ul > li {
   float: left;
@@ -107,7 +109,7 @@ body{
 	width: 100%;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2){
-  width: 53%;
+  width: 51%;
   padding: 0 0.15rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child{
@@ -115,11 +117,12 @@ body{
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child img {
   width: .25rem;
-}.nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child span:first-child {
+}
+.nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child span:first-child {
    font-size: .4rem;
  }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:first-child span:last-child {
-  color: #fd7e29;
+  color: #bbbbbd;
   font-size: .28rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(2) ul li:nth-child(2) {
@@ -127,20 +130,21 @@ body{
   font-size: .28rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(3) {
-  width: 22%;
+  width: 25%;
   float: right;
-  padding: .3rem 0;
+  padding: .2rem 0;
   margin-right: .2rem;
 }
 .nav > ul > li .section-list > ul > li:nth-child(3) img {
-  width: .5rem;
+  height: .45rem;
   vertical-align: middle;
 }
 .nav > ul > li .section-list > ul > li:nth-child(3) a {
   display: inline-block;
+  padding: .1rem;
 }
-.nav > ul > li .section-list > ul > li:nth-child(3) a:first-child {
-  margin-right: .1rem;
+.nav > ul > li .section-list > ul.active > li:nth-child(3) a {
+  background: #5b524d;
 }
 .nav-right {
   position: fixed;
