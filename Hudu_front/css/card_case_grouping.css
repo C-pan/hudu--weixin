@@ -1,12 +1,15 @@
 body{
   font-size: 0.28rem;
-  overflow: scroll;
 }
 /* ÁÄÌì header*/
 .card_case_header {
-  height: 0.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: .9rem;
   width: 100%;
   background: #f0f0f2;
+  z-index: 10000;
 }
 .card_case_header .search_from{
   width: 95%;
@@ -60,7 +63,7 @@ body{
 .nav {
   width: 7rem;
   margin: 0 auto;
-  margin-top: .1rem;
+  padding: 1rem 0;
 
   -webkit-touch-callout:none;
   -webkit-user-select:none;
@@ -68,6 +71,7 @@ body{
   -moz-user-select:none;
   -ms-user-select:none;
   user-select:none;
+  -o-user-select:none;
 }
 .nav > ul > li .nav-title {
   position: relative;
@@ -103,6 +107,8 @@ body{
   background: #fff;
   border-bottom: 1px solid #ccc;
 
+  -webkit-tap-highlight-color: rgba(255, 0 , 0, 0);
+  text-decoration: none;
 }
 .nav > ul > li .section-list > ul > li {
   float: left;

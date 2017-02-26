@@ -61,7 +61,7 @@ body{
 
 .banner {
   text-align: center;
-  margin-top: 1.1rem;
+  margin-top: .5rem;
 }
 .banner > img,.section_header_logo img{
   width: 2rem;
@@ -149,7 +149,7 @@ body{
   right: -50%;
 }
 .section_main .info {
-  padding-left: .5rem;
+  padding-left: .7rem;
   color: #ff8b23;
   box-sizing: border-box;
   margin-top: 0.5rem;
@@ -176,13 +176,14 @@ body{
 }
 .recommended {
   position: fixed;
-  bottom: 1.04999967rem;
+  bottom: 1.8rem;
+  width: 0.6rem;
+  height: 3.23749899rem;
   z-index: 1000;
   right: 50%;
 }
 .recommended img {
-  width: 0.60156231rem;
-  height: 3.23749899rem;
+  width: 100%;
 }
 #footer {
   position: fixed;

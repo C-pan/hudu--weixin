@@ -15,13 +15,14 @@ document.onreadystatechange = PageLoaded;
 //当页面加载完成后执行 loading动画
 var deg_num = 0,isTransform = true
 function PageLoaded() {
-	var timer3 = setInterval(function(){
+	var timer2 = setInterval(function(){
 		deg_num += 1
 		if(deg_num >= 36){
 			deg_num = 0
 		}
-		if(isTransform){
-			document.getElementById('loading').style.transform = 'rotate('+deg_num*-10+'deg)'
+		document.getElementById('loading').style.transform = 'rotate('+deg_num*-10+'deg)'
+		if(!isTransform){
+			clearInterval(timer2)
 		}
 	},50)
 
@@ -31,7 +32,6 @@ function PageLoaded() {
 
 		var num1 = 0
 		var timer1 = setInterval(function(){
-
 			document.getElementById('bg').style.opacity = 1 - num1/10
 			num1 += 1
 			if(num1 >= 10){
@@ -47,6 +47,26 @@ function PageLoaded() {
 				$('.section_header_logo img').css({opacity: 1,transform: 'translate(0,0)'})
 				$('.banner_li1 > img').css({opacity: 1,transform: 'translate(0,0)'})
 				$('#section').css({opacity: 1})
+
+				var num3 = 1
+				var timer3 = setInterval(function(){
+					if( num3 % 2 != 0){
+						$('.recommended').css({width: '0.72rem'})
+					}else{
+						$('.recommended').css({width: '0.6rem'})
+					}
+					if( (++num3) >4 ){
+						$('.recommended').css({bottom: '1.5rem'})
+						clearInterval(timer3)
+						//var num4 = 1
+						//setInterval(function(){
+						//	$('.recommended img').attr({src: img/})
+						//	if( (++ num4) >=5){
+						//		num4 = 1
+						//	}
+						//},500)
+					}
+				},500)
 			}
 		},100)
 	}

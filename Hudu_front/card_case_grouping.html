@@ -405,28 +405,36 @@
 	<script src="js/public.js"></script>
 	<script>
 		$('.section-list ul li a').on('touchstart', function(e){
-			$(e.target).parents('a').animate({background: 'rgba(153, 153, 153, 0.5)'})
+			$(e.target).parents('a').animate({background: 'rgba(153, 153, 153, 0.5)'},100)
 		}).on('touchend', function(e){
-			$(e.target).parents('a').animate({background: 'rgb(255, 255, 255)'})
+			$(e.target).parents('a').animate({background: ''},100)
 		})
 		$('.section-list ul').on('touchstart', function(e){
 			if(e.target.nodeName != 'A' && e.target.parentNode.nodeName != 'A'){
 				$(e.target).parents('.section-list>ul').animate({
 					background: 'rgba(153, 153, 153, 0.5)'
-				})
+				},200)
 				$(e.target).parents('.section-list>ul').find('span,li').animate({
 					color: '#3d4145'
-				})
+				},100)
 			}
 		}).on('touchend', function(e){
 			$(e.target).parents('.section-list>ul').animate({
-				background: 'rgb(255, 255, 255)',
-				color: ''
-			})
+				background: 'rgb(255, 255, 255)'
+			},200)
 			$(e.target).parents('.section-list>ul').find('span,li').animate({
 				color: ''
-			})
+			},100)
+		}).on('touchmove', function(e){
+			$(e.target).parents('.section-list>ul').animate({
+				background: 'rgb(255, 255, 255)'
+			},200)
+			$(e.target).parents('.section-list>ul').find('span,li').animate({
+				color: ''
+			},100)
 		})
+
+
 
 		$('.open_i').on('click', function(e){
 					var tar = $(e.target)

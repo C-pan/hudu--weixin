@@ -54,12 +54,12 @@
 						</li>
 						<li></li>
 					</ul>
-					<ul onclick=window.location="#a">
+					<ul>
 						<li>
 							<img src="img/shanghui_1.png" alt="用户头像">
 						</li>
 						<li>
-							<ul>
+							<ul ontouchstart = "return false;">
 								<li>
 									<span class="section-list-name">吴易奇</span>
 									<img src="img/shangbiao.png" alt="验证">
@@ -78,7 +78,7 @@
 						</li>
 						<li></li>
 					</ul>
-					<ul onclick=window.location="#a">
+					<ul>
 						<li>
 							<img src="img/shanghui_1.png" alt="用户头像">
 						</li>
@@ -460,37 +460,43 @@
 		</ul>
 	</div>
 
-
-
 	<script src="js/zepto.js"></script>
 	<script src="js/touch.js"></script>
 	<script src="js/fx.js"></script>
 	<script src="js/public.js"></script>
 	<script>
 		$('.section-list-main ul li a').on('touchstart', function(e){
-			$(e.target).parents('a').animate({background: 'rgba(153, 153, 153, 0.5)'})
+			$(e.target).animate({background: 'rgba(153, 153, 153, 0.5)'},100)
 		}).on('touchend', function(e){
-			$(e.target).parents('a').animate({background: 'rgb(255, 255, 255)'})
+			$(e.target).animate({background: ''},100)
 		})
 
-				$('.section-list-main ul').on('touchstart', function(e){
-					if(e.target.nodeName != 'A' && e.target.parentNode.nodeName != 'A'){
-						$(e.target).parents('.section-list-main>ul').animate({
-							background: 'rgba(153, 153, 153, 0.5)'
-						})
-						$(e.target).parents('.section-list-main>ul').find('span,li').animate({
-							color: '#3d4145'
-						})
-					}
-				}).on('touchend', function(e){
-					$(e.target).parents('.section-list-main>ul').animate({
-						background: 'rgb(255, 255, 255)',
-						color: ''
-					})
-					$(e.target).parents('.section-list-main>ul').find('span,li').animate({
-						color: ''
-					})
-				})
+
+		$('.section-list-main ul').on('touchmove', function(e){
+			$(e.target).parents('.section-list-main>ul').animate({
+				background: 'rgb(255, 255, 255)'
+			},200)
+			$(e.target).parents('.section-list-main>ul').find('span,li').animate({
+				color: ''
+			},100)
+		}).on('touchstart', function(e){
+			if(e.target.nodeName != 'A' && e.target.parentNode.nodeName != 'A'){
+				$(e.target).parents('.section-list-main>ul').animate({
+					background: 'rgba(153, 153, 153, 0.5)'
+				},200)
+				$(e.target).parents('.section-list-main>ul').find('span,li').animate({
+					color: '#3d4145'
+				},100)
+			}
+		}).on('touchend', function(e){
+			$(e.target).parents('.section-list-main>ul').animate({
+				background: 'rgb(255, 255, 255)'
+			},200)
+			$(e.target).parents('.section-list-main>ul').find('span,li').animate({
+				color: ''
+			},100)
+		})
+
 
 				$('.open_i').on('click', function(e){
 					var tar = $(e.target)
