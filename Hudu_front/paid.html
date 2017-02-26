@@ -5,38 +5,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title>会员审核-未付费</title>
 	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/unpaid.css">
+	<link rel="stylesheet" href="css/paid.css">
 </head>
 <body>
-
-<!-- 弹出层 -->
-<div id="bind_amdin_mask">
-    <div class="popup">
-         <form action="" method="get"> 
-            
-            <div class="notice_info">
-				你申请加入江门市电白商会，提交的意向职位已通过审核，请你直接微信支付会费或者联系商会秘书线下支付会费！
-            </div>
-            <div class="mon">会员：500/届</div>
-            <div class="user_rights">
-                <label>
-                    <img src="img/radiot_noselect.png" alt="未选中" class="user_rights_close"/>
-                    <input name="" type="radio" value="" class="user_rights_input"/>
-                    <span class="user_rights_close">微信支付</span>
-                </label> 
-                <label>
-                    <img src="img/radiot_select.png" alt="未选中" class="user_rights_close"/>
-                    <input name="" type="radio" value="" class="user_rights_input"/>
-                    <span class="user_rights_close">线下支付</span>
-                </label>
-            </div>
-            <div class="bind_admin_btn_box_popup">
-                <a href="" class="cancel_bind_btn">取消</a>
-                <a href="#" class="bind_btn">通知他</a>
-            </div>
-        </form> 
-    </div>
-</div>
 <!-- 主内容 -->
 	<header class="unpaid_header">
 		<ul>
@@ -62,16 +33,16 @@
 								<li>
 									<a href="#">未审核</a>
 								</li>
-								<li class="active">
+								<li >
 									<a href="#">
 										<label for="">
-											<input type="checkbox" class="all_check"  />未付款
+											未付款
 										</label>
 									</a>
 									<i></i>
 								</li>
-								<li>
-									<a href="#">已付款</a>
+								<li class="active">
+									<a href="#"><input type="checkbox" class="all_check"  />已付款</a>
 								</li>
 						</ul>
 				</nav>
@@ -110,13 +81,8 @@
 						</a>
 					</li>
 			</ul>
-
-
-
-
-
 			<div class="bind_admin_btn_box">
-					<span class="bind_btn">催收付费</span>
+					<span class="bind_btn">设为未付	</span>
 					<a href="" class="cancel_bind_btn">删除</a>
 			</div>
 	</section>
@@ -131,27 +97,6 @@
 		}).bind('touchend',function(){
 			 $(this).css('background','transparent');
 		});
-
-
-		// 弹出层选择框
-		 $('.user_rights_close').on('click',function(e){
-            var dom = e.target
-            var checked = $(dom).siblings('.user_rights_input')[0].checked
-            if( !checked ){
-                if( dom.nodeName == 'SPAN' ){
-                    $(dom).addClass('active').siblings('img').attr('src', 'img/radiot_select.png')
-                }else if( dom.nodeName == 'IMG'){
-                    $(dom).attr('src', 'img/radiot_select.png').siblings('span').addClass('active')
-                }
-                $(dom).parent('label').siblings().children('img').attr('src', 'img/radiot_noselect.png')
-                $(dom).parent('label').siblings().children('span').removeClass('active')
-            }
-        })
-		 // 弹出层
-		 $('.bind_btn').on('click',function () {
-		 	$('#bind_amdin_mask').css('display','block')
-		 })
-
 		// 复选框
 		$(document).ready(function(){
         $(".my_info_list input").each(function(){ //1. 用each遍列所有的input   
@@ -164,8 +109,6 @@
                     $(this).find('.myCheck').removeClass('myCheck_checked');
                 }
             });
-
-
         });
         $('.nav ul>.active').click(function(){       //2. 判断给每个input事件click绑定方法
 
