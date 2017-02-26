@@ -65,7 +65,7 @@ body{
 .nav > ul > li .nav-title {
   position: relative;
   padding: .3rem;
-  border-bottom: .1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background: #fff;
 }
 .nav > ul > li .nav-title > i {
