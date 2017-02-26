@@ -203,7 +203,7 @@ body {
   width: 0.28rem;
   height: 0.28rem;
   background: url(../img/all_cheekbox_ico.png);
-  background-size: 0.28rem;;
+  background-size: 0.3rem;;
 }
 .all_check{
   float: left;
@@ -214,8 +214,16 @@ body {
   height: 0.28rem;
   background: #ffa304;
 }
-
-
+.all_check_checked{
+  float: left;
+  margin-top: 0.16rem;
+  margin-left: 0.15rem;
+  border: 0;
+  width: 0.28rem;
+  height: 0.28rem;
+  background: url(../img/all_cheekbox_ico2.png);
+  background-size: 0.3rem;;
+}
 
 
 

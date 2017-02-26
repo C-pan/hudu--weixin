@@ -152,33 +152,7 @@
 		 	$('#bind_amdin_mask').css('display','block')
 		 })
 
-		 //全选复选框
-		  
-		// $('.my_info_list li').click(function(){
-		// 	if ($(this).find('.myCheck').attr("checked",false)) {
-		// 		// alert("是选中");
-		// 		$(this).find('.myCheck').css({"background":"url(img/all_cheekbox_ico.png)","border":"0","backgroundSize":"0.30rem",});
-		// 	}
-		// 	else{
-		// 		$(this).find('.myCheck').css({"background":"#fff)","border":"0",});
-		// 		alert("没选中");
-		// 	}
-		// });
- 		
-
- 	// 	$(".myCheck").click(function(){
-		//     $("input[type=checkbox]").each(function(){   
-		//     if(this.checked){   
-		//         	checked = false;   
-		//         $(this).css('backgroundColor','#ffffff');
-		//     }else{   
-		//         this.checked = true;   
-		//         $(this).css('backgroundColor','#f00');
-		//      }
-		//     });
-		// });
-		// 
-		// 
+		// 复选框
 		$(document).ready(function(){
         $(".my_info_list input").each(function(){ //1. 用each遍列所有的input   
             
@@ -189,9 +163,23 @@
                 }else{
                     $(this).find('.myCheck').removeClass('myCheck_checked');
                 }
-                 // alert("没选中");
             });
+
+
         });
+        $('.nav ul>.active').click(function(){       //2. 判断给每个input事件click绑定方法
+
+                if( $(this).find('.all_check').is(':checked')){
+                   $(this).find('.all_check').addClass('all_check_checked');
+                   $('.my_info_list').find('.myCheck').addClass('myCheck_checked');
+                    $('.my_info_list').find('.myCheck').attr('checked',true);
+                }else{
+                    $(this).find('.all_check').removeClass('all_check_checked');
+
+                    $('.my_info_list').find('.myCheck').removeClass('myCheck_checked');
+                    $('.my_info_list').find('.myCheck').attr('checked',false);
+                }
+            });
     });
 	</script>
 </html>
