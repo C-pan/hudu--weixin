@@ -58,13 +58,13 @@ function PageLoaded() {
 					if( (++num3) >4 ){
 						$('.recommended').css({bottom: '1.5rem'})
 						clearInterval(timer3)
-						//var num4 = 1
-						//setInterval(function(){
-						//	$('.recommended img').attr({src: img/})
-						//	if( (++ num4) >=5){
-						//		num4 = 1
-						//	}
-						//},500)
+						var num4 = 1
+						setInterval(function(){
+							$('.recommended img').attr({src: 'img/recommended'+ num4 + '.png' })
+							if( (++ num4) >=8){
+								num4 = 1
+							}
+						},1000)
 					}
 				},500)
 			}
