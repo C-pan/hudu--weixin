@@ -217,6 +217,8 @@ body {
   margin-left: 0.15rem;
   border: 1px solid #ffa304;
   border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   width: 0.28rem;
   height: 0.28rem;
   background: #fff;
@@ -227,6 +229,8 @@ body {
   margin-left: 0.15rem;
   border: 0;
   border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   width: 0.28rem;
   height: 0.28rem;
   background: url(../img/all_cheekbox_ico.png);
@@ -237,6 +241,9 @@ body {
   margin-top: 0.16rem;
   margin-left: 0.15rem;
   border: 1px solid #fff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   width: 0.28rem;
   height: 0.28rem;
   background: #ffa304;
@@ -246,6 +253,9 @@ body {
   margin-top: 0.16rem;
   margin-left: 0.15rem;
   border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   width: 0.28rem;
   height: 0.28rem;
   background: url(../img/all_cheekbox_ico2.png);
