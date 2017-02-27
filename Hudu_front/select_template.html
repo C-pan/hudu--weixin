@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>狐度通-聊天</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/select_template.css" />
+	<!-- Demo styles -->
+</head>
+<body>
+	<header class="header">
+		<div>
+			<span class="upload_img">上传</span>
+			<input type="file" accept="image/*" id='upload_inp'>
+			<b></b>
+			<span>素材库</span>
+		</div>
+		<span>滑动右边选择名片模板</span>
+	</header>
+	<section class="section">
+		<img src="img/select_template1.png" alt="已选中"/>
+	</section>
+
+	<ul class="template">
+		<li>
+			<img src="img/select_template1.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template2.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template3.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template1.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template2.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template3.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template1.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template2.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template3.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template1.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template2.png" alt="待选"/>
+		</li>
+		<li>
+			<img src="img/select_template3.png" alt="待选"/>
+		</li>
+	</ul>
+
+	<footer class="footer">
+		<ul class="clearfix">
+			<li>取消</li>
+			<li>立即使用</li>
+		</ul>
+	</footer>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+		$('.upload_img').on('click',function(){
+			console.log(11)
+			$('#upload_inp').click()
+		})
+		$('#upload_inp').on('change',function(e){
+			var target = e.target
+			var reg = /(\.jpg|\.png|\.jpeg)$/ig
+			if(!/image\/\w+/.test(target.files[0].type)){
+				alert("这个需要图片！");
+				return false;
+			}
+			if(!reg.test(target.value)){
+				alert('请选择JPG或者PNG格式的图片！')
+				return
+			}
+			if (target.files[0]) {
+				var reader = new FileReader()
+				reader.onload = function(e){
+					var img = e.target.result
+					var imgURL = target.files[0]
+//					$('#upload_img').attr('src', img)
+				}
+			}
+			reader.readAsDataURL(target.files[0])
+		})
+
+		$('.template img').on('click', function(e){
+			$('.section img').attr({src:  $(e.target).attr('src')})
+		})
+	</script>
+</body>
+</html>

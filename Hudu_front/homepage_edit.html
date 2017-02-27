@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>狐度通-聊天</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/homepage_edit.css" />
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+	<!-- Demo styles -->
+</head>
+<body>
+	<section class="section">
+		<section class="section-banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/home_banner.png" alt="首页轮播图"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/home_banner.png" alt="首页轮播图"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/home_banner.png" alt="首页轮播图"/>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="section-main">
+			<ul class="clearfix">
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+				<li>
+					<img src="img/chamber_introduction.png" alt="商会简介"/>
+				</li>
+			</ul>
+		</section>
+	</section>
+	<footer class="footer">
+		<ul class="clearfix">
+			<li class="bgy">更换九宫</li>
+			<li class="bgg">编辑栏目</li>
+			<li class="bgg">更换轮播</li>
+		</ul>
+	</footer>
+
+	<div class="model-box">
+		<div class="model-wrapper" data-wrapper="wrapper">
+			<div class="model-content">
+				<ul class="model-content-info">
+					<li>
+						<input type="text" placeholder="栏目名"/>
+					</li>
+					<li>
+						<span>背景色</span>
+						<div>
+							<img src="img/select_back.png" alt="背景色"/>
+							<img src="img/next_level.png" alt="xuanzhe"/>
+							<ul style="display: none">
+								<li>
+									<img src="img/select_back.png" alt="背景色"/>
+								</li>
+								<li>
+									<img src="img/select_back.png" alt="背景色"/>
+								</li>
+								<li>
+									<img src="img/select_back.png" alt="背景色"/>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<span>小图标</span>
+						<div>
+							<img src="img/back_07.png" alt="小图标"/>
+							<img src="img/next_level.png" alt="xuanzhe"/>
+							<ul>
+								<li>
+									<img src="img/back_07.png" alt="小图标"/>
+								</li>
+								<li>
+									<img src="img/back_07.png" alt="小图标"/>
+								</li>
+								<li>
+									<img src="img/back_07.png" alt="小图标"/>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="model-content-url clearfix">
+					<li class="active">
+						<div>
+							<img src="img/radiot_noselect.png" alt="未选中"/>
+							<input type="checkbox"/>
+							选择链接
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="img/radiot_noselect.png" alt="未选中"/>
+							<input type="checkbox"/>
+							自定义链接
+						</div>
+					</li>
+				</ul>
+				<div class="model-content-urlSel">
+					<p>
+						选择链接
+						<img src="img/next_level.png" alt="xuanzhe"/>
+					</p>
+					<input type="text" placeholder="请输入链接"/>
+				</div>
+				<p class="model-content-btn">
+					<a href="#">保存</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/swiper-3.4.1.jquery.min.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			slidesPerView: 1,
+			paginationClickable: true,
+			spaceBetween: 30,
+			loop: true
+		});
+
+		$('.section-main li').on('click', function(){
+			$('.model-box').css({display: 'table'})
+		})
+		$('.model-box').on('click', function(e){
+			console.log(e.target)
+			if( $(e.target).attr('data-wrapper') == 'wrapper'){
+				$('.model-box').css({display: 'none'})
+			}
+		})
+	</script>
+</body>
+</html>
