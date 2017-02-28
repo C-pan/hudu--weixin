@@ -31,12 +31,13 @@
 }
 .section > ul > li img:first-child {
   width: 100%;
+  border: 1px solid #ccc;
 }
 .section > ul > li img:nth-child(2) {
   width: .4rem;
   position: absolute;
-  top: .02rem;
-  right: .24rem;
+  top: .05rem;
+  left: 0.05rem;
 }
 .footer {
   position: fixed;
