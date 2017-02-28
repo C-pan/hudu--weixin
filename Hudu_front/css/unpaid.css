@@ -77,6 +77,9 @@ body {
   border-left:1px solid #cacacc;
 }
 .nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%
   font-size: 0.28rem;
   color: #757475;
 }
@@ -125,7 +128,7 @@ body {
 }
 .unpaid_section .my_info_list li .left_tit{
   float: left;
-  padding-left: 0.3rem;
+  padding-left: 0.2rem;
   font-size: 0.28rem;
   color: #332C2B;
   height: 0.9rem;
@@ -162,31 +165,6 @@ body {
   padding-top: 0.32rem;
 }
 
-.bind_admin_btn_box{
-    height: 0.6rem;
-    text-align: center;
-    font-size: 0.28rem;
-    margin-top: 1.3rem;
-}
-
-.bind_admin_btn_box a,.bind_admin_btn_box span{
-    border: 2px solid #ffa304;
-    border-radius: 0.08rem;
-    display: inline-block;
-    height:0.56rem;
-    line-height: 0.56rem;
-    width: 2.1rem;
-}
- .bind_admin_btn_box .cancel_bind_btn{
-    color: #ffa304;
-    background: #fff;
-    margin-right: .3rem;
-}
-.bind_admin_btn_box .bind_btn{
-    color: #fff;
-    background: #ffa304;
-}
-
 .bind_admin_btn_box_popup{
     height: 0.6rem;
     text-align: center;
@@ -213,7 +191,7 @@ body {
 
 .myCheck{
   float: left;
-  margin-top: 0.26rem;
+  margin-top: 0.33rem;
   margin-left: 0.15rem;
   border: 1px solid #ffa304;
   border-radius: 0;
@@ -319,13 +297,85 @@ body {
   cursor: pointer;
 }
  
-#bind_amdin_mask .bind_admin_btn_box .cancel_bind_btn{
-    color: #ffa304;
+ 
+
+
+
+    /*footer*/
+.my_activity_footer{
+    border-top: 1px solid #bebebe;
+    height: 0.9rem;
     background: #fff;
-    margin-right: .4rem;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
 }
-#bind_amdin_mask .bind_admin_btn_box .bind_btn{
+.my_activity_btn{
+    display: block;
+    background: #f0f0f0;
+    width: 25%;
+    height: 0.9rem;
+    float: left;
+    text-align: center;
+    font-size: 0.18rem;
+}
+.my_activity_btn a{
+    height: 0.9rem;
+    width: 100%;
+    display: block;
+}
+.my_activity_btn .my_activity_icon{
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0.08rem auto 0.05rem;
+    background: url(../img/close_popup_btn.png) center no-repeat;
+    background-size: contain;
+}
+.my_activity_btn span{
+    padding-top: 0.08rem;
+    color: #797879;
+    font-size: 0.24rem; 
+}
+.export_emall{
+    float: right;
+    width: 75%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    position: relative;
+    font-size: 0.3rem;
     color: #fff;
-    background: #ffa304;
-    /*margin:0rem 0.12rem;*/
+    text-align:center;
+    background: #ffa404;
+}
+.export_emall_content{
+     
+}
+.export_emall>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    font-size:0.3rem;
+}
+.export_emall .export_emall_icon{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 0.40rem;
+    height: 0.40rem;
+    background:url(img/export_emall_icon.png) center  no-repeat;
+    background-size: contain;
+    margin-top: 0.25rem;
+    margin-left: 2.32rem;
+    margin-right: 0.07rem;
+    float: left;
+}
+.export_emall span{
+    display: inline-block;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+    margin-top: 0.31rem;
+    float: left;
 }
