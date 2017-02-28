@@ -168,7 +168,7 @@ body {
  
 .myCheck{
   float: left;
-  margin-top: 0.32rem;
+  margin-top: 0.3rem;
   margin-left: 0.15rem;
   border: 1px solid #ffa304;
   width: 0.28rem;
@@ -177,7 +177,7 @@ body {
 }
 .myCheck_checked{
   float: left;
-  margin-top: 0.32rem;
+  margin-top: 0.3rem;
   margin-left: 0.15rem;
   border: 0;
   border-radius: 0;
