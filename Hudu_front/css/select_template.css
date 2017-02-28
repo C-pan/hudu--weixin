@@ -50,15 +50,25 @@
   width: 1.2rem;
   height: 92%;
   overflow: auto;
+  border: 1px solid #ccc;
 }
 .template > li {
   box-sizing: border-box;
   width: 100%;
   padding: .1rem;
+}
+.template > li.active{
   background: #f49e00;
 }
-.template > li img {
+.template li div{
+	width: 90%;
+	position: relative;
+}
+.template li div img:first-child{
   width: 100%;
+}
+.template li div img:last-child{
+  position: absolute;
 }
 .footer {
   position: fixed;
