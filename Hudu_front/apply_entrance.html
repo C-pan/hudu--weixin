@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>申请入会</title>
   <link rel="stylesheet" href="css/reset.css" />
@@ -86,31 +85,7 @@
   <script src="js/zepto.js"></script>
   <script src="js/public.js"></script>
   <script>
-    $('#upload_img').on('click',function(){
-      console.log(2)
-      $('#upload_inp').click()
-    })
-    $('#upload_inp').on('change',function(e){
-      var target = e.target
-      var reg = /(\.jpg|\.png|\.jpeg)$/ig
-      if(!/image\/\w+/.test(target.files[0].type)){  
-        alert("这个需要图片！");  
-        return false;  
-      } 
-      if(!reg.test(target.value)){
-        alert('请选择JPG或者PNG格式的图片！')
-        return
-      }
-      if (target.files[0]) {
-        var reader = new FileReader()
-        reader.onload = function(e){
-          var img = e.target.result
-          var imgURL = target.files[0]
-          $('#upload_img').attr('src', img)
-        }
-      }
-      reader.readAsDataURL(target.files[0])
-    })
+ 
 
     $('.agree').on('click', function(){
       if( !$('#agree')[0].checked ){
@@ -119,18 +94,6 @@
         $('.agree_img').attr({src: 'img/notSelect.png', alt: '未选中'})
       }
     })
-    // 弹出层
-    $('.agree_btn').on('click',function () {
-      $('#mask').css('display','none');
-    }); 
-    $('.read_agreement').on('click',function () {
-      $('#mask').css('display','block');
-    }); 
-    // 
-    $('.position_dues_ipn_list li').bind('touchstart',function () {
-      $(this).css('background','rgba(200,200,200,0.6)');
-    }).bind('touchend',function(){
-       $(this).css('background','transparent');
-    });
+    
   </script>
 </html>

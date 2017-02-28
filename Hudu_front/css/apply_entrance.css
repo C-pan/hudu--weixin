@@ -73,6 +73,7 @@ body {
 .position_dues_section .position_dues_ipn_list  span{
   float: left;
   font-family: "微软雅黑";
+  color: #231815;
 }
 .position_dues_section .position_dues_ipn_list .position_select{
   position: absolute;
@@ -140,7 +141,7 @@ body {
   height: 0.95rem;
   line-height: 0.95rem;
   border-bottom: 1px solid #e3e3e3;
-  color: #bbbbbd;
+  color: #231815;
   font-size: 0.25rem;
   font-family: "微软雅黑";
 }
