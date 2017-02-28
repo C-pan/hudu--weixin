@@ -273,13 +273,15 @@
 	<script>
 		$('.open-sel').on('click', function(e){
 			var tar = $(e.target)
-			if(tar[0].nodeName != 'P'){
+			if(tar[0].nodeName != 'P' && tar[0].nodeName != 'DIV'){
 				tar = tar.parents('.open-sel')
 			}
-			console.log(tar.attr('data-open'))
 			if(tar.attr('data-open') == 0){
-				tar.attr('data-open', 1)
+				$('.select-list').css({display: 'none'})
+				$('.open-sel').attr('data-open', 0)
 				tar.next('.select-list').css({display: 'block'})
+				tar.attr('data-open', 1)
+
 			}else{
 				tar.attr('data-open', 0)
 				tar.next('.select-list').css({display: 'none'})
@@ -335,10 +337,6 @@
 			if(tar .attr('data-wrapper') == 'wrapper'){
 				$('.model-box').css({display: 'none'})
 			}
-			console.log(tar.parents('.select-list').length)
-			console.log(tar.hasClass('.select-list').length )
-			console.log(tar.parents('.open-sel').length )
-			console.log(tar.attr('data-open') )
 			if(tar.parents('.select-list').length == 0 &&
 					tar.next().attr('data-open') === undefined &&
 					tar.parents('.open-sel').length ==0 &&
