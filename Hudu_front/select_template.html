@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
-	<title>狐度通-聊天</title>
+	<title>选择名片模板</title>
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/select_template.css" />
 	<!-- Demo styles -->
@@ -21,7 +21,8 @@
 	<section class="section">
 		<div class="section-main">
 			<img src="img/select_template1.png" alt="已选模板" class="section-template" />
-			<img src="img/notSelect.png" alt="未选中" class="section-status" data-sel="false">
+			<img src="img/select.png" alt="选择模板" class="section-status" data-sel="false">
+			<input type="checkbox" class="section-btn" checked="true"/>
 		</div>
 	</section>
 
@@ -79,8 +80,10 @@
 			var tar = $(e.target)
 			if(tar.attr('data-sel') == 'false'){
 				$(e.target).attr({src: 'img/select.png', 'data-sel': 'true'})
+				$('.section-btn')[0].checked = true
 			}else{
 				$(e.target).attr({src: 'img/notSelect.png', 'data-sel': 'false'})
+				$('.section-btn')[0].checked = false
 			}
 		})
 		$('.upload_img').on('click',function(){
@@ -114,8 +117,9 @@
 				tar = tar.parent()
 			}
 			$(tar).addClass('active').siblings('.active').removeClass('active')
-			console.log(tar.children)
 			$('.section-template').attr({src:  tar.children().attr('src')})
+			$('.section-status').attr({src: 'img/select.png', 'data-sel': 'true'})
+			$('.section-btn')[0].checked = true
 		})
 	</script>
 </body>

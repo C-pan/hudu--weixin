@@ -9,11 +9,11 @@
   left: 0;
   z-index: 100;
   padding: .2rem;
-  font-size: .3rem;
+  font-size: .27rem;
 }
 .header div {
   display: inline-block;
-  margin-right: .1rem;
+  margin-right: .3rem;
 }
 .header div input {
   display: none;
@@ -41,19 +41,23 @@
   background: #fff;
 }
 .section div{
-	width: 73%;
+	width: 69%;
 	position: relative;
 	margin-top: .2rem;
 	margin-left: .3rem;
+    margin-bottom: .9rem;
 }
 .section div img:first-child{
   width: 100%;
 }
-.section div img:last-child{
+.section div img:nth-child(2){
 	width: .4rem;
   position: absolute;
   top: .1rem;
   left: .1rem;
+}
+.section div input{
+  display: none;
 }
 .template {
   position: fixed;
@@ -69,6 +73,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: .1rem;
+  padding-bottom: 0;
 }
 .template > li.active{
   background: #f49e00;
