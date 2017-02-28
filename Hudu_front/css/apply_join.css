@@ -24,13 +24,12 @@ body {
   font-size: .3rem;
 }
 .apply_join_header ul li:last-child p {
-  margin-top: .05rem;
-  font-size: .14rem;
+  font-size: .22rem;
   color: #939393;
 }
 .apply_join_header ul li:last-child p img {
-  width: .22rem;
-  vertical-align: top;
+  width: .25rem;
+  vertical-align: middle;
 }
 .apply_join_header > p {
   position: absolute;

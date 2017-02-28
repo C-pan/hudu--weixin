@@ -1,0 +1,63 @@
+body {
+  background: #fff;
+}
+.editor {
+  width: 7rem;
+  margin: 0 auto;
+}
+.editor-header {
+  padding: .15rem .45rem .1rem;
+  position: relative;
+  background: #f0f0f1;
+}
+.editor-header > ul > li {
+  float: left;
+}
+.editor-header > ul > li:first-child img {
+  width: 1.5rem;
+}
+.editor-header > ul > li:last-child {
+  padding: .4rem .2rem;
+}
+.editor-header > ul > li:last-child span {
+  font-size: .3rem;
+}
+.editor-header > ul > li:last-child p {
+  font-size: .25rem;
+  color: #939393;
+}
+.editor-header > ul > li:last-child p img {
+  width: .3rem;
+  vertical-align: top;
+}
+.editor-header > p {
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .22rem;
+  color: #fd7e29;
+}
+.editor-header > p img {
+  width: .34rem;
+  vertical-align: top;
+}
+.editor-section ul li {
+  box-sizing: border-box;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  padding: 0 .2rem;
+  border-bottom: 1px solid #ccc;
+}
+.editor-section ul li a {
+  color: #231815;
+}
+.editor-section ul li a img:first-child {
+  width: .5rem;
+  position: relative;
+  top: .15rem;
+}
+.editor-section ul li a img:last-child {
+  float: right;
+  width: .25rem;
+  margin-top: .28rem;
+}

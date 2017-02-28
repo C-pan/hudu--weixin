@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>选择素材</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/replace_latex.css" />
+	<!-- Demo styles -->
+</head>
+<body>
+	<header class="header">
+		选择官网模板
+	</header>
+	
+	<section class="section">
+		<ul class="clearfix">
+			<li>
+				<img src="img/website_template1.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+			<li>
+				<img src="img/website_template2.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+			<li>
+				<img src="img/website_template3.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+			<li>
+				<img src="img/website_template4.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+			<li>
+				<img src="img/website_template5.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+			<li>
+				<img src="img/website_template6.jpg" alt="模板">
+				<img src="img/notSelect.png" alt="未选中" data-sel="1" class="sample-sel">
+				<input type="checkbox" name="sample">
+			</li>
+		</ul>
+	</section>
+
+	<footer class="footer">
+		<ul class="clearfix">
+			<li>取消</li>
+			<li>立即使用</li>
+		</ul>
+	</footer>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+	$('.sample-sel').on('click', function(e){
+		e.preventDefault()
+		var tar = $(e.target)
+		if(tar.attr('data-sel') == 1){
+			tar.attr({src: 'img/select.png'})
+			tar.attr('data-sel', 2)
+		}else{
+			tar.attr({src: 'img/notSelect.png'})
+			tar.attr('data-sel', 1)
+		}
+		tar.next()[0].checked = !tar.next()[0].checked
+		console.log(tar.next()[0].checked)
+	})
+
+// 		$('.section-status').on('click', function(e){
+// 			e.preventDefault()
+// 			var tar = $(e.target)
+// 			if(tar.attr('data-sel') == 'false'){
+// 				$(e.target).attr({src: 'img/select.png', 'data-sel': 'true'})
+// 			}else{
+// 				$(e.target).attr({src: 'img/notSelect.png', 'data-sel': 'false'})
+// 			}
+// 		})
+// 		$('.upload_img').on('click',function(){
+// 			$('#upload_inp').click()
+// 		})
+// 		$('#upload_inp').on('change',function(e){
+// 			var target = e.target
+// 			var reg = /(\.jpg|\.png|\.jpeg)$/ig
+// 			if(!/image\/\w+/.test(target.files[0].type)){
+// 				alert("这个需要图片！");
+// 				return false;
+// 			}
+// 			if(!reg.test(target.value)){
+// 				alert('请选择JPG或者PNG格式的图片！')
+// 				return
+// 			}
+// 			if (target.files[0]) {
+// 				var reader = new FileReader()
+// 				reader.onload = function(e){
+// 					var img = e.target.result
+// 					var imgURL = target.files[0]
+// //					$('#upload_img').attr('src', img)
+// 				}
+// 			}
+// 			reader.readAsDataURL(target.files[0])
+// 		})
+	</script>
+</body>
+</html>

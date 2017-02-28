@@ -9,56 +9,50 @@
   left: 0;
   z-index: 100;
   padding: .2rem;
+  padding-left: .3rem;
+  border-bottom: 1px solid #ccc;
 }
-.header div {
-  display: inline-block;
-  margin-right: .1rem;
-}
-.header div input {
+.header input {
   display: none;
 }
-.header div b {
+.header b {
   display: inline-block;
   width: 0;
   height: .4rem;
   border-right: 2px solid #f49e00;
-  margin: 0 .05rem;
-  margin-bottom: -0.1rem;
+  margin: 0 .1rem;
+  margin-bottom: -0.08rem;
 }
-.header div span:last-child {
+.header span,
+.header a {
   color: #f49e00;
 }
-.header span {
-  color: #818788;
-}
 .section {
-  box-sizing: border-box;
   width: 7rem;
-  height: 100%;
   margin: 0 auto;
-  padding-top: .9rem;
+  padding: 0.9rem 0;
   background: #fff;
 }
-.section img {
-  width: 5.5rem;
-  margin: .1rem 0 0 .1rem;
+.section > ul {
+  padding-top: .3rem;
+  padding-left: .2rem;
 }
-.template {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 1.2rem;
-  height: 92%;
-  overflow: auto;
-}
-.template > li {
+.section > ul > li {
+  float: left;
+  position: relative;
   box-sizing: border-box;
-  width: 100%;
-  padding: .1rem;
-  background: #f49e00;
+  width: 50%;
+  padding-right: .2rem;
+  padding-bottom: .1rem;
 }
-.template > li img {
+.section > ul > li img:first-child {
   width: 100%;
+}
+.section > ul > li img:nth-child(2) {
+  width: .4rem;
+  position: absolute;
+  top: .05rem;
+  left: .05rem;
 }
 .footer {
   position: fixed;

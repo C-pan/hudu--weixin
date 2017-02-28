@@ -19,7 +19,10 @@
 		<span>滑动右边选择名片模板</span>
 	</header>
 	<section class="section">
-		<img src="img/select_template1.png" alt="已选中"/>
+		<div class="section-main">
+			<img src="img/select_template1.png" alt="已选模板" class="section-template" />
+			<img src="img/notSelect.png" alt="未选中" class="section-status" data-sel="false">
+		</div>
 	</section>
 
 	<ul class="template">
@@ -71,8 +74,16 @@
 	<script src="js/zepto.js"></script>
 	<script src="js/public.js"></script>
 	<script>
+		$('.section-status').on('click', function(e){
+			e.preventDefault()
+			var tar = $(e.target)
+			if(tar.attr('data-sel') == 'false'){
+				$(e.target).attr({src: 'img/select.png', 'data-sel': 'true'})
+			}else{
+				$(e.target).attr({src: 'img/notSelect.png', 'data-sel': 'false'})
+			}
+		})
 		$('.upload_img').on('click',function(){
-			console.log(11)
 			$('#upload_inp').click()
 		})
 		$('#upload_inp').on('change',function(e){
@@ -97,8 +108,14 @@
 			reader.readAsDataURL(target.files[0])
 		})
 
-		$('.template img').on('click', function(e){
-			$('.section img').attr({src:  $(e.target).attr('src')})
+		$('.template li').on('click', function(e){
+			var tar = $(e.target)
+			if(tar[0].nodeName == 'IMG'){
+				tar = tar.parent()
+			}
+			$(tar).addClass('active').siblings('.active').removeClass('active')
+			console.log(tar.children)
+			$('.section-template').attr({src:  tar.children().attr('src')})
 		})
 	</script>
 </body>
