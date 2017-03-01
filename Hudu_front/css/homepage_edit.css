@@ -17,26 +17,28 @@
 .section-main > ul > li {
   box-sizing: border-box;
   float: left;
-  width: 30%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  width: 32%;
+  height: 2rem;
+  margin-right: 2%;
+  margin-bottom: 2%;
   background: #d87570;
   position: relative;
   text-align: center;
   color: #fff;
 }
-.section-main > ul > li:last-child{
-	margin-right: 0;
+.section-main > ul > li:nth-child(3n){
+  margin-right: 0;
 }
 .section-main > ul > li img:first-child {
   position: absolute;
   top: .1rem;
   right: .1rem;
-  width: .3rem;
+  width: .5rem;
 }
 .section-main > ul > li img:nth-child(2) {
-  width: .5rem;
+  width: .9rem;
   display: block;
+  margin: .3rem auto 0;
 }
 .footer {
   width: 100%;
@@ -101,22 +103,35 @@
 .model-content-info > li:first-child {
   line-height: .8rem;
 }
-.model-content-info > li .open-sel{
+.model-content-info > li >div:first-child{
   height: 0.8rem;
   line-height: 0.8rem;
 }
-.model-content-info > li .open-sel > div {
-	box-sizing: border-box;
+.model-content-info > li >div:first-child >input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+}
+.model-content-info > li >div:first-child > div {
+  box-sizing: border-box;
   float: right;
   height: 100%;
   width: 1.5rem;
   padding: .05rem 0;
-}
-.model-content-info > li .open-sel > div > img:first-child {
+}.model-content-info > li >div:first-child > div > span {
+  display: inline-block;
+   width: 0.75rem;
+   height: 100%;
+   margin-right: .2rem;
+ }
+.model-content-info > li >div:first-child > div > img:first-child {
   height: 100%;
   margin-right: .2rem;
 }
-.model-content-info > li .open-sel > div  > img:nth-child(2) {
+.model-content-info > li >div:first-child > div  > img:nth-child(2) {
   width: .3rem;
   margin-bottom: .26rem;
 }
@@ -191,11 +206,7 @@
   box-sizing: border-box;
   display: none;
   position: absolute;
-<<<<<<< HEAD
-  top: .8rem;
-=======
   top: 1.05rem;
->>>>>>> 97db40e595eabfc15833a004781a5b42eccfbdcf
   right: 0;
   width: 6.5rem;
   height: 3.6rem;
@@ -218,7 +229,9 @@
 }
 .select-list.select-list-url{
   right: -.2rem;
-  padding: .2rem;
+}
+.select-list.select-list-url ul{
+  padding: 0 .2rem;
 }
 .select-list > img{
   position: absolute;
@@ -243,13 +256,13 @@
 	overflow: hidden;
 	white-space: nowrap;
 }
-.select-list ul.clearfix li{
+.model-content-info .select-list ul.clearfix li{
   float: left;
   width: 16.66%;
   box-sizing: border-box;
   padding-right: .2rem;
   padding-bottom: .2rem;
 }
-.select-list ul.clearfix li img{
+.model-content-info .select-list ul.clearfix li img{
   width: 100%;
 }
