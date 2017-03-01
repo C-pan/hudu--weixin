@@ -30,40 +30,61 @@
 		<section class="section-main">
 			<ul class="clearfix">
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 				<li>
-					<img src="img/chamber_introduction.png" alt="商会简介"/>
+					<img src="img/_editor.png" alt="">
+					<img src="img/back_fun_05.png" alt="">
+					<span>商会简介</span>
 				</li>
 			</ul>
 		</section>
 	</section>
-	<footer class="footer">
+	<footer class="footer" onclick="ba(this)">
 		<ul class="clearfix">
-			<li class="bgy"><a href="./replace_latex.html">更换九宫</a></li>
+			<!-- <li class="bgy"><a href="./replace_latex.html">更换九宫</a></li>
 			<li class="bgg"><a href="./editor_column.html">编辑栏目</a></li>
-			<li class="bgg"><a href="./replace_shuffling.html">更换轮播</a></li>
+			<li class="bgg"><a href="./replace_shuffling.html">更换轮播</a></li> -->
+			<li><span>asdf</span></li>
+			<li><i>asdf</i></li>
+			<li>asdf</li>
 		</ul>
 	</footer>
 
@@ -84,7 +105,7 @@
 						</div>
 						<div class="select-list">
 							<i></i>
-							<ul class="clearfix sel-background">
+							<ul class="clearfix sel-background" data-info="bgcolor">
 								<li data-bag="#07ff01">
 									<img src="img/green.png" alt=""/>
 								</li>
@@ -143,7 +164,7 @@
 						</div>
 						<div class="select-list">
 							<i></i>
-							<ul class="clearfix">
+							<ul class="clearfix" data-info="img">
 								<li>
 									<img src="img/editor_applymem.png" alt="小图标"/>
 								</li>
@@ -216,7 +237,7 @@
 					</p>
 					<div class="select-list select-list-url">
 						<i></i>
-						<ul>
+						<ul data-info="url">
 							<li>
 								https://www.baidu.com/
 							</li>
@@ -268,6 +289,20 @@
 	<script src="js/swiper-3.4.1.jquery.min.js"></script>
 	<script src="js/public.js"></script>
 	<script>
+		var chamber = {}
+		function _editor(e,str) {
+			var tar = $(e)
+			if(tar.attr('data-open') == 0){
+				$('.select-list').css({display: 'none'})
+				$('.open-sel').attr('data-open', 0)
+				tar.next('.select-list').css({display: 'block'})
+				tar.attr('data-open', 1)
+
+			}else{
+				tar.attr('data-open', 0)
+				tar.next('.select-list').css({display: 'none'})
+			}
+		}
 		$('.open-sel').on('click', function(e){
 			var tar = $(e.target)
 			if(tar.attr('data-open') === undefined){
@@ -289,9 +324,9 @@
 		$('.select-list ul li').on('click', function(e){
 			var tar = $(e.target)
 			if(tar[0].nodeName == 'IMG'){
-				tar.parents('.select-list').prev().children('.selected-img').attr('src', tar.attr('src'))
+				tar.parents('.select-list').prev().find('.selected-img').attr('src', tar.attr('src'))
 			}else if(tar[0].nodeName == 'LI'){
-				tar.parents('.select-list').prev().children('span').html(tar.html())
+				tar.parents('.select-list').prev().find('span').html(tar.html())
 			}
 		})
 
