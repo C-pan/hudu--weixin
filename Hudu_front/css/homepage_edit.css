@@ -180,7 +180,8 @@
   right: .1rem;
   width: 6.3rem;
   height: 3rem;
-  padding: .2rem;
+  padding-top: .2rem;
+  padding-left: .2rem;
   z-index: 2000;
   background: #fff;
   border: 1px solid #f49e00;
@@ -200,6 +201,7 @@
 }
 .select-list.select-list-url{
   right: -.1rem;
+  padding: .2rem;
 }
 .select-list > img{
   position: absolute;
@@ -222,10 +224,10 @@
 }
 .select-list ul.clearfix li{
   float: left;
-  width: .8rem;
-  height: .8rem;
-  margin-right: .2rem;
-  margin-bottom: .2rem;
+  width: 16.66%;
+  box-sizing: border-box;
+  padding-right: .2rem;
+  padding-bottom: .2rem;
 }
 .select-list ul.clearfix li img{
   width: 100%;
