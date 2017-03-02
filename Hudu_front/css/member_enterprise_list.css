@@ -1,0 +1,65 @@
+  body{
+    background: #fefefe;
+  }
+ 
+ 
+
+  .section-banner{
+    width: 6.9rem;
+    margin:0 auto;
+  }
+  .section-banner img{
+    width: 100%;
+    margin:0 auto;
+  }
+  .member_enterprise_content{
+    width: 7rem;
+    margin:0 auto;
+    background: #fefefe;
+  }
+  .member_enterprise_content .member_enterprise_tit{
+    box-sizing: border-box;
+    width: 6.9rem;
+    margin: 0 auto;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    background: #ffa304;
+    color: #fff;
+    font-size: 0.32rem;
+    padding-left: 0.2rem;
+  }
+  .member_enterprise_content .member_enterprise_list{
+    width: 7rem;
+    margin:0 auto;
+  }
+  .member_enterprise_content .member_enterprise_list>li{
+    width: 7rem;
+    height: 1.5rem;
+    border-bottom: 1px solid #eeeeef;
+  }
+  .member_enterprise_content .member_enterprise_list>li img{
+    width: 1.5rem;
+    height: 1.1rem;
+    float: left;
+    margin: 0.2rem;
+  }
+  .member_enterprise_content .member_enterprise_list>li .member_right{
+    float: left;
+    width: 5rem;
+    height: 1.5rem;
+  }
+  .member_enterprise_list>li .member_right .memb_position{
+    margin-top:0.22rem;
+    font-size: 0.24rem;
+    color: #ffa304; 
+  }
+  .member_enterprise_list>li .member_right .memb_company{
+    margin-top:0.02rem;
+    font-size: 0.28rem;
+    color: #4e4c4c; 
+  }
+  .member_enterprise_list>li .member_right .company_position{
+    margin-top:0.02rem;
+    font-size: 0.26rem;
+    color: #4e4c4c; 
+  }
