@@ -134,15 +134,16 @@ body {
   width: 7rem;
   height: 1.4rem;
   margin-top: 0.05rem;
+  overflow: hidden;
   border-bottom:1px solid #d7d7d7;
 }
 .sketch_box .sketch_tit{
   box-sizing: border-box;
   width: 7rem;
-  height: 0.45rem;
-  line-height: 0.45rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   padding-left: 0.4rem;
-  font-size: 0.24rem;
+  font-size: 0.28rem;
   color: #b7b7b8;
   background: #eeeeef;
 }
@@ -151,24 +152,25 @@ body {
   width: 7rem;
   height: 0.95rem;
   line-height: 0.5rem;
-  font-size: 0.22rem;
+  font-size: 0.24rem;
   color: #b7b7b8;
+  background: #fff;
   padding-left: 0.6rem;
 }
 .info_box{
   box-sizing: border-box;
   width: 7rem;
-  height: 3.3rem;
+  min-height: 2.85rem;
   margin-top: 0.05rem;
   border-bottom:1px solid #d7d7d7;
 }
 .info_tit{
   box-sizing: border-box;
   width: 7rem;
-  height: 0.45rem;
-  line-height: 0.45rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   padding-left: 0.4rem;
-  font-size: 0.24rem;
+  font-size: 0.28rem;
   color: #b7b7b8;
   background: #eeeeef;
 }
@@ -176,19 +178,142 @@ body {
   box-sizing: border-box; 
   width: 7rem;
   height: 2.85rem;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 
 
 
+/*遮罩层*/
+ #bind_amdin_mask{
+    position: fixed;
+    background: rgba(0,0,0,0.76);
+    height: 100%;
+    width: 100%;
+    z-index: 1200;
+    display: none;
+ }
+ 
 
 
 
+/*搜索框*/
+.chat_header {
+  position: fixed;
+  z-index: 1000;
+  height: 0.8rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f0f0f2;
+}
+.chat_header .search_from{
+  width: 95%;
+  height: 0.8rem;
+  margin: 0 auto;
+}
+.chat_header .input_box{
+  float: left;
+  margin-top: 0.13rem;
+  height: 0.56rem;
+  width: 88%;
+  border:1px solid #dededf;
+  background: #fff;
+  border-radius: 0.08rem;
+}
+.input_box>input{
+  float: left;
+  height: 0.56rem;
+  width: 85%;
+  font-size: 0.2rem;
+}
+.chat_header .input_box .search_bnt{
+  float: left;
+  width: 0.7rem;
+  height: 0.56rem;
+  overflow: hidden;
+}
+.chat_header .input_box .search_bnt img{
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  padding-left: 0.1rem; 
+  overflow: hidden;
+}
+.chat_header .add_contacts{
+  float: right;
+  width: 10%;
+  height: 0.8rem;
+  line-height:  0.8rem;
+  color: #ffa304;
+  text-align: center;
+}
+.chat_header .add_contacts a{
+  float: left;
+  width: 6.4%;
+  height: 0.8rem;
+  text-align: center;
+}
+.chat_header .add_contacts img{
+  padding-top: 0.16rem;
+  padding-left: 0.10rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  overflow: hidden;
+}
 
-
-
-
+/*搜索内容*/
+.member_enterprise_content{
+    width: 7rem;
+    margin:0.8rem auto 0rem;
+    background: #fefefe;
+  }
+  .member_enterprise_content .member_enterprise_tit{
+    box-sizing: border-box;
+    width: 6.9rem;
+    margin: 0 auto;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    background: #ffa304;
+    color: #fff;
+    font-size: 0.32rem;
+    padding-left: 0.2rem;
+  }
+  .member_enterprise_content .member_enterprise_list{
+    width: 7rem;
+    margin:0 auto;
+  }
+  .member_enterprise_content .member_enterprise_list>li{
+    width: 7rem;
+    height: 1.5rem;
+    border-bottom: 1px solid #eeeeef;
+  }
+  .member_enterprise_content .member_enterprise_list>li img{
+    width: 1.5rem;
+    height: 1.1rem;
+    float: left;
+    margin: 0.2rem;
+  }
+  .member_enterprise_content .member_enterprise_list>li .member_right{
+    float: left;
+    width: 5rem;
+    height: 1.5rem;
+  }
+  .member_enterprise_list>li .member_right .memb_position{
+    margin-top:0.22rem;
+    font-size: 0.24rem;
+    color: #ffa304; 
+  }
+  .member_enterprise_list>li .member_right .memb_company{
+    margin-top:0.02rem;
+    font-size: 0.28rem;
+    color: #332C2B; 
+  }
+  .member_enterprise_list>li .member_right .company_position{
+    margin-top:0.02rem;
+    font-size: 0.26rem;
+    color: #4e4c4c; 
+  }
 
 
 
