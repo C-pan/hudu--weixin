@@ -119,21 +119,27 @@
   box-sizing: border-box;
   float: right;
   height: 100%;
-  width: 1.5rem;
+  width: 1.3rem;
   padding: .05rem 0;
-}.model-content-info > li >div:first-child > div > span {
-  display: inline-block;
-   width: 0.75rem;
-   height: 100%;
-   margin-right: .2rem;
+}
+.model-content-info > li:nth-child(2) > div > div{
+  width: 3.2rem;
+}
+.model-content-info > li >div:first-child > div > input {
+  float: left;
+  width: 75%;
+  height: 100%;
+  margin-right: .15rem;
+  padding: 0 .1rem;
+  font-size: .3rem;
  }
 .model-content-info > li >div:first-child > div > img:first-child {
   height: 100%;
-  margin-right: .2rem;
 }
 .model-content-info > li >div:first-child > div  > img:nth-child(2) {
+  float: right;
   width: .3rem;
-  margin-bottom: .26rem;
+  padding: .15rem 0;
 }
 .model-content-url {
   width: 100%;

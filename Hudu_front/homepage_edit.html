@@ -89,14 +89,13 @@
 			<div class="model-content">
 				<ul class="model-content-info">
 					<li>
-						<input type="text" placeholder="栏目名" id="chamber-name" onblur="_editorName(this)"/>
+						<input type="text" placeholder="栏目名" id="chamber-name" oninput="_editorName(this)"/>
 					</li>
-					<li onclick="_open_jscolor()">
+					<li>
 						<div>
 							<span>背景色</span>
-							<input class="jscolor" value="rgb(216, 117, 112)">
 							<div>
-								<span id="chamber-bgcolor"></span>
+								<input readonly id="chamber-bgcolor" class="jscolor" value="rgb(216, 117, 112)">
 								<img src="img/list_dow.png" alt="xuanzhe"/>
 							</div>
 						</div>
@@ -239,15 +238,14 @@
 	<script>
 		var chamber = {}, open_dom = ''
 
-		function _open_jscolor() {
-			console.log($('.jscolor'))
-			$('.jscolor').click()
-		}
+
 		function _editorName(e){
 			chamber.name = e.value
 		}
 		$('.subInfo').on('click', function(){
-			open_dom.css({background: chamber.bgcolor})
+			chamber.bgcolors = $('#chamber-bgcolor').val()
+			console.log(chamber)
+			open_dom.css({background: '#' + chamber.bgcolors})
 			open_dom.children('.open-modal').next().attr('src',chamber.img )
 			open_dom.children('span').html(chamber.name)
 			open_dom.attr({'data-url': chamber.url})
@@ -260,26 +258,26 @@
 			chamber.img = open_dom.children('.open-modal').next().attr('src')
 			chamber.bgcolors = open_dom.css('background-color')
 			chamber.url = open_dom.attr('data-url')
-			$('#chamber-bgcolor').css({background: chamber.bgcolors })
+			$('#chamber-bgcolor').val( chamber.bgcolors).css({background: chamber.bgcolors,color: 'transparent'})
 			$('#chamber-img').attr({src: chamber.img})
 			$('#chamber-name').val(chamber.name)
 			$('#chamber-url').html(chamber.url)
 			$('.model-box').css({display: 'table'})
 		})
 
-		function _editor(e,str) {
-			var tar = $(e)
-			if(tar.attr('data-open') == 0){
-				$('.select-list').css({display: 'none'})
-				$('.open-sel').attr('data-open', 0)
-				tar.next('.select-list').css({display: 'block'})
-				tar.attr('data-open', 1)
-
-			}else{
-				tar.attr('data-open', 0)
-				tar.next('.select-list').css({display: 'none'})
-			}
-		}
+//		function _editor(e,str) {
+//			var tar = $(e)
+//			if(tar.attr('data-open') == 0){
+//				$('.select-list').css({display: 'none'})
+//				$('.open-sel').attr('data-open', 0)
+//				tar.next('.select-list').css({display: 'block'})
+//				tar.attr('data-open', 1)
+//
+//			}else{
+//				tar.attr('data-open', 0)
+//				tar.next('.select-list').css({display: 'none'})
+//			}
+//		}
 		$('.open-sel').on('click', function(e){
 			var tar = $(e.target)
 			if(tar.attr('data-open') === undefined){
@@ -310,7 +308,7 @@
 				tar.parents('.select-list').prev().find('#chamber-img').attr('src', tar.children().attr('src'))
 				chamber[key] = tar.children().attr('src')
 			}
-			console.log(open_dom)
+			console.log(chamber)
 		})
 
 
