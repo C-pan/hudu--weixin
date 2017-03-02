@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>会员企业编辑</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/member_enterprise_edit.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" charset="UTF-8">
+</head>
+<body>
+    <section class="position_dues_section">
+        <div class="preserved">
+            <a href="#" class="preserved_btn">保存</a>
+        </div>
+        <div class="upload_bg_box">
+            <div class="upload_bg">
+                <img src="img/upaload_compamy_bg.png" alt="" id="upload_bg_img">
+            </div>
+        </div> 
+        <div class="sel_member">
+            <img src="img/Business_Association.jpg" class="menmber_ico" alt="">
+            <span class="left_tit">单位名称</span>
+            <input class="position_inp" type="text" placeholder="输入会员姓名查询">
+            <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        </div>
+        <div class="info_box">
+            <div class="info_tit">会员企业详情：</div>
+            <div class="info_box">
+
+              <!--编辑框 默认展开部分-->
+              <div class="Activity-Edit">
+
+                <div class="event-intro">
+                   
+                  <div class="rich-text-editor">
+                    <div class="input-node text_intro" id="intro" contenteditable="true" data-ph="输入活动介绍,精彩的活动描述可以吸引更多人哦" style="width:100%; box-sizing:border-box ;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="image-editor" class="hide">
+                <div id="image-editor-content" style="height: 680px; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                  <img class="corp">
+                  <canvas class="curtain" width="800" height="680"></canvas>
+                </div>
+              </div>
+              <script type="text/javascript" src="js/zepto_22.js" charset="UTF-8"></script>
+              <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+              <!--启动输入框-->
+              <div class="loading-view hide">
+                <div class="rich-text-editor-toolbar">
+                  <a rt-cmd="insertImage()" class="icon-camera">&nbsp;</a>
+                  <a rt-cmd="bold" rt-cmd-name="bold" class="cmd-button bold-false">B</a>
+                  <div class="cmd-button foreColor-565a5c" rt-cmd-name="foreColor">
+                    A
+                    <tooltip>
+                    <div class="tooltip-container">
+                      <a class="round-rect foreColor-565a5c" style="display: inline-block" rt-cmd="foreColor(&#39;#565a5c&#39;)">
+                                                  &nbsp;
+                      </a>
+                      <a class="round-rect foreColor-82898d" style="display: inline-block" rt-cmd="foreColor(&#39;#82898d&#39;)">
+                                                  &nbsp;
+                      </a>
+                      <a class="round-rect foreColor-3893ed" style="display: inline-block" rt-cmd="foreColor(&#39;#3893ed&#39;)">
+                                                  &nbsp;
+                      </a>
+                      <a class="round-rect foreColor-f03442" style="display: inline-block" rt-cmd="foreColor(&#39;#f03442&#39;)">
+                                                  &nbsp;
+                      </a>
+                      <a class="round-rect foreColor-ff7612" style="display: inline-block" rt-cmd="foreColor(&#39;#ff7612&#39;)">
+                                                  &nbsp;
+                      </a>
+                      <a class="round-rect foreColor-aa56c5" style="display: inline-block" rt-cmd="foreColor(&#39;#aa56c5&#39;)">
+                                                  &nbsp;
+                      </a>
+                    </div>
+                    </tooltip>
+                  </div>
+                  <div class="cmd-button fontSize-3" rt-cmd-name="fontSize">
+                    A
+                    <tooltip>
+                    <div class="tooltip-container">
+                      <a style="display: inline-block; font-size: 14px" rt-cmd="fontSize(&#39;3&#39;)">
+                                                  A(小)
+                      </a>
+                      <a style="display: inline-block; font-size: 18px" rt-cmd="fontSize(&#39;4&#39;)">
+                                                  A(中)
+                      </a>
+                      <a style="display: inline-block; font-size: 20px" rt-cmd="fontSize(&#39;5&#39;)">
+                                                  A(大)
+                      </a>
+                    </div>
+                    </tooltip>
+                  </div>
+                  <div class="cmd-button close-button" rt-cmd="close())">
+                                  完成编辑
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+        <div class="sketch_box">
+            <div class="sketch_tit">简述：</div>
+            <textarea name="" class="sketch_textarea" placeholder="输入会员企业描述"></textarea>
+        </div>
+         
+
+  </section>
+  <script src="js/public.js"></script>
+</body>
+  <script src="js/zepto.js"></script>
+  <script src="js/public.js"></script>
+  <script>
+ 
+
+
+    // 触摸焦点效果
+    $('.position_dues_ipn_list li').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+    }).bind('touchend',function(){
+       $(this).css('background','transparent');
+    });
+    $('.upload_bg_box').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+    }).bind('touchend',function(){
+       $(this).css('background','#f0f0f1');
+    });
+
+    
+    // 上传背景图   .upload_bg_box  .upload_bg  #upload_bg_inp   #upload_bg_img           cs  #upldp
+     $('#upload_bg_img').on('click',function(){
+      console.log("bg")
+      $('#upload_bg_inp').click()
+    })
+    $('#upload_bg_inp').on('change',function(e){
+      var target = e.target
+      var reg = /(\.jpg|\.png|\.jpeg)$/ig
+      if(!/image\/\w+/.test(target.files[0].type)){  
+        alert("这个需要图片！");  
+        return false;  
+      } 
+      if(!reg.test(target.value)){
+        alert('请选择JPG或者PNG格式的图片！')
+        return
+      }
+      if (target.files[0]) {
+        var reader = new FileReader()
+        reader.onload = function(e){
+          var img = e.target.result
+          var imgURL = target.files[0]
+          $('#upload_bg_img').attr('src', img)
+        }
+      }
+      reader.readAsDataURL(target.files[0])
+    })
+  </script>
+</html>

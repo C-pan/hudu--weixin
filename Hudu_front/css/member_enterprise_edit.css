@@ -1,0 +1,204 @@
+
+body {
+  background: #fff;
+  font-size: 0.3rem;
+}
+
+.position_dues_section{
+  width: 7rem;
+  margin: 0 auto;
+}
+.position_dues_section .preserved{
+  width: 7rem;
+  height: 0.65rem;
+  background: #ffa304;
+}
+.position_dues_section .preserved>a{
+  display: block;
+  float: right;
+  margin-top: 0.14rem;
+  margin-right: 0.35rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  padding:0 0.15rem;
+  color: #fff;
+  font-size: 0.3rem;
+  border:1px solid #fff;
+  border-radius: 0.1rem;
+}
+.position_dues_section .upload_bg_box{
+  height: 1.55rem;
+  width: 100%;
+  background: #f0f0f2;
+  position: relative;
+  margin:0 auto;
+  text-align: center;
+  background-size: 1.9rem 0.6rem;
+}
+.position_dues_section .upload_box_bg{
+  height: 0.95rem;
+  width: 100%;
+  background: #f0f0f1;
+  position: relative;
+}
+.position_dues_section #upload_bg_inp{
+  display: none;
+}
+.position_dues_section .upload_bg_box .upload_bg img{
+  position: relative;
+  top: 0.4rem;
+  margin:0 auto;
+  height: 0.8rem;
+  width: 2.85rem;
+}
+.position_dues_section .authentication{
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .26rem;
+  color: #ffa304;
+}
+.position_dues_section .authentication img {
+  width: .34rem;
+  vertical-align: top;
+}
+
+
+.sel_member{
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 0.28rem;
+  font-family: "微软雅黑";
+}
+.sel_member .menmber_ico{
+  float: left;
+  box-sizing: border-box;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-left: 0.3rem;margin-top: 0.33rem;
+
+}
+.sel_member .left_tit{
+  float: left;
+  padding-left: 0.15rem;
+  font-size: 0.28rem;
+  color: #c8c8c8;
+  height: 1rem;
+  line-height: 1rem;
+  font-family: "微软雅黑";
+}
+.sel_member .right_cntent{
+  position: absolute;
+  top: 0;
+  right: 0.6rem;
+  font-size: 0.28rem;
+  color: #B6B6B7;
+  height: 1rem;
+  line-height: 1rem;
+  font-family: "微软雅黑";
+}
+.sel_member #bind_phone{
+  position: absolute;
+  top: 0.15rem;
+  right: 0.6rem;
+  color: #ffa304;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0 0.16rem;
+  border:1px solid #ffa304;
+  border-radius:0.06rem;
+}
+.sel_member .right_ico img{
+ position: absolute;
+  top: 0;
+  right: 0.25rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  padding-top: 0.35rem;
+}
+ 
+.sel_member .position_inp{
+  width:4.5rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  color: #5a5a5a;
+  font-size: 0.25rem;
+  font-family: "微软雅黑";
+  padding-left: 0.2rem;
+}
+.sketch_box{
+  box-sizing: border-box;
+  width: 7rem;
+  height: 1.4rem;
+  margin-top: 0.05rem;
+  border-bottom:1px solid #d7d7d7;
+}
+.sketch_box .sketch_tit{
+  box-sizing: border-box;
+  width: 7rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  padding-left: 0.4rem;
+  font-size: 0.24rem;
+  color: #b7b7b8;
+  background: #eeeeef;
+}
+.sketch_box .sketch_textarea{
+  box-sizing: border-box; 
+  width: 7rem;
+  height: 0.95rem;
+  line-height: 0.5rem;
+  font-size: 0.22rem;
+  color: #b7b7b8;
+  padding-left: 0.6rem;
+}
+.info_box{
+  box-sizing: border-box;
+  width: 7rem;
+  height: 3.3rem;
+  margin-top: 0.05rem;
+  border-bottom:1px solid #d7d7d7;
+}
+.info_tit{
+  box-sizing: border-box;
+  width: 7rem;
+  height: 0.45rem;
+  line-height: 0.45rem;
+  padding-left: 0.4rem;
+  font-size: 0.24rem;
+  color: #b7b7b8;
+  background: #eeeeef;
+}
+.sketch_box .info_box{
+  box-sizing: border-box; 
+  width: 7rem;
+  height: 2.85rem;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
