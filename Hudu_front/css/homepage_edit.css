@@ -41,6 +41,10 @@
   height: 100%;
   padding: 0.1rem 0.2rem;
 }
+.swiper-slide>div>ul>li textarea{
+  border: 1px solid #ccc;
+  display: none;
+}
 .swiper-slide>div>ul>li>p{
   font-size: 0.3rem;
   text-align: center;

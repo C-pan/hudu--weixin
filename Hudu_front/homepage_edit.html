@@ -21,15 +21,27 @@
 							</p>
 							<ul class="clearfix">
 								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									<p onclick="_editorText()">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText()">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
 									</div>
 								</li>
 								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									<p onclick="_editorText(this)">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText(this)">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
 									</div>
 								</li>
 							</ul>
@@ -43,15 +55,27 @@
 							</p>
 							<ul class="clearfix">
 								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									<p onclick="_editorText(this)">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText(this)">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
 									</div>
 								</li>
 								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									<p onclick="_editorText()">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText()">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
 									</div>
 								</li>
 							</ul>
@@ -297,7 +321,13 @@
 		var  open_dom = '' // 保存所点击的dom
 		var oldBgcolor = ''  //用户最后一次编辑并保存的颜色值
 
-
+		function _editorText(e){
+			var tar = $(e)
+			tar.children('span').css({display: 'none'}).next('textarea').css({display: 'block'}).val( tar.children('span').html() )
+		}
+		$('.swiper-slide ul li textarea').on('blur', function(e){
+			console.log(00)
+		})
 		// 官网名称input的绑定
 		function _editorName(e){
 			chamber.name = e.value
