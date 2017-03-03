@@ -39,10 +39,10 @@
   }
    .member_info .member_right .memb_position .position{
     padding-left: 0.22rem;
-    font-size: 0.12rem;
+    font-size: 0.15rem;
     color: #74bc3a; 
     background: url(../img/v_ico.png) left bottom no-repeat;
-    background-size: 0.2rem;
+    background-size: 0.15rem;
   }
    .member_info .member_right .memb_company{
     font-size: 0.14rem;
