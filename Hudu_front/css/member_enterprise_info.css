@@ -1,6 +1,10 @@
   body{
     background: #fefefe;
   }
+  .member_enterprise_content{
+    width: 7rem;
+    margin:0 auto;
+  }
   .member_enterprise_content .member_img{
     width: 6.9rem;
     margin:0.05rem auto;
@@ -12,6 +16,7 @@
   .member_enterprise_content  .member_info{
     width: 7rem;
     height: 1.2rem;
+
     border-bottom: 1px solid #9e9e9e;
   }
   .member_enterprise_content  .member_info img{
