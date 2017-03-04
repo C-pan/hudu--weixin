@@ -15,13 +15,94 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+						<div>
+							<p>
+								<img src="img/member_banner_1.jpg" alt=""/>
+							</p>
+							<ul class="clearfix">
+								<li>
+									<p onclick="_editorText()">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText()">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
+									</div>
+								</li>
+								<li>
+									<p onclick="_editorText(this)">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText(this)">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
+									</div>
+								</li>
+							</ul>
+							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+						</div>
 					</div>
 					<div class="swiper-slide">
-						<img src="img/home_banner2.jpg" alt="首页轮播图"/>
+						<div>
+							<p>
+								<img src="img/my_photo.png" alt=""/>
+							</p>
+							<ul class="clearfix">
+								<li>
+									<p onclick="_editorText(this)">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText(this)">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
+									</div>
+								</li>
+								<li>
+									<p onclick="_editorText()">
+										<span>模板名片</span>
+										<textarea cols="30" rows="10"></textarea>
+									</p>
+									<div onclick="_editorText()">
+										<span>
+											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+										</span>
+										<textarea cols="30" rows="10"></textarea>
+									</div>
+								</li>
+							</ul>
+							<img src="img/home_banner2.jpg" alt="首页轮播图"/>
+						</div>
 					</div>
 					<div class="swiper-slide">
-						<img src="img/home_banner3.jpg" alt="首页轮播图"/>
+						<div>
+							<p>
+								<img src="img/top.jpg" alt=""/>
+							</p>
+							<ul class="clearfix">
+								<li>
+									<p>模板名片</p>
+									<div>
+										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									</div>
+								</li>
+								<li>
+									<p>模板名片</p>
+									<div>
+										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
+									</div>
+								</li>
+							</ul>
+							<img src="img/home_banner3.jpg" alt="首页轮播图"/>
+						</div>
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
@@ -236,27 +317,44 @@
 	<script src="js/jscolor.js"></script>
 	<script src="js/public.js"></script>
 	<script>
-		var chamber = {}, open_dom = ''
+		var chamber = {}  // 宫格名称、颜色、图标、链接
+		var  open_dom = '' // 保存所点击的dom
+		var oldBgcolor = ''  //用户最后一次编辑并保存的颜色值
 
-
+		function _editorText(e){
+			var tar = $(e)
+			tar.children('span').css({display: 'none'}).next('textarea').css({display: 'block'}).val( tar.children('span').html() )
+		}
+		$('.swiper-slide ul li textarea').on('blur', function(e){
+			console.log(00)
+		})
+		// 官网名称input的绑定
 		function _editorName(e){
 			chamber.name = e.value
 		}
+
+		// 提交官网编辑信息
 		$('.subInfo').on('click', function(){
 			chamber.bgcolors = $('#chamber-bgcolor').val()
-			console.log(chamber)
 			open_dom.css({background: '#' + chamber.bgcolors})
 			open_dom.children('.open-modal').next().attr('src',chamber.img )
 			open_dom.children('span').html(chamber.name)
 			open_dom.attr({'data-url': chamber.url})
 			$('.model-box').css({display: 'none'})
 		})
+
+		// 编辑宫格
 		$('.open-modal').on('click', function(e){
 			var tar = $(e.target)
 			open_dom = tar.parent()
+			// 如果用户有过最后一次保存的颜色值，就保存在 chamber.bgcolors 中
+			if( oldBgcolor ){
+				chamber.bgcolors = oldBgcolor
+			}else{
+				chamber.bgcolors = open_dom.css('background-color')
+			}
 			chamber.name = open_dom.children('span').html()
 			chamber.img = open_dom.children('.open-modal').next().attr('src')
-			chamber.bgcolors = open_dom.css('background-color')
 			chamber.url = open_dom.attr('data-url')
 			$('#chamber-bgcolor').val( chamber.bgcolors).css({background: chamber.bgcolors,color: 'transparent'})
 			$('#chamber-img').attr({src: chamber.img})
@@ -265,19 +363,7 @@
 			$('.model-box').css({display: 'table'})
 		})
 
-//		function _editor(e,str) {
-//			var tar = $(e)
-//			if(tar.attr('data-open') == 0){
-//				$('.select-list').css({display: 'none'})
-//				$('.open-sel').attr('data-open', 0)
-//				tar.next('.select-list').css({display: 'block'})
-//				tar.attr('data-open', 1)
-//
-//			}else{
-//				tar.attr('data-open', 0)
-//				tar.next('.select-list').css({display: 'none'})
-//			}
-//		}
+		// 点击弹出可供选择的小图标、链接模态框
 		$('.open-sel').on('click', function(e){
 			var tar = $(e.target)
 			if(tar.attr('data-open') === undefined){
@@ -295,6 +381,7 @@
 		})
 
 
+		// 点击选择小图标、链接
 		$('.select-list ul li').on('click', function(e){
 			var tar = $(e.target)
 			var key = tar.parents('ul.clearfix').attr('data-info')
@@ -312,6 +399,7 @@
 		})
 
 
+		// 点击切换选择或者自定义链接
 		$('.model-content-url li').on('click', function(e){
 			var tar = $(e.target)
 			if(tar[0].nodeName != 'LI'){
@@ -337,11 +425,11 @@
 			slidesPerView: 1,
 			paginationClickable: true,
 			spaceBetween: 30,
-			autoplay: 1000,
+			//autoplay: 1000,
 			autoplayDisableOnInteraction: false,
 			loop: true
 		});
-
+   		// 点击隐藏模态框
 		$('.model-box').on('click', function(e){
 			var tar = $(e.target)
 			if(tar .attr('data-wrapper') == 'wrapper'){

@@ -7,8 +7,56 @@
 .section-banner .swiper-container {
   width: 100%;
 }
-.section-banner .swiper-container img {
+.swiper-slide>div{
   width: 100%;
+  position: relative;
+}
+.swiper-slide>div>img{
+  width: 100%;
+}
+.swiper-slide>div>p{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  padding: 0.1rem 0;
+  text-align: center;
+}
+.swiper-slide>div>p>img{
+  height: 100%;
+}
+.swiper-slide>div>ul{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.swiper-slide>div>ul>li{
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 0.1rem 0.2rem;
+}
+.swiper-slide>div>ul>li textarea{
+  border: 1px solid #ccc;
+  display: none;
+}
+.swiper-slide>div>ul>li>p{
+  font-size: 0.3rem;
+  text-align: center;
+}
+.swiper-slide>div>ul>li>div{
+  height: 68%;
+  font-size: 0.1rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .section-main > ul {
   margin-top: .2rem;
