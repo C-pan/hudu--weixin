@@ -125,7 +125,7 @@ body {
   height: 0.9rem;
   line-height: 0.9rem;
   color: #5a5a5a;
-  font-size: 0.25rem;
+  font-size: 0.28rem;
   font-family: "微软雅黑";
   padding-left: 0.2rem;
 }
@@ -152,7 +152,7 @@ body {
   width: 7rem;
   height: 0.95rem;
   line-height: 0.5rem;
-  font-size: 0.24rem;
+  font-size: 0.3rem;
   color: #b7b7b8;
   background: #fff;
   padding-left: 0.6rem;
@@ -163,6 +163,9 @@ body {
   min-height: 2.85rem;
   margin-top: 0.05rem;
   border-bottom:1px solid #d7d7d7;
+}
+.info_box img{
+  width: 100%;
 }
 .info_tit{
   box-sizing: border-box;
@@ -327,3 +330,6 @@ body {
 
 
 
+.text_intro img{
+  width: 100%;
+}
