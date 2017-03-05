@@ -1,6 +1,14 @@
   body{
     background: #fefefe;
   }
+ .section-banner{
+    width: 6.9rem;
+    margin:0 auto;
+  }
+  .section-banner img{
+    width: 100%;
+    margin:0 auto;
+  }
   .member_enterprise_content{
     width: 7rem;
     margin:0 auto;
