@@ -151,9 +151,9 @@ body {
   box-sizing: border-box; 
   width: 7rem;
   height: 0.95rem;
-  line-height: 0.5rem;
+  line-height: 0.95rem;
   font-size: 0.3rem;
-  color: #b7b7b8;
+  color: #333;
   background: #fff;
   padding-left: 0.6rem;
 }

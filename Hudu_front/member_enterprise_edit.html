@@ -43,7 +43,7 @@
               <a href="#">
                 <img src="img/member_01.jpg" alt="">
                 <div class="member_right">
-                  <div class="memb_position">李先生常务秘书长</div>
+                  <div class="memb_position">吴3先生常务秘书长</div>
                   <div class="memb_company">广东省江门市狐度科技有限公司</div>
                   <div class="company_position">总经理</div>
                 </div>
@@ -78,7 +78,7 @@
 					<div class="event-intro">
 						<div class="rich-text-editor">
 							<div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
-							<span style="color:#c0c0c0;  font-size: 0.3rem;">输入会员企业图文介绍，为企业推广</span>
+							<div  class="bjl" style="color: #ccc; font-size: 0.3rem;" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
 							</div>
 						</div>
 					</div>
@@ -184,7 +184,7 @@
       reader.readAsDataURL(target.files[0])
     })
      // 触摸焦点效果
-    $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
+    $('.sketch_textarea,.sel_member,.info_box,.member_enterprise_list>li').bind('touchstart',function () {
       $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
        $(this).css('background','transparent');
@@ -201,4 +201,14 @@
     $('.add_contacts').on('click',function () {
        $('#bind_amdin_mask').css('display','none');
     })
+
+    // 弹出层关闭
+    $('.member_enterprise_list>li').on('click',function () {
+      $('#bind_amdin_mask').css('display','none');
+      var selName=$(this).find('.memb_position').html();//获取到选中的用户
+      $('.position_inp').attr('value',selName);
+    })
+    $('.info_box').click(function ( ) {
+      $('.bjl').remove();
+    });
   </script>
