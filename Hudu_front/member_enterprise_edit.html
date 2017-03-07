@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <title>编辑器</title>
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/member_enterprise_edit.css">
     <link rel="stylesheet" type="text/css" href="css/edit_style.css" charset="UTF-8">
@@ -14,48 +15,6 @@
     <link rel="stylesheet" href="css/upload.css"/>
     <script src="js/public.js"></script>
     <style>
-        .upload_bg_box .upload_bg{
-            display: table-cell;
-            height: 1.55rem;
-            width: 7rem;
-            vertical-align: middle;
-            position: relative;
-        }
-        .upload_bg_box ul{
-            float: left;
-            width: 75%;
-            padding: .15rem 0 0 .15rem;
-            display: none;
-        }
-        .upload_bg_box p{
-            float: left;
-            box-sizing: border-box;
-            width: 25%;
-            padding-right: .15rem;
-            padding-top: .15rem;
-            position: relative;
-            display: none;
-        }
-        .upload_bg_box ul li{
-            float: left;
-            box-sizing: border-box;
-            width: 33.3%;
-            padding-right: .15rem;
-            padding-bottom: .15rem;
-            display: table-cell;
-            vertical-align: middle;
-            height: 1.8rem;
-        }
-        .upload_bg_box ul li img, .upload_bg_box p img{
-            width: 100%;
-        }
-        .upload_bg input{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
     </style>
 </head>
 <body style="height: 100%;">
@@ -87,16 +46,6 @@
                 </a>
             </li>
             <li>
-<<<<<<< HEAD
-                <a href="#">
-                    <img src="img/member_01.jpg" alt="">
-                    <div class="member_right">
-                        <div class="memb_position">李先生常务秘书长</div>
-                        <div class="memb_company">广东省江门市狐度科技有限公司</div>
-                        <div class="company_position">总经理</div>
-                    </div>
-                </a>
-=======
               <a href="#">
                 <img src="img/member_01.jpg" alt="">
                 <div class="member_right">
@@ -105,7 +54,6 @@
                   <div class="company_position">总经理</div>
                 </div>
               </a>
->>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc
             </li>
         </ul>
     </section>
@@ -126,7 +74,7 @@
             <!--</li>-->
         </ul>
         <p>
-            <img src="img/9-1.jpg" alt=""/>
+            <img src="img/add_member_ico.png" alt=""/>
             <input class="upload-file file" type="file" accept="image/*" capture="camera"/>
         </p>
     </div>
@@ -137,26 +85,26 @@
     <!--</div>-->
     <!--<img id="previewResult"/> <img id="previewResult1"/>-->
     <div class="app" id="uploadPage">
-        <div class="upload-loading">
-            <span class="centerXY"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></span>
-        </div>
-        <div class="bar"><a class="back pull-left" id="closeCrop"><i class="fa fa-reply"></i></a><a id="getFile" class="pull-right">使用</a></div>
-        <div class="main">
-            <canvas class="upload-mask">
-
-            </canvas>
-            <div class="preview-box">
-                <img id="preview"/>
-            </div>
-            <canvas class="photo-canvas">
-
-            </canvas>
-            <a  id="rotateBtn">
-                <i class="fa fa-rotate-right  fa-3x"></i>
-                <div>旋转照片</div>
-            </a>
-        </div>
+    <div class="upload-loading">
+        <span class="centerXY"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></span>
     </div>
+    <div class="bar"><a class="back pull-left" id="closeCrop"><i class="fa fa-reply"></i></a><a id="getFile" class="pull-right">使用</a></div>
+    <div class="main">
+        <canvas class="upload-mask">
+
+        </canvas>
+        <div class="preview-box">
+            <img id="preview"/>
+        </div>
+        <canvas class="photo-canvas">
+
+        </canvas>
+        <a  id="rotateBtn">
+            <i class="fa fa-rotate-right  fa-3x"></i>
+            <div>旋转照片</div>
+        </a>
+    </div>
+</div>
 
 
     <div class="sel_member">
@@ -166,10 +114,8 @@
         <span class="right_ico"><img src="img/next_level.png" alt=""></span>
     </div>
     <div class="info_box">
-        <div class="info_tit">会员企业详情：</div>
-        <div class="info_box">
-            <div class="info_tit">会员企业详情：</div>
-            <div class="info_box">
+      <div class="info_tit">会员企业详情：</div>
+      <div class="info_box">
 
 				<!--编辑框 默认展开部分-->
 				<div class="Activity-Edit">
@@ -182,9 +128,8 @@
 					</div>
 				</div>
 				<!-- 编辑器结束 -->
-            </div>
-            <!-- 编辑器结束 -->
-        </div>
+      </div>
+      <!-- 编辑器结束 -->
     </div>
     <div class="sketch_box">
         <div class="sketch_tit">简述：</div>
@@ -257,7 +202,6 @@
 <script src="js/canvas-toBlob.js"></script>
 <script>
     // 上传背景图   .upload_bg_box  .upload_bg  #upload_bg_inp   #upload_bg_img           cs  #upldp
-<<<<<<< HEAD
     //     $('#upload_bg_img').on('click',function(){
     //      console.log("bg")
     //      $('#upload_bg_inp').click()
@@ -288,36 +232,6 @@
     // 触摸焦点效果
     $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
         $(this).css('background','rgba(200,200,200,0.6)');
-=======
-     $('#upload_bg_img').on('click',function(){
-      console.log("bg")
-      $('#upload_bg_inp').click()
-    })
-    $('#upload_bg_inp').on('change',function(e){
-      var target = e.target
-      var reg = /(\.jpg|\.png|\.jpeg)$/ig
-      if(!/image\/\w+/.test(target.files[0].type)){  
-        alert("这个需要图片！");  
-        return false;  
-      } 
-      if(!reg.test(target.value)){
-        alert('请选择JPG或者PNG格式的图片！')
-        return
-      }
-      if (target.files[0]) {
-        var reader = new FileReader()
-        reader.onload = function(e){
-          var img = e.target.result
-          var imgURL = target.files[0]
-          $('#upload_bg_img').attr('src', img)
-        }
-      }
-      reader.readAsDataURL(target.files[0])
-    })
-     // 触摸焦点效果
-    $('.sketch_textarea,.sel_member,.info_box,.member_enterprise_list>li').bind('touchstart',function () {
-      $(this).css('background','rgba(200,200,200,0.6)');
->>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc
     }).bind('touchend',function(){
         $(this).css('background','transparent');
     });
@@ -334,22 +248,32 @@
         $('#bind_amdin_mask').css('display','none');
     })
 
+    // 弹出层关闭
+    $('.member_enterprise_list>li').on('click',function () {
+      $('#bind_amdin_mask').css('display','none');
+      var selName=$(this).find('.memb_position').html();//获取到选中的用户
+      $('.position_inp').attr('value',selName);
+    })
+    $('.info_box').click(function ( ) {
+      $('.bjl').remove();
+    });
 
-    var myCrop;
-    //    防require缓存
+
+ var myCrop;
+//    防require缓存
     require.config({
         urlArgs:"bust="+new Date
     })
-<<<<<<< HEAD
     require(["jquery",'hammer','tomPlugin',"tomLib",'hammer.fake','hammer.showtouch'],function($,hammer,plugin,T){
         document.addEventListener("touchmove",function(e){
             e.preventDefault();
         })
         //初始化图片大小300*300
-        var $file=$(".file"),
+        // var opts={cropWidth: $('body').css('width') * 90%, cropHeight: $('body').css('height') * 50%},
+        var opts={cropWidth: parseInt($('body').css('width')) * 0.9,cropHeight: parseInt($('body').css('height')) * 0.5},
+                $file=$(".file"),
                 previewStyle={x:0,y:0,scale:1,rotate:0,ratio:1},
                 transform= T.prefixStyle("transform"),
-                $previewResult=$("#previewResult"),
                 $previewBox=$(".preview-box"),
                 $rotateBtn=$("#rotateBtn"),
                 $getFile=$("#getFile"),
@@ -358,10 +282,8 @@
                 $mask=$(".upload-mask"),
                 $loading=$(".upload-loading"),
                 maskCtx=$mask[0].getContext("2d"),
-                $needCropImg=$("#needCropImg"),
-                opts={cropWidth: parseInt($('body').css('width')) * 0.9,cropHeight: parseInt($('body').css('height')) * 0.5}
-        console.log($('body').css('width'))
-
+                $needCropImg=$("#needCropImg");
+                console.log(opts)
         //这是插件调用主体
         myCrop=T.cropImage({
             bindFile:$file,//绑定Input file
@@ -381,6 +303,7 @@
             },
             onLoad:function(data){
                 //用户每次选择图片后执行回调
+
                 $('.photo-canvas').css({opacity: 0})
                 previewStyle.ratio=data.ratio;
                 $preview.attr("src",data.originSrc).css({width:data.width,height:data.height}).css(transform,'scale('+1/previewStyle.ratio+')');
@@ -407,7 +330,7 @@
                 $preview.css(transform,"translate3d("+ previewStyle.x+'px,'+ previewStyle.y+"px,0) rotate("+previewStyle.rotate+"deg) scale("+(previewStyle.scale/previewStyle.ratio)+")")
             }
         })
-        //旋转图片
+        // 旋转图片
         $rotateBtn.on("click",function(){
             previewStyle.rotate+=90;
             if(previewStyle.rotate>=360){
@@ -420,47 +343,32 @@
         //获取图片并关闭弹窗返回到表单界面
         $getFile.on("click",function(){
             var cropInfo;
-            // if(i>0){
-            //     alert('4');
-            //     $('#previewResult1').attr("src",cropInfo.src).show();
-            // }
-            // else{
-
-            // }
-            $('.upload_bg').hide()
-            $('.upload-img-list').show()
-            $('.upload_bg_box p').show()
+          	$('.upload_bg').hide()
+          	$('.upload-img-list').show()
+          	$('.upload_bg_box p').show()
             $uploadPage.hide();
             myCrop.setCropStyle(previewStyle)
             //自定义getCropFile({type:"png",background:"red",lowDpi:true})
             cropInfo=myCrop.getCropFile({});
-
             $('.upload-img-list').append("<li><img src='"+ cropInfo.src +"'/></li>")
-//            if(!$previewResult.attr("src")){
-//                $previewResult.attr("src",cropInfo.src).show();
-//            }
-//            else{
-//                $('#previewResult1').attr("src",cropInfo.src).show();
-//            }
-            // $previewResult.attr("src",cropInfo.src).show();
-            var i=1;
+            
 
             //可选传base64或者file对象
             //cropInfo.src cropInfo.dfd
 
             //you can upload img base64  :cheers:)
             console.info('拿到Base64了,传给后台吧？')//src.substr(22)
-            /*     $.ajax({
-             url:'http://127.0.0.1/testAdjustImg/upload.php',
-             type:"post",
-             dataType:"json",
-             data:{base64:cropInfo.src.substr(22),uploadType:'base64'},//后端无需在过滤头
-             success:function(data){
-             if(data.result==1){
-             console.log(data.imgPath)
-             }
-             }
-             })*/
+       /*     $.ajax({
+                url:'http://127.0.0.1/testAdjustImg/upload.php',
+                type:"post",
+                dataType:"json",
+                data:{base64:cropInfo.src.substr(22),uploadType:'base64'},//后端无需在过滤头
+                success:function(data){
+                    if(data.result==1){
+                        console.log(data.imgPath)
+                    }
+                }
+            })*/
             //you can upload new img file :cheers:)
             cropInfo.dfd.done(function(blob){
                 if(blob){
@@ -489,16 +397,17 @@
         //上传文件按钮&&关闭弹窗按钮
         $(document).delegate(".file","click",function(){
             $uploadPage.show();
+            showCropModal();
         }).delegate("#closeCrop","click",function(){
             $uploadPage.hide();
             resetUserOpts();
             myCrop.setCropStyle(previewStyle)
         })
-        $file.one("click",showCropModal)
-        $previewResult.on('click',showCropModal)
+        // $('.file').on("click",showCropModal)
 
         function showCropModal(){
             setTimeout(function(){
+          			$("#preview").attr({src: ''})
                 $uploadPage.show();
                 $mask.prop({width:$mask.width(),height:$mask.height()})
                 maskCtx.fillStyle="rgba(0,0,0,0.7)";
@@ -507,26 +416,12 @@
                 maskCtx.lineWidth='2'
                 maskCtx.clearRect(($mask.width()-opts.cropWidth)/2,($mask.height()-opts.cropHeight)/2,opts.cropWidth,opts.cropHeight)
                 maskCtx.strokeRect(($mask.width()-opts.cropWidth)/2-1,($mask.height()-opts.cropHeight)/2-1,opts.cropWidth+2,opts.cropHeight+2);//Add a subpath with four points
-                $('.photo-canvas').css({opacity: 1, background: '#fff'})
-            })
+                $('.photo-canvas').css({opacity: 1,background: '#fff'})
+            },200)
         }
-
         //单独绑定图片时用到
 //        $needCropImg[0].addEventListener("load",showCropModal)
 //        $needCropImg[0].src='./img/9-1.jpg';
     })
 </script>
 </html>
-=======
-
-    // 弹出层关闭
-    $('.member_enterprise_list>li').on('click',function () {
-      $('#bind_amdin_mask').css('display','none');
-      var selName=$(this).find('.memb_position').html();//获取到选中的用户
-      $('.position_inp').attr('value',selName);
-    })
-    $('.info_box').click(function ( ) {
-      $('.bjl').remove();
-    });
-  </script>
->>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc

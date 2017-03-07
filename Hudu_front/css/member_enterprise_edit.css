@@ -314,18 +314,54 @@ body {
     color: #4e4c4c; 
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .text_intro img{
   width: 100%;
+}
+
+
+/* 截取图片 */
+.upload_bg_box .upload_bg{
+    display: table-cell;
+    height: 1.55rem;
+    width: 7rem;
+    vertical-align: middle;
+    position: relative;
+}
+.upload_bg_box ul{
+    float: left;
+    width: 75%;
+    padding: .15rem 0 0 .15rem;
+    display: none;
+}
+.upload_bg_box p{
+   	float: left;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 0.3rem;
+    padding-right: .32rem;
+    padding-top: .32rem;
+    position: relative;
+    display: none;
+}
+.upload_bg_box ul li{
+    float: left;
+    box-sizing: border-box;
+    width: 33.3%;
+    padding-right: .15rem;
+    padding-bottom: .15rem;
+    display: table-cell;
+    vertical-align: middle;
+    height: 1.8rem;
+    text-align: center;
+}
+.upload_bg_box ul li img, .upload_bg_box p img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.upload_bg input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
