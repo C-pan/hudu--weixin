@@ -50,8 +50,8 @@
   text-align: center;
 }
 .swiper-slide>div>ul>li>div{
-  height: 68%;
-  font-size: 0.1rem;
+  height: 70%;
+  font-size: 0.25rem;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -320,4 +320,8 @@
 }
 .model-content-info .select-list ul.clearfix li img{
   width: 100%;
+}
+
+#upload_img{
+  display: none;
 }

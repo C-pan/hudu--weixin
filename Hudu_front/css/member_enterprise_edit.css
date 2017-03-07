@@ -10,20 +10,18 @@ body {
 }
 .position_dues_section .preserved{
   width: 7rem;
-  height: 0.65rem;
+  height: 0.7rem;
+  padding: 0.1rem;
   background: #ffa304;
 }
 .position_dues_section .preserved>a{
   display: block;
   float: right;
-  margin-top: 0.14rem;
   margin-right: 0.35rem;
-  height: 0.36rem;
-  line-height: 0.36rem;
-  padding:0 0.15rem;
+  padding: 0.07rem 0.15rem;
   color: #fff;
   font-size: 0.3rem;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   border-radius: 0.1rem;
 }
 .position_dues_section .upload_bg_box{
@@ -66,6 +64,7 @@ body {
   height: 1rem;
   line-height: 1rem;
   border-bottom: 1px solid #e3e3e3;
+  background: #fff;
   font-size: 0.28rem;
   font-family: "微软雅黑";
 }
@@ -124,6 +123,14 @@ body {
   font-size: 0.28rem;
   font-family: "微软雅黑";
   padding-left: 0.2rem;
+}
+.sel_member >span:last-child{
+  float: right;
+  margin-top: 0.08rem;
+  margin-right: 0.2rem;
+}
+.sel_member >span:last-child img{
+  width: 0.35rem;
 }
 .sketch_box{
   box-sizing: border-box;
@@ -357,6 +364,7 @@ body {
 .upload_bg_box ul li img, .upload_bg_box p img{
     max-width: 100%;
     max-height: 100%;
+    border: 1px solid #846d6d;
 }
 .upload_bg input{
     position: absolute;

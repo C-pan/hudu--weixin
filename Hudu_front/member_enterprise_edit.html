@@ -69,9 +69,7 @@
             <input class="upload-file file" type="file" accept="image/*" capture="camera"/>
         </div>
         <ul class="upload-img-list">
-            <!--<li>-->
-            <!--<img src="img/9-1.jpg" alt=""/>-->
-            <!--</li>-->
+
         </ul>
         <p>
             <img src="img/add_member_ico.png" alt=""/>
@@ -111,7 +109,7 @@
         <img src="img/Business_Association.jpg" class="menmber_ico" alt="">
         <span class="left_tit">选择会员</span>
         <input class="position_inp" type="text" placeholder="输入会员姓名查询" value="吴先生">
-        <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+        <span><img src="img/next_level.png" alt=""></span>
     </div>
     <div class="info_box">
       <div class="info_tit">会员企业详情：</div>
@@ -127,7 +125,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- 编辑器结束 -->
       </div>
       <!-- 编辑器结束 -->
     </div>
@@ -230,11 +227,12 @@
 
 
     // 触摸焦点效果
-    $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
-        $(this).css('background','rgba(200,200,200,0.6)');
-    }).bind('touchend',function(){
-        $(this).css('background','transparent');
-    });
+//    $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
+//        $(this).css('background','rgba(200,200,200,0.6)');
+//    }).bind('touchend',function(){
+//        $(this).css('background','transparent');
+//    });
+
     $('.upload_bg_box').bind('touchstart',function () {
         $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
@@ -269,8 +267,8 @@
             e.preventDefault();
         })
         //初始化图片大小300*300
-        // var opts={cropWidth: $('body').css('width') * 90%, cropHeight: $('body').css('height') * 50%},
-        var opts={cropWidth: parseInt($('body').css('width')) * 0.9,cropHeight: parseInt($('body').css('height')) * 0.5},
+         var opts={cropWidth: 640, cropHeight: 330},
+//        var opts={cropWidth: parseInt($('body').css('width')) * 0.9,cropHeight: parseInt($('body').css('height')) * 0.5},
                 $file=$(".file"),
                 previewStyle={x:0,y:0,scale:1,rotate:0,ratio:1},
                 transform= T.prefixStyle("transform"),

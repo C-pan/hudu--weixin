@@ -14,34 +14,33 @@
 		<section class="section-banner">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
+					<input type="file" accept="image/*" id='upload_img'>
 					<div class="swiper-slide">
 						<div>
 							<p>
-								<img src="img/member_banner_1.jpg" alt=""/>
+								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
 							<ul class="clearfix">
 								<li>
-									<p onclick="_editorText()">
-										<span>模板名片</span>
-										<textarea cols="30" rows="10"></textarea>
-									</p>
-									<div onclick="_editorText()">
-										<span>
-											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-										</span>
-										<textarea cols="30" rows="10"></textarea>
+									<div class="Activity-Edit">
+										<div class="event-intro">
+											<div class="rich-text-editor">
+												<div class="input-node text_intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
+													<div  class="bjl" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</li>
 								<li>
-									<p onclick="_editorText(this)">
-										<span>模板名片</span>
-										<textarea cols="30" rows="10"></textarea>
-									</p>
-									<div onclick="_editorText(this)">
-										<span>
-											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-										</span>
-										<textarea cols="30" rows="10"></textarea>
+									<div class="Activity-Edit">
+										<div class="event-intro">
+											<div class="rich-text-editor">
+												<div class="input-node text_intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
+													<div  class="bjl" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -51,7 +50,7 @@
 					<div class="swiper-slide">
 						<div>
 							<p>
-								<img src="img/my_photo.png" alt=""/>
+								<img class="swiper-slide-img" src="img/my_photo.png" alt=""/>
 							</p>
 							<ul class="clearfix">
 								<li>
@@ -85,7 +84,7 @@
 					<div class="swiper-slide">
 						<div>
 							<p>
-								<img src="img/top.jpg" alt=""/>
+								<img class="swiper-slide-img" src="img/top.jpg" alt=""/>
 							</p>
 							<ul class="clearfix">
 								<li>
@@ -316,7 +315,56 @@
 	<script src="js/swiper-3.4.1.jquery.min.js"></script>
 	<script src="js/jscolor.js"></script>
 	<script src="js/public.js"></script>
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.panzoom.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
 	<script>
+		(function() {
+			var $section = $('.section').first();
+			$section.find('.swiper-slide-img').panzoom({
+				$zoomIn: $section.find(".zoom-in"),
+				$zoomOut: $section.find(".zoom-out"),
+				$zoomRange: $section.find(".zoom-range"),
+				$reset: $section.find(".reset")
+			});
+		})();
+
+		$('.bjl').on('touchstart', function(){
+			console.log(41)
+		}).on('touchend', function(){
+			console.log(4546546)
+		})
+
+		var slImgDom = '';
+		$('.swiper-slide-img').on('click', function(e){
+			slImgDom = $(e.target)
+			$('#upload_img').click()
+		})
+
+		$('#upload_img').on('change',function(e){
+			var target = e.target
+			var reg = /(\.jpg|\.png|\.jpeg)$/ig
+			if(!/image\/\w+/.test(target.files[0].type)){
+				alert("这个需要图片！");
+				return false;
+			}
+			if(!reg.test(target.value)){
+				alert('请选择JPG或者PNG格式的图片！')
+				return
+			}
+			if (target.files[0]) {
+				var reader = new FileReader()
+				reader.onload = function(e){
+					var img = e.target.result
+					var imgURL = target.files[0]
+					slImgDom.attr('src', img)
+				}
+			}
+			reader.readAsDataURL(target.files[0])
+		})
+
+
+
 		var chamber = {}  // 宫格名称、颜色、图标、链接
 		var  open_dom = '' // 保存所点击的dom
 		var oldBgcolor = ''  //用户最后一次编辑并保存的颜色值
