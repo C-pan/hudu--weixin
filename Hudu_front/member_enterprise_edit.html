@@ -87,6 +87,7 @@
                 </a>
             </li>
             <li>
+<<<<<<< HEAD
                 <a href="#">
                     <img src="img/member_01.jpg" alt="">
                     <div class="member_right">
@@ -95,6 +96,16 @@
                         <div class="company_position">总经理</div>
                     </div>
                 </a>
+=======
+              <a href="#">
+                <img src="img/member_01.jpg" alt="">
+                <div class="member_right">
+                  <div class="memb_position">吴3先生常务秘书长</div>
+                  <div class="memb_company">广东省江门市狐度科技有限公司</div>
+                  <div class="company_position">总经理</div>
+                </div>
+              </a>
+>>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc
             </li>
         </ul>
     </section>
@@ -157,16 +168,20 @@
     <div class="info_box">
         <div class="info_tit">会员企业详情：</div>
         <div class="info_box">
+            <div class="info_tit">会员企业详情：</div>
+            <div class="info_box">
 
-            <!--编辑框 默认展开部分-->
-            <div class="Activity-Edit">
-                <div class="event-intro">
-                    <div class="rich-text-editor">
-                        <div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
-                            <span style="color:#c0c0c0; line-height: 1rem;">输入会员企业图文介绍，为企业推广</span>
-                        </div>
-                    </div>
-                </div>
+				<!--编辑框 默认展开部分-->
+				<div class="Activity-Edit">
+					<div class="event-intro">
+						<div class="rich-text-editor">
+							<div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
+							<div  class="bjl" style="color: #ccc; font-size: 0.3rem;" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 编辑器结束 -->
             </div>
             <!-- 编辑器结束 -->
         </div>
@@ -242,6 +257,7 @@
 <script src="js/canvas-toBlob.js"></script>
 <script>
     // 上传背景图   .upload_bg_box  .upload_bg  #upload_bg_inp   #upload_bg_img           cs  #upldp
+<<<<<<< HEAD
     //     $('#upload_bg_img').on('click',function(){
     //      console.log("bg")
     //      $('#upload_bg_inp').click()
@@ -272,6 +288,36 @@
     // 触摸焦点效果
     $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
         $(this).css('background','rgba(200,200,200,0.6)');
+=======
+     $('#upload_bg_img').on('click',function(){
+      console.log("bg")
+      $('#upload_bg_inp').click()
+    })
+    $('#upload_bg_inp').on('change',function(e){
+      var target = e.target
+      var reg = /(\.jpg|\.png|\.jpeg)$/ig
+      if(!/image\/\w+/.test(target.files[0].type)){  
+        alert("这个需要图片！");  
+        return false;  
+      } 
+      if(!reg.test(target.value)){
+        alert('请选择JPG或者PNG格式的图片！')
+        return
+      }
+      if (target.files[0]) {
+        var reader = new FileReader()
+        reader.onload = function(e){
+          var img = e.target.result
+          var imgURL = target.files[0]
+          $('#upload_bg_img').attr('src', img)
+        }
+      }
+      reader.readAsDataURL(target.files[0])
+    })
+     // 触摸焦点效果
+    $('.sketch_textarea,.sel_member,.info_box,.member_enterprise_list>li').bind('touchstart',function () {
+      $(this).css('background','rgba(200,200,200,0.6)');
+>>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc
     }).bind('touchend',function(){
         $(this).css('background','transparent');
     });
@@ -294,6 +340,7 @@
     require.config({
         urlArgs:"bust="+new Date
     })
+<<<<<<< HEAD
     require(["jquery",'hammer','tomPlugin',"tomLib",'hammer.fake','hammer.showtouch'],function($,hammer,plugin,T){
         document.addEventListener("touchmove",function(e){
             e.preventDefault();
@@ -470,3 +517,16 @@
     })
 </script>
 </html>
+=======
+
+    // 弹出层关闭
+    $('.member_enterprise_list>li').on('click',function () {
+      $('#bind_amdin_mask').css('display','none');
+      var selName=$(this).find('.memb_position').html();//获取到选中的用户
+      $('.position_inp').attr('value',selName);
+    })
+    $('.info_box').click(function ( ) {
+      $('.bjl').remove();
+    });
+  </script>
+>>>>>>> 6f68a821aceeaa855304b5b8ce1885cf378c02dc

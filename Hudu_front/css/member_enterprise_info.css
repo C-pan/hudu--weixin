@@ -1,6 +1,14 @@
   body{
     background: #fefefe;
   }
+ .section-banner{
+    width: 6.9rem;
+    margin:0 auto;
+  }
+  .section-banner img{
+    width: 100%;
+    margin:0 auto;
+  }
   .member_enterprise_content{
     width: 7rem;
     margin:0 auto;
@@ -38,19 +46,18 @@
     color: #332C2B; 
   }
    .member_info .member_right .memb_position .position{
-    padding-left: 0.22rem;
-    font-size: 0.15rem;
+    padding-left: 0.26rem;
+    font-size: 0.25rem;
     color: #74bc3a; 
     background: url(../img/v_ico.png) left bottom no-repeat;
     background-size: 0.15rem;
   }
    .member_info .member_right .memb_company{
-    font-size: 0.14rem;
+    font-size: 0.25rem;
     color: #9e9e9e; 
   }
    .member_info .member_right .company_position{
-     
-    font-size: 0.16rem;
+    font-size: 0.25rem;
     color: #4e4c4c; 
   }
   .company_profile{
@@ -68,7 +75,7 @@
     border-radius: 0.08rem;
   }
   .company_profile .profile_cont{
-    font-size: 0.26rem;
+    font-size: 0.27rem;
     color: #ffa304;
     line-height: 0.4rem;
     text-indent: 0.48rem;

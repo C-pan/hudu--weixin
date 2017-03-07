@@ -79,7 +79,11 @@
 		});
 
 	
-
+		$('.member_enterprise_list>li').bind('touchstart',function () {
+	      $(this).css('background','rgba(200,200,200,0.6)');
+	    }).bind('touchend',function(){
+	       $(this).css('background','transparent');
+	    });
 	
 
 </script>
