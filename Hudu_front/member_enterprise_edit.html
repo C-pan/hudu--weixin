@@ -1,204 +1,472 @@
 <!DOCTYPE html>
 <html class="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-	<title>编辑器</title>
-	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/member_enterprise_edit.css">
-<!--编辑器css-->
-	<link rel="stylesheet" type="text/css" href="css/edit_style.css" charset="UTF-8">
-	<script src="js/public.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>编辑器</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/member_enterprise_edit.css">
+    <link rel="stylesheet" type="text/css" href="css/edit_style.css" charset="UTF-8">
+    <!--编辑器css-->
+    <link rel="stylesheet" href="css/page-common.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="css/upload.css"/>
+    <script src="js/public.js"></script>
+    <style>
+        .upload_bg_box .upload_bg{
+            display: table-cell;
+            height: 1.55rem;
+            width: 7rem;
+            vertical-align: middle;
+            position: relative;
+        }
+        .upload_bg_box ul{
+            float: left;
+            width: 75%;
+            padding: .15rem 0 0 .15rem;
+            display: none;
+        }
+        .upload_bg_box p{
+            float: left;
+            box-sizing: border-box;
+            width: 25%;
+            padding-right: .15rem;
+            padding-top: .15rem;
+            position: relative;
+            display: none;
+        }
+        .upload_bg_box ul li{
+            float: left;
+            box-sizing: border-box;
+            width: 33.3%;
+            padding-right: .15rem;
+            padding-bottom: .15rem;
+            display: table-cell;
+            vertical-align: middle;
+            height: 1.8rem;
+        }
+        .upload_bg_box ul li img, .upload_bg_box p img{
+            width: 100%;
+        }
+        .upload_bg input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body style="height: 100%;">
 <!-- 弹出层 -->
 <div id="bind_amdin_mask">
-       <header class="chat_header">
-          <div class="search_from">
+    <header class="chat_header">
+        <div class="search_from">
             <div class="input_box">
-              <a href="#" class="search_bnt"><img src="img/search_btn.png"></a>
-              <input type="text" placeholder="搜索姓名 .....">
+                <a href="#" class="search_bnt"><img src="img/search_btn.png"></a>
+                <input type="text" placeholder="搜索姓名 .....">
             </div>
             <div class="add_contacts">
-              取消
+                取消
             </div>
-          </div>
-        </header>
-        <!-- 搜索到的内容 -->
-        <!-- 内容 -->
-        <section class="member_enterprise_content">
-          <ul class="member_enterprise_list">
+        </div>
+    </header>
+    <!-- 搜索到的内容 -->
+    <!-- 内容 -->
+    <section class="member_enterprise_content">
+        <ul class="member_enterprise_list">
             <li>
-              <a href="#">
-                <img src="img/member_01.jpg" alt="">
-                <div class="member_right">
-                  <div class="memb_position">李先生常务秘书长</div>
-                  <div class="memb_company">广东省江门市狐度科技有限公司</div>
-                  <div class="company_position">总经理</div>
-                </div>
-              </a>
+                <a href="#">
+                    <img src="img/member_01.jpg" alt="">
+                    <div class="member_right">
+                        <div class="memb_position">李先生常务秘书长</div>
+                        <div class="memb_company">广东省江门市狐度科技有限公司</div>
+                        <div class="company_position">总经理</div>
+                    </div>
+                </a>
             </li>
             <li>
-              <a href="#">
-                <img src="img/member_01.jpg" alt="">
-                <div class="member_right">
-                  <div class="memb_position">李先生常务秘书长</div>
-                  <div class="memb_company">广东省江门市狐度科技有限公司</div>
-                  <div class="company_position">总经理</div>
-                </div>
-              </a>
+                <a href="#">
+                    <img src="img/member_01.jpg" alt="">
+                    <div class="member_right">
+                        <div class="memb_position">李先生常务秘书长</div>
+                        <div class="memb_company">广东省江门市狐度科技有限公司</div>
+                        <div class="company_position">总经理</div>
+                    </div>
+                </a>
             </li>
-          </ul>
-        </section>
+        </ul>
+    </section>
 </div>
 <!-- 主内容 -->
- <section class="position_dues_section">
-        <div class="preserved">
-            <a href="#" class="preserved_btn">保存</a>
+<section class="position_dues_section">
+    <div class="preserved">
+        <a href="#" class="preserved_btn">保存</a>
+    </div>
+    <div class="upload_bg_box clearfix">
+        <div class="upload_bg">
+            <img src="img/upaload_compamy_bg.png" alt="" id="upload_bg_img">
+            <input class="upload-file file" type="file" accept="image/*" capture="camera"/>
         </div>
-        <div class="upload_bg_box">
-            <div class="upload_bg">
-                <img src="img/upaload_compamy_bg.png" alt="" id="upload_bg_img">
-                <input type="file" accept="img/*" id='upload_bg_inp'>
-            </div>
-        </div> 
-        <div class="sel_member">
-            <img src="img/Business_Association.jpg" class="menmber_ico" alt="">
-            <span class="left_tit">选择会员</span>
-            <input class="position_inp" type="text" placeholder="输入会员姓名查询" value="吴先生">
-            <span class="right_ico"><img src="img/next_level.png" alt=""></span>
-        </div>
-        <div class="info_box">
-            <div class="info_tit">会员企业详情：</div>
-            <div class="info_box">
+        <ul class="upload-img-list">
+            <!--<li>-->
+            <!--<img src="img/9-1.jpg" alt=""/>-->
+            <!--</li>-->
+        </ul>
+        <p>
+            <img src="img/9-1.jpg" alt=""/>
+            <input class="upload-file file" type="file" accept="image/*" capture="camera"/>
+        </p>
+    </div>
 
-				<!--编辑框 默认展开部分-->
-				<div class="Activity-Edit">
-					<div class="event-intro">
-						<div class="rich-text-editor">
-							<div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
-							<span style="color:#c0c0c0; line-height: 1rem;">输入会员企业图文介绍，为企业推广</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- 编辑器结束 -->
+
+    <!--<div style="background: url(img/123.png) center center no-repeat; position: relative; width: 150px; display: inline-block; height: 60px;">-->
+    <!--<input class="upload-file" type="file" id="file" accept="image/*" capture="camera"/>-->
+    <!--</div>-->
+    <!--<img id="previewResult"/> <img id="previewResult1"/>-->
+    <div class="app" id="uploadPage">
+        <div class="upload-loading">
+            <span class="centerXY"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></span>
+        </div>
+        <div class="bar"><a class="back pull-left" id="closeCrop"><i class="fa fa-reply"></i></a><a id="getFile" class="pull-right">使用</a></div>
+        <div class="main">
+            <canvas class="upload-mask">
+
+            </canvas>
+            <div class="preview-box">
+                <img id="preview"/>
             </div>
+            <canvas class="photo-canvas">
+
+            </canvas>
+            <a  id="rotateBtn">
+                <i class="fa fa-rotate-right  fa-3x"></i>
+                <div>旋转照片</div>
+            </a>
         </div>
-        <div class="sketch_box">
-            <div class="sketch_tit">简述：</div>
-            <textarea name="" class="sketch_textarea" placeholder="输入会员企业描述"></textarea>
+    </div>
+
+
+    <div class="sel_member">
+        <img src="img/Business_Association.jpg" class="menmber_ico" alt="">
+        <span class="left_tit">选择会员</span>
+        <input class="position_inp" type="text" placeholder="输入会员姓名查询" value="吴先生">
+        <span class="right_ico"><img src="img/next_level.png" alt=""></span>
+    </div>
+    <div class="info_box">
+        <div class="info_tit">会员企业详情：</div>
+        <div class="info_box">
+
+            <!--编辑框 默认展开部分-->
+            <div class="Activity-Edit">
+                <div class="event-intro">
+                    <div class="rich-text-editor">
+                        <div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
+                            <span style="color:#c0c0c0; line-height: 1rem;">输入会员企业图文介绍，为企业推广</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 编辑器结束 -->
         </div>
-  </section>
+    </div>
+    <div class="sketch_box">
+        <div class="sketch_tit">简述：</div>
+        <textarea name="" class="sketch_textarea" placeholder="输入会员企业描述"></textarea>
+    </div>
+</section>
 
 <div id="image-editor" class="hide">
-	<div id="image-editor-content" style="height: 680px; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-		<img class="corp">
-		<canvas class="curtain" width="800" height="680"></canvas>
-	</div>
+    <div id="image-editor-content" style="height: 680px; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <img class="corp">
+        <canvas class="curtain" width="800" height="680"></canvas>
+    </div>
 </div>
 <script type="text/javascript" src="js/zepto.js" charset="UTF-8"></script>
 <script type="text/javascript" src="js/edit.js" charset="UTF-8"></script>
 <!--启动输入框-->
-<div class="loading-view hide">
-	<div class="rich-text-editor-toolbar">
-		<a rt-cmd="insertImage()" class="icon-camera">&nbsp;</a>
-		<a rt-cmd="bold" rt-cmd-name="bold" class="cmd-button bold-false">B</a>
-		<div class="cmd-button foreColor-565a5c" rt-cmd-name="foreColor">
-			A
-			<tooltip>
-			<div class="tooltip-container">
-				<a class="round-rect foreColor-565a5c" style="display: inline-block" rt-cmd="foreColor(&#39;#565a5c&#39;)">
-                                    &nbsp;
-				</a>
-				<a class="round-rect foreColor-82898d" style="display: inline-block" rt-cmd="foreColor(&#39;#82898d&#39;)">
-                                    &nbsp;
-				</a>
-				<a class="round-rect foreColor-3893ed" style="display: inline-block" rt-cmd="foreColor(&#39;#3893ed&#39;)">
-                                    &nbsp;
-				</a>
-				<a class="round-rect foreColor-f03442" style="display: inline-block" rt-cmd="foreColor(&#39;#f03442&#39;)">
-                                    &nbsp;
-				</a>
-				<a class="round-rect foreColor-ff7612" style="display: inline-block" rt-cmd="foreColor(&#39;#ff7612&#39;)">
-                                    &nbsp;
-				</a>
-				<a class="round-rect foreColor-aa56c5" style="display: inline-block" rt-cmd="foreColor(&#39;#aa56c5&#39;)">
-                                    &nbsp;
-				</a>
-			</div>
-			</tooltip>
-		</div>
-		<div class="cmd-button fontSize-3" rt-cmd-name="fontSize">
-			A
-			<tooltip>
-			<div class="tooltip-container">
-				<a style="display: inline-block; font-size: 14px" rt-cmd="fontSize(&#39;3&#39;)">
-                                    A(小)
-				</a>
-				<a style="display: inline-block; font-size: 18px" rt-cmd="fontSize(&#39;4&#39;)">
-                                    A(中)
-				</a>
-				<a style="display: inline-block; font-size: 20px" rt-cmd="fontSize(&#39;5&#39;)">
-                                    A(大)
-				</a>
-			</div>
-			</tooltip>
-		</div>
-		<div class="cmd-button close-button" rt-cmd="close())">
-                    完成编辑
-		</div>
-	</div>
+<div class="loading-view hide"`>
+    <div class="rich-text-editor-toolbar">
+        <a rt-cmd="insertImage()" class="icon-camera">&nbsp;</a>
+        <a rt-cmd="bold" rt-cmd-name="bold" class="cmd-button bold-false">B</a>
+        <div class="cmd-button foreColor-565a5c" rt-cmd-name="foreColor">
+            A
+            <tooltip>
+                <div class="tooltip-container">
+                    <a class="round-rect foreColor-565a5c" style="display: inline-block" rt-cmd="foreColor(&#39;#565a5c&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-82898d" style="display: inline-block" rt-cmd="foreColor(&#39;#82898d&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-3893ed" style="display: inline-block" rt-cmd="foreColor(&#39;#3893ed&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-f03442" style="display: inline-block" rt-cmd="foreColor(&#39;#f03442&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-ff7612" style="display: inline-block" rt-cmd="foreColor(&#39;#ff7612&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-aa56c5" style="display: inline-block" rt-cmd="foreColor(&#39;#aa56c5&#39;)">
+                        &nbsp;
+                    </a>
+                </div>
+            </tooltip>
+        </div>
+        <div class="cmd-button fontSize-3" rt-cmd-name="fontSize">
+            A
+            <tooltip>
+                <div class="tooltip-container">
+                    <a style="display: inline-block; font-size: 14px" rt-cmd="fontSize(&#39;3&#39;)">
+                        A(小)
+                    </a>
+                    <a style="display: inline-block; font-size: 18px" rt-cmd="fontSize(&#39;4&#39;)">
+                        A(中)
+                    </a>
+                    <a style="display: inline-block; font-size: 20px" rt-cmd="fontSize(&#39;5&#39;)">
+                        A(大)
+                    </a>
+                </div>
+            </tooltip>
+        </div>
+        <div class="cmd-button close-button" rt-cmd="close())">
+            完成编辑
+        </div>
+    </div>
 </div>
 </body>
-</html>
-<script type="text/javascript" src="js/zepto.js"  ></script>
-
-  <script>
-   
+<script src="js/require.js" ></script>
+<script src="js/main.js"></script>
+<script src="js/canvas-toBlob.js"></script>
+<script>
     // 上传背景图   .upload_bg_box  .upload_bg  #upload_bg_inp   #upload_bg_img           cs  #upldp
-     $('#upload_bg_img').on('click',function(){
-      console.log("bg")
-      $('#upload_bg_inp').click()
-    })
-    $('#upload_bg_inp').on('change',function(e){
-      var target = e.target
-      var reg = /(\.jpg|\.png|\.jpeg)$/ig
-      if(!/image\/\w+/.test(target.files[0].type)){  
-        alert("这个需要图片！");  
-        return false;  
-      } 
-      if(!reg.test(target.value)){
-        alert('请选择JPG或者PNG格式的图片！')
-        return
-      }
-      if (target.files[0]) {
-        var reader = new FileReader()
-        reader.onload = function(e){
-          var img = e.target.result
-          var imgURL = target.files[0]
-          $('#upload_bg_img').attr('src', img)
-        }
-      }
-      reader.readAsDataURL(target.files[0])
-    })
-     // 触摸焦点效果
+    //     $('#upload_bg_img').on('click',function(){
+    //      console.log("bg")
+    //      $('#upload_bg_inp').click()
+    //    })
+    //    $('#upload_bg_inp').on('change',function(e){
+    //      var target = e.target
+    //      var reg = /(\.jpg|\.png|\.jpeg)$/ig
+    //      if(!/image\/\w+/.test(target.files[0].type)){
+    //        alert("这个需要图片！");
+    //        return false;
+    //      }
+    //      if(!reg.test(target.value)){
+    //        alert('请选择JPG或者PNG格式的图片！')
+    //        return
+    //      }
+    //      if (target.files[0]) {
+    //        var reader = new FileReader()
+    //        reader.onload = function(e){
+    //          var img = e.target.result
+    //          var imgURL = target.files[0]
+    //          $('#upload_bg_img').attr('src', img)
+    //        }
+    //      }
+    //      reader.readAsDataURL(target.files[0])
+    //    })
+
+
+    // 触摸焦点效果
     $('.sketch_textarea,.sel_member,.info_box').bind('touchstart',function () {
-      $(this).css('background','rgba(200,200,200,0.6)');
+        $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
-       $(this).css('background','transparent');
+        $(this).css('background','transparent');
     });
     $('.upload_bg_box').bind('touchstart',function () {
-      $(this).css('background','rgba(200,200,200,0.6)');
+        $(this).css('background','rgba(200,200,200,0.6)');
     }).bind('touchend',function(){
-       $(this).css('background','#f0f0f1');
+        $(this).css('background','#f0f0f1');
     });
     // 弹出层
     $('.sel_member').on('click',function () {
-      $('#bind_amdin_mask').css('display','block');
+        $('#bind_amdin_mask').css('display','block');
     });
     $('.add_contacts').on('click',function () {
-       $('#bind_amdin_mask').css('display','none');
+        $('#bind_amdin_mask').css('display','none');
     })
-  </script>
+
+
+    var myCrop;
+    //    防require缓存
+    require.config({
+        urlArgs:"bust="+new Date
+    })
+    require(["jquery",'hammer','tomPlugin',"tomLib",'hammer.fake','hammer.showtouch'],function($,hammer,plugin,T){
+        document.addEventListener("touchmove",function(e){
+            e.preventDefault();
+        })
+        //初始化图片大小300*300
+        var $file=$(".file"),
+                previewStyle={x:0,y:0,scale:1,rotate:0,ratio:1},
+                transform= T.prefixStyle("transform"),
+                $previewResult=$("#previewResult"),
+                $previewBox=$(".preview-box"),
+                $rotateBtn=$("#rotateBtn"),
+                $getFile=$("#getFile"),
+                $preview=$("#preview"),
+                $uploadPage=$("#uploadPage"),
+                $mask=$(".upload-mask"),
+                $loading=$(".upload-loading"),
+                maskCtx=$mask[0].getContext("2d"),
+                $needCropImg=$("#needCropImg"),
+                opts={cropWidth: parseInt($('body').css('width')) * 0.9,cropHeight: parseInt($('body').css('height')) * 0.5}
+        console.log($('body').css('width'))
+
+        //这是插件调用主体
+        myCrop=T.cropImage({
+            bindFile:$file,//绑定Input file
+//            bindFile:$needCropImg[0],//绑定一个图片
+            enableRatio:true,//是否启用高清,高清得到的图片会比较大
+            canvas:$(".photo-canvas")[0],  //放一个canvas对象
+            cropWidth:opts.cropWidth,       //剪切大小
+            cropHeight:opts.cropHeight,
+            bindPreview:$preview,      //绑定一个预览的img标签
+            useHammer:true,            //是否使用hammer手势，否的话将不支持缩放
+            oninit:function(){
+
+            },
+            onChange:function(){
+                $loading.show();
+                resetUserOpts();
+            },
+            onLoad:function(data){
+                //用户每次选择图片后执行回调
+                $('.photo-canvas').css({opacity: 0})
+                previewStyle.ratio=data.ratio;
+                $preview.attr("src",data.originSrc).css({width:data.width,height:data.height}).css(transform,'scale('+1/previewStyle.ratio+')');
+                myCrop.setCropStyle(previewStyle)
+                $loading.hide();
+            }
+        });
+        function resetUserOpts(){
+            $(".photo-canvas").hammer('reset');
+            previewStyle={scale:1,x:0,y:0,rotate:0};
+            // $previewResult.attr("src",'').hide();
+            $preview.attr("src",'')
+        }
+        // $('#fileChooseButton').on('click',function(){
+        //     setTimeout(function(){
+        //         resetUserOpts();
+        //     })
+        // })
+        $(".photo-canvas").hammer({
+            gestureCb:function(o){
+                //每次缩放拖拽的回调
+                $.extend(previewStyle,o);
+//                console.log("用户修改图片",previewStyle)
+                $preview.css(transform,"translate3d("+ previewStyle.x+'px,'+ previewStyle.y+"px,0) rotate("+previewStyle.rotate+"deg) scale("+(previewStyle.scale/previewStyle.ratio)+")")
+            }
+        })
+        //旋转图片
+        $rotateBtn.on("click",function(){
+            previewStyle.rotate+=90;
+            if(previewStyle.rotate>=360){
+                previewStyle.rotate-=360;
+            }
+            $(".photo-canvas").hammer('setRotate',previewStyle.rotate)
+            myCrop.setCropStyle(previewStyle)
+            $preview.css(transform,"translate3d("+ previewStyle.x+'px,'+ previewStyle.y+"px,0) rotate("+previewStyle.rotate+"deg) scale("+(previewStyle.scale/previewStyle.ratio)+")")
+        })
+        //获取图片并关闭弹窗返回到表单界面
+        $getFile.on("click",function(){
+            var cropInfo;
+            // if(i>0){
+            //     alert('4');
+            //     $('#previewResult1').attr("src",cropInfo.src).show();
+            // }
+            // else{
+
+            // }
+            $('.upload_bg').hide()
+            $('.upload-img-list').show()
+            $('.upload_bg_box p').show()
+            $uploadPage.hide();
+            myCrop.setCropStyle(previewStyle)
+            //自定义getCropFile({type:"png",background:"red",lowDpi:true})
+            cropInfo=myCrop.getCropFile({});
+
+            $('.upload-img-list').append("<li><img src='"+ cropInfo.src +"'/></li>")
+//            if(!$previewResult.attr("src")){
+//                $previewResult.attr("src",cropInfo.src).show();
+//            }
+//            else{
+//                $('#previewResult1').attr("src",cropInfo.src).show();
+//            }
+            // $previewResult.attr("src",cropInfo.src).show();
+            var i=1;
+
+            //可选传base64或者file对象
+            //cropInfo.src cropInfo.dfd
+
+            //you can upload img base64  :cheers:)
+            console.info('拿到Base64了,传给后台吧？')//src.substr(22)
+            /*     $.ajax({
+             url:'http://127.0.0.1/testAdjustImg/upload.php',
+             type:"post",
+             dataType:"json",
+             data:{base64:cropInfo.src.substr(22),uploadType:'base64'},//后端无需在过滤头
+             success:function(data){
+             if(data.result==1){
+             console.log(data.imgPath)
+             }
+             }
+             })*/
+            //you can upload new img file :cheers:)
+            cropInfo.dfd.done(function(blob){
+                if(blob){
+                    var formData=new FormData;
+                    blob.name='imgFile'
+                    formData.append("imgFile",blob)
+                    formData.append("uploadType",'imgFile');
+                    $.ajax({
+                        url:'http://127.0.0.1/testAdjustImg/upload.php',
+                        type:"post",
+                        data:formData,
+                        processData:false,
+                        contentType: false,
+                        dataType:"json",
+                        success:function(data){
+                            console.log(data)
+                            if(data.result==1){
+                                console.log(data.imgPath)
+                            }
+                        }
+                    })
+                }
+            })
+
+        })
+        //上传文件按钮&&关闭弹窗按钮
+        $(document).delegate(".file","click",function(){
+            $uploadPage.show();
+        }).delegate("#closeCrop","click",function(){
+            $uploadPage.hide();
+            resetUserOpts();
+            myCrop.setCropStyle(previewStyle)
+        })
+        $file.one("click",showCropModal)
+        $previewResult.on('click',showCropModal)
+
+        function showCropModal(){
+            setTimeout(function(){
+                $uploadPage.show();
+                $mask.prop({width:$mask.width(),height:$mask.height()})
+                maskCtx.fillStyle="rgba(0,0,0,0.7)";
+                maskCtx.fillRect(0,0,$mask.width(),$mask.height());
+                maskCtx.strokeStyle='white';
+                maskCtx.lineWidth='2'
+                maskCtx.clearRect(($mask.width()-opts.cropWidth)/2,($mask.height()-opts.cropHeight)/2,opts.cropWidth,opts.cropHeight)
+                maskCtx.strokeRect(($mask.width()-opts.cropWidth)/2-1,($mask.height()-opts.cropHeight)/2-1,opts.cropWidth+2,opts.cropHeight+2);//Add a subpath with four points
+                $('.photo-canvas').css({opacity: 1, background: '#fff'})
+            })
+        }
+
+        //单独绑定图片时用到
+//        $needCropImg[0].addEventListener("load",showCropModal)
+//        $needCropImg[0].src='./img/9-1.jpg';
+    })
+</script>
+</html>
