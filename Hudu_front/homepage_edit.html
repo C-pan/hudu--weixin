@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/homepage_edit.css" />
 	<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/edit_style.css" charset="UTF-8">
 	<!-- Demo styles -->
 </head>
 <body>
@@ -17,93 +16,51 @@
 				<div class="swiper-wrapper">
 					<input type="file" accept="image/*" id='upload_img'>
 					<div class="swiper-slide">
-						<div>
+						<div class="swiper-slide-main">
 							<p>
 								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
-							<ul class="clearfix">
-								<li>
-									<!--编辑框 默认展开部分-->
-									<div class="Activity-Edit">
-										<div class="event-intro">
-											<div class="rich-text-editor">
-												<div class="input-node text_intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
-													<div  class="bjl" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<!--编辑框 默认展开部分-->
-									<div class="Activity-Edit">
-										<div class="event-intro">
-											<div class="rich-text-editor">
-												<div class="input-node text_intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
-													<div  class="bjl" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
 							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div>
+						<div class="swiper-slide-main">
 							<p>
-								<img class="swiper-slide-img" src="img/my_photo.png" alt=""/>
+								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
-							<ul class="clearfix">
-								<li>
-									<p onclick="_editorText(this)">
-										<span>模板名片</span>
-										<textarea cols="30" rows="10"></textarea>
-									</p>
-									<div onclick="_editorText(this)">
-										<span>
-											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-										</span>
-										<textarea cols="30" rows="10"></textarea>
-									</div>
-								</li>
-								<li>
-									<p onclick="_editorText()">
-										<span>模板名片</span>
-										<textarea cols="30" rows="10"></textarea>
-									</p>
-									<div onclick="_editorText()">
-										<span>
-											Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-										</span>
-										<textarea cols="30" rows="10"></textarea>
-									</div>
-								</li>
-							</ul>
-							<img src="img/home_banner2.jpg" alt="首页轮播图"/>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
+							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div>
+						<div class="swiper-slide-main">
 							<p>
-								<img class="swiper-slide-img" src="img/top.jpg" alt=""/>
+								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
-							<ul class="clearfix">
-								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-									</div>
-								</li>
-								<li>
-									<p>模板名片</p>
-									<div>
-										Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和
-									</div>
-								</li>
-							</ul>
-							<img src="img/home_banner3.jpg" alt="首页轮播图"/>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
+							<div>
+								<p>输入会员企业图文介绍</p>
+								<textarea></textarea>
+							</div>
+							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
 						</div>
 					</div>
 				</div>
@@ -315,27 +272,41 @@
 	</div>
 	
 
-</body>
-
 	<script src="js/zepto.js"></script>
+	<script src="js/touch.js"></script>
+	<!-- 轮播插件 -->
 	<script src="js/swiper-3.4.1.jquery.min.js"></script>
+	<!-- jq颜色吸取插件 -->
 	<script src="js/jscolor.js"></script>
 	<script src="js/public.js"></script>
+	<!-- jq拖拽事件 -->
 	<script src="js/jquery-2.1.4.js"></script>
 	<script src="js/jquery.panzoom.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="js/edit.js" charset="UTF-8"></script>
 	<script>
 		(function() {
 			var $section = $('.section').first();
-			$section.find('.swiper-slide-img').panzoom({
+			var sectionD = $section.find('.swiper-slide-main>p, .swiper-slide-main>div').panzoom({
 				$zoomIn: $section.find(".zoom-in"),
 				$zoomOut: $section.find(".zoom-out"),
 				$zoomRange: $section.find(".zoom-range"),
-				$reset: $section.find(".reset")
+				$reset: $section.find(".reset"),
+				onEnd: function(e){
+					var $tar = $(e.target)
+					if($tar[0].nodeName != 'P'){
+						$tar = $tar.parent()
+					}
+				},
 			});
 		})();
 
+		$('.swiper-slide-main div p').on('click', function(e){
+			$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
+		})
+
+		$('.swiper-slide-main div textarea').on('blur', function(e){
+			$(e.target).css({display: 'none'}).prev().css({display: 'block'}).html($(e.target).val())
+		})
 
 		var slImgDom = '';
 		$('.swiper-slide-img').on('click', function(e){
@@ -495,4 +466,6 @@
 			}
 		})
 	</script>
+</body>
+
 </html>
