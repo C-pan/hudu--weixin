@@ -2,6 +2,7 @@
 body {
   background: #fff;
   font-size: 0.3rem;
+  max-width: 100%;
 }
 
 .position_dues_section{
@@ -344,14 +345,17 @@ body {
    	float: left;
     box-sizing: border-box;
     width: 25%;
-    padding: 0.3rem;
-    padding-right: .32rem;
-    padding-top: .32rem;
+    padding-right: .15rem;
+    padding-top: .15rem;
     position: relative;
     display: none;
 }
+.upload_bg_box p img{
+    padding: 0.2rem;
+}
 .upload_bg_box ul li{
     float: left;
+    position: relative;
     box-sizing: border-box;
     width: 33.3%;
     padding-right: .15rem;
@@ -361,11 +365,18 @@ body {
     height: 1.8rem;
     text-align: center;
 }
-.upload_bg_box ul li img, .upload_bg_box p img{
+.upload_bg_box ul li img:first-child, .upload_bg_box p img{
     max-width: 100%;
     max-height: 100%;
     border: 1px solid #846d6d;
 }
+.upload_bg_box ul li img:last-child{
+    position: absolute;
+    top: -.15rem;
+    right: 0;
+    width: 0.4rem;
+}
+
 .upload_bg input{
     position: absolute;
     top: 0;
