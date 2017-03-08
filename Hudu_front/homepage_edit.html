@@ -21,27 +21,11 @@
 								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
 							<div>
-								<p>输入会员企业图文介绍</p>
+								<span>输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
 							<div>
-								<p>输入会员企业图文介绍</p>
-								<textarea></textarea>
-							</div>
-							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="swiper-slide-main">
-							<p>
-								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
-							</p>
-							<div>
-								<p>输入会员企业图文介绍</p>
-								<textarea></textarea>
-							</div>
-							<div>
-								<p>输入会员企业图文介绍</p>
+								<span>输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
 							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
@@ -53,11 +37,27 @@
 								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
 							</p>
 							<div>
-								<p>输入会员企业图文介绍</p>
+								<span>输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
 							<div>
-								<p>输入会员企业图文介绍</p>
+								<span>输入会员企业图文介绍</span>
+								<textarea></textarea>
+							</div>
+							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-slide-main">
+							<p>
+								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
+							</p>
+							<div>
+								<span>输入会员企业图文介绍</span>
+								<textarea></textarea>
+							</div>
+							<div>
+								<span>输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
 							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
@@ -273,7 +273,6 @@
 	
 
 	<script src="js/zepto.js"></script>
-	<script src="js/touch.js"></script>
 	<!-- 轮播插件 -->
 	<script src="js/swiper-3.4.1.jquery.min.js"></script>
 	<!-- jq颜色吸取插件 -->
@@ -293,19 +292,49 @@
 				$reset: $section.find(".reset"),
 				onEnd: function(e){
 					var $tar = $(e.target)
-					if($tar[0].nodeName != 'P'){
+					if($tar[0].nodeName != 'P' && $tar[0].nodeName != 'DIV'){
 						$tar = $tar.parent()
 					}
-				},
+					alert($tar)
+//					$.ajax({
+		//				url:'http://127.0.0.1/testAdjustImg/upload.php',
+		//				type:"post",
+		//				data:formData,
+		//				processData:false,
+		//				contentType: false,
+		//				dataType:"json",
+		//				success:function(data){
+		//					console.log(data)
+		//					if(data.result==1){
+		//						console.log(data.imgPath)
+		//					}
+		//				}
+		//			})
+				}
 			});
 		})();
 
-		$('.swiper-slide-main div p').on('click', function(e){
+		$('.swiper-slide-main div span').on('touchstart', function(e){
 			$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
 		})
 
 		$('.swiper-slide-main div textarea').on('blur', function(e){
 			$(e.target).css({display: 'none'}).prev().css({display: 'block'}).html($(e.target).val())
+//			$.ajax({
+//				url:'http://127.0.0.1/testAdjustImg/upload.php',
+//				type:"post",
+//				data:formData,
+//				processData:false,
+//				contentType: false,
+//				dataType:"json",
+//				success:function(data){
+//					console.log(data)
+//					if(data.result==1){
+//						console.log(data.imgPath)
+//					}
+//				}
+//			})
+
 		})
 
 		var slImgDom = '';
@@ -346,9 +375,7 @@
 			var tar = $(e)
 			tar.children('span').css({display: 'none'}).next('textarea').css({display: 'block'}).val( tar.children('span').html() )
 		}
-		$('.swiper-slide ul li textarea').on('blur', function(e){
-			console.log(00)
-		})
+
 		// 官网名称input的绑定
 		function _editorName(e){
 			chamber.name = e.value
