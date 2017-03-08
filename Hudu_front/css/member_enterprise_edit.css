@@ -11,7 +11,7 @@ body {
 }
 .position_dues_section .preserved{
   width: 7rem;
-  height: 0.7rem;
+  height: 0.73rem;
   padding: 0.1rem;
   background: #ffa304;
 }
@@ -27,9 +27,10 @@ body {
 }
 .position_dues_section .upload_bg_box{
   width: 100%;
+  margin:0 auto;
+  padding: .15rem 0 0.1rem .15rem;
   background: #f0f0f2;
   position: relative;
-  margin:0 auto;
   text-align: center;
   background-size: 1.9rem 0.6rem;
 }
@@ -338,15 +339,13 @@ body {
 .upload_bg_box ul{
     float: left;
     width: 75%;
-    padding: .15rem 0 0 .15rem;
     display: none;
 }
 .upload_bg_box p{
-   	float: left;
+   	float: right;
     box-sizing: border-box;
     width: 25%;
     padding-right: .15rem;
-    padding-top: .15rem;
     position: relative;
     display: none;
 }
@@ -359,7 +358,6 @@ body {
     box-sizing: border-box;
     width: 33.3%;
     padding-right: .15rem;
-    padding-bottom: .15rem;
     display: table-cell;
     vertical-align: middle;
     height: 1.8rem;
@@ -370,7 +368,7 @@ body {
     max-height: 100%;
     border: 1px solid #846d6d;
 }
-.upload_bg_box ul li img:last-child{
+.upload_bg_box ul li img:nth-child(2){
     position: absolute;
     top: -.15rem;
     right: 0;
