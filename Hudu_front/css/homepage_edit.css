@@ -35,17 +35,16 @@
 }
 .swiper-slide>div>div:nth-child(2){
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
+  top: 50%;
+  left: 30%;
+  max-height: 50%;
 }
 .swiper-slide>div>div:nth-child(3){
   position: absolute;
-  bottom: 0;
+  top: 50%;
   right: 0;
   width: 50%;
-  height: 50%;
+  max-height: 50%;
 }
 .swiper-slide>div>div textarea{
   border: 1px solid #231815;
@@ -104,7 +103,7 @@
 }
 .footer ul li {
   float: left;
-  width: 33%;
+  width: 33.15%;
   height: 100%;
   line-height: 1rem;
   border-right: 1px solid #fff;
@@ -123,8 +122,23 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   display: none;
+}
+.model-box-woning{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+}
+.model-wrapper-woning{
+  position: absolute;
+  top: 20%;
+  left: .25rem;
 }
 .model-wrapper {
   display: table-cell;
@@ -138,8 +152,15 @@
   background: #fff;
   color: #818788;
 }
+.model-box-woning .model-content{
+  border-radius: 5px;
+}
 .model-content input {
   font-size: 0.34rem;
+}
+.model-content > p{
+  text-align: center;
+  font-size: .35rem;
 }
 .model-content-info {
   width: 100%;

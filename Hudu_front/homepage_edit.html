@@ -18,49 +18,23 @@
 					<div class="swiper-slide">
 						<div class="swiper-slide-main">
 							<p>
-								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
+								<img class="swiper-slide-img" src="img/home_edit_logo.png" alt=""/>
 							</p>
 							<div>
 								<span>输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
-							<div>
-								<span>输入会员企业图文介绍</span>
-								<textarea></textarea>
-							</div>
-							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+							<img src="img/home_banner1.png" alt="首页轮播图"/>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-slide-main">
-							<p>
-								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
-							</p>
-							<div>
-								<span>输入会员企业图文介绍</span>
-								<textarea></textarea>
-							</div>
-							<div>
-								<span>输入会员企业图文介绍</span>
-								<textarea></textarea>
-							</div>
-							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+							<img src="img/home_banner2.png" alt="首页轮播图"/>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="swiper-slide-main">
-							<p>
-								<img class="swiper-slide-img" src="img/member_banner_1.jpg" alt=""/>
-							</p>
-							<div>
-								<span>输入会员企业图文介绍</span>
-								<textarea></textarea>
-							</div>
-							<div>
-								<span>输入会员企业图文介绍</span>
-								<textarea></textarea>
-							</div>
-							<img src="img/home_banner1.jpg" alt="首页轮播图"/>
+							<img src="img/home_banner3.png" alt="首页轮播图"/>
 						</div>
 					</div>
 				</div>
@@ -270,6 +244,15 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div class="model-box-woning">
+		<div class="model-wrapper-woning" data-wrapper="wrapper">
+			<div class="model-content">
+			 	<p>最多只能输入15个字符！</p>
+			</div>
+		</div>
+	</div>
 	
 
 	<script src="js/zepto.js"></script>
@@ -296,6 +279,7 @@
 						$tar = $tar.parent()
 					}
 					console.log($tar)
+					// 将这个dom 发送到后台
 //					$.ajax({
 		//				url:'http://127.0.0.1/testAdjustImg/upload.php',
 		//				type:"post",
@@ -318,8 +302,20 @@
 			$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
 		})
 
+		var se = $('')
+
 		$('.swiper-slide-main div textarea').on('blur', function(e){
+				console.log(e.target.offsetLeft)
 			$(e.target).css({display: 'none'}).prev().css({display: 'block'}).html($(e.target).val())
+			if(e.target.value.length > 15){
+				var $tar = $(e.target)
+				$tar.prev().css({display: 'none'})
+				$tar.css({display: 'block'})[0].focus()
+				$('.model-box-woning').css({display: 'block'})
+				setTimeout(function(){
+					$('.model-box-woning').css({display: 'none'})
+				}, 1000)
+			}
 //			$.ajax({
 //				url:'http://127.0.0.1/testAdjustImg/upload.php',
 //				type:"post",
@@ -413,6 +409,7 @@
 
 		// 点击弹出可供选择的小图标、链接模态框
 		$('.open-sel').on('click', function(e){
+
 			var tar = $(e.target)
 			if(tar.attr('data-open') === undefined){
 				tar = tar.parents('.open-sel')
