@@ -21,7 +21,7 @@
 								<img class="swiper-slide-img" src="img/home_edit_logo.png" alt=""/>
 							</p>
 							<div>
-								<span>输入会员企业图文介绍</span>
+								<span id="span">输入会员企业图文介绍</span>
 								<textarea></textarea>
 							</div>
 							<img src="img/home_banner1.png" alt="首页轮播图"/>
@@ -265,6 +265,8 @@
 	<script src="js/jquery-2.1.4.js"></script>
 	<script src="js/jquery.panzoom.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
+
+	<script src="js/hammer.js"></script>
 	<script>
 		(function() {
 			var $section = $('.section').first();
@@ -278,7 +280,7 @@
 					if($tar[0].nodeName != 'P' && $tar[0].nodeName != 'DIV'){
 						$tar = $tar.parent()
 					}
-					console.log($tar)
+					console.log($tar[0])
 					// 将这个dom 发送到后台
 //					$.ajax({
 		//				url:'http://127.0.0.1/testAdjustImg/upload.php',
@@ -298,11 +300,17 @@
 			});
 		})();
 
-		$('.swiper-slide-main div span').on('touchstart', function(e){
-			$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
-		})
+		
 
-		var se = $('')
+		// $('#span')[0].addEventListener('mousedown', function(e){
+		// 	console.log(524)
+		// 	$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
+		// }, false);
+		// editSpan.ontap = function(ev){
+		// 	alert(4)
+		// 	$(e.target).css({display: 'none'}).next().css({display: 'block'}).val($(e.target).html())[0].focus()
+		// }
+
 
 		$('.swiper-slide-main div textarea').on('blur', function(e){
 				console.log(e.target.offsetLeft)
@@ -333,12 +341,20 @@
 
 		})
 
-		var slImgDom = '';
-		$('.swiper-slide-img').on('click', function(e){
-			slImgDom = $(e.target)
-			$('#upload_img').click()
-		})
 
+		var slImgDom = '';
+		// $('.swiper-slide-img').on('click', function(e){
+		// 	slImgDom = $(e.target)
+		// 	$('#upload_img').click()
+		// })
+
+		
+		var uploadImg = new Hammer($('.swiper-slide-img')[0]);
+		uploadImg.on('tap', function(e) {
+		    slImgDom = $(e.target)
+			$('#upload_img').click()
+		});
+		
 		$('#upload_img').on('change',function(e){
 			var target = e.target
 			var reg = /(\.jpg|\.png|\.jpeg)$/ig
