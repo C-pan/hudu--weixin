@@ -12,7 +12,7 @@
 .section-header > ul > li {
   position: relative;
   float: left;
-  width: 24%;
+  width: 32.2%;
   height: 0.6rem;
   line-height: 0.6rem;
   margin-right: 1%;
@@ -25,9 +25,13 @@
 }
 .section-header > ul > li > img {
   position: absolute;
-  left: .1rem;
+  left: .05rem;
   top: .1rem;
-  width: .2rem;
+  width: .26rem;
+  margin-top: .07rem;
+  display: none;
+}
+.section-header > ul > li > input {
   display: none;
 }
 .section-header > ul > li.active {
@@ -35,6 +39,36 @@
 }
 .section-header > ul > li.active > img {
   display: inline-block;
+}
+.section-list {
+  width: 100%;
+  padding: 0 .1rem;
+  background: #fff;
+}
+.section-list > ul {
+  display: none;
+}
+.section-list > ul.list-1 {
+  display: block;
+}
+.section-list > ul > li {
+  padding: .2rem .1rem;
+  overflow: hidden;
+  border-bottom: 1px solid #bbbbbd;
+}
+.section-list > ul > li > img {
+  float: left;
+  width: .35rem;
+  margin: .06rem .1rem 0 0;
+}
+.section-list > ul > li > input {
+  display: none;
+}
+.section-list > ul > li > p {
+  float: left;
+}
+.section-list > ul > li > p > span:last-child {
+  color: #bbbbbd;
 }
 .footer {
   position: fixed;
