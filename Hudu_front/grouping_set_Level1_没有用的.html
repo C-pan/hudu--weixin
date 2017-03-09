@@ -1,109 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>分组排序设置</title>
-    <link rel="stylesheet" href="css/reset.css"/>
-    <link rel="stylesheet" href="css/grouping_set_Level1.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    <title>编辑器</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/edit_style.css" charset="UTF-8">
+    <!--编辑器css-->
+    <script src="js/public.js"></script>
+    <style>
+    </style>
 </head>
-<body>
-    <section class="section">
-        <nav class="nav">
-            <ul class="clearfix">
-                <li>
-                    <a href="#">职务设置</a>
-                </li>
-                <li></li>
-                <li class="open_menu" data-open="true">
-                    <img src="img/sort.png" alt="排序" data-open="true"/>
-                    <span data-open="true">一级分组排序</span>
-                    <i></i>
-                    <div class="position_menu">
-                    	<ul>
-                    		<li><a href="#">一级职务</a></li>
-                    		<li><a href="#">二级职务</a></li>
-                    	</ul>
+<body style="height: 100%;">
+<!-- 主内容 -->
+
+    <!--<div style="background: url(img/123.png) center center no-repeat; position: relative; width: 150px; display: inline-block; height: 60px;">-->
+    <!--<input class="upload-file" type="file" id="file" accept="image/*" capture="camera"/>-->
+    <!--</div>-->
+    <!--<img id="previewResult"/> <img id="previewResult1"/>-->
+
+    <div class="info_box">
+            <!--编辑框 默认展开部分-->
+            <div class="Activity-Edit">
+                <div class="event-intro">
+                    <div class="rich-text-editor">
+                        <div class="input-node text_intro" id="intro" style="z-index: 800" contenteditable="true" style="width:100%; box-sizing:border-box ;">
+                            <div  class="bjl" style="color: #ccc; font-size: 0.3rem;" placeholder="输入会员企业图文介绍，为企业推广">输入会员企业图文介绍，为企业推广</div>
+                        </div>
                     </div>
-                </li>
-            </ul>
-            <p class="nav_title">上下拖动条目进行排序</p>
-        </nav>
-        <div class="list">
-            <ul class="list_ul">
-                <li class="clearfix">
-                    <span>
-                        会领导
-                    </span>
-                    <span class="list_menu">
-                        <img src="img/menu.png" alt="菜单"/>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span>
-                        顾问专家
-                    </span>
-                    <span class="list_menu">
-                        <img src="img/menu.png" alt="菜单"/>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span>
-                        理事会
-                    </span>
-                    <span class="list_menu">
-                        <img src="img/menu.png" alt="菜单"/>
-                    </span>
-                </li>
-                <li class="clearfix">
-	                  <span>
-	                      秘书处
-	                  </span>
-	                  <span class="list_menu">
-	                      <img src="img/menu.png" alt="菜单"/>
-	                  </span>
-                </li>
-            </ul>
+                </div>
+            </div>
+        <!-- 编辑器结束 -->
+    </div>
+
+<div id="image-editor" class="hide">
+    <div id="image-editor-content" style="height: 680px; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+        <img class="corp">
+        <canvas class="curtain" width="800" height="680"></canvas>
+    </div>
+</div>
+<script type="text/javascript" src="js/zepto.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/edit.js" charset="UTF-8"></script>
+<!--启动输入框-->
+<div class="loading-view hide">
+    <div class="rich-text-editor-toolbar">
+        <a rt-cmd="insertImage()" class="icon-camera">&nbsp;</a>
+        <a rt-cmd="bold" rt-cmd-name="bold" class="cmd-button bold-false">B</a>
+        <div class="cmd-button foreColor-565a5c" rt-cmd-name="foreColor">
+            A
+            <tooltip>
+                <div class="tooltip-container">
+                    <a class="round-rect foreColor-565a5c" style="display: inline-block" rt-cmd="foreColor(&#39;#565a5c&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-82898d" style="display: inline-block" rt-cmd="foreColor(&#39;#82898d&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-3893ed" style="display: inline-block" rt-cmd="foreColor(&#39;#3893ed&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-f03442" style="display: inline-block" rt-cmd="foreColor(&#39;#f03442&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-ff7612" style="display: inline-block" rt-cmd="foreColor(&#39;#ff7612&#39;)">
+                        &nbsp;
+                    </a>
+                    <a class="round-rect foreColor-aa56c5" style="display: inline-block" rt-cmd="foreColor(&#39;#aa56c5&#39;)">
+                        &nbsp;
+                    </a>
+                </div>
+            </tooltip>
         </div>
-    </section>
-
-	<script src="js/zepto.js"></script>
-	<script src="js/public.js"></script>
-    <script src="js/Sortable.js"></script>
-    <script>
-
-      var list_ul = $('.list_ul')[0];
-
-			new Sortable.create(list_ul, {
-				handle: '.list_menu',
-				animation: 150,
-				preventOnFilter: true,
-				onStart: function (/**Event*/evt){
-	        var itemEl = evt.item; // 当前拖拽的html元素
-	        console.log(itemEl)
-	        //$(itemEl).css({opacity: 0.5})
-	    	},
-			});
-
-			$('.open_menu').on('click',function(e){
-				if($('.position_menu').css('display') == 'none'){
-					$('.position_menu').css({display: 'block'})
-				}else{
-					$('.position_menu').css({display: 'none'})
-				}
-			})
-
-			$('.section').on('click', function(e){
-				if(!$(e.target).attr('data-open')){
-					$('.position_menu').css({display: 'none'})
-				}
-			})
-        
-    </script>
-			}
+        <div class="cmd-button fontSize-3" rt-cmd-name="fontSize">
+            A
+            <tooltip>
+                <div class="tooltip-container">
+                    <a style="display: inline-block; font-size: 14px" rt-cmd="fontSize(&#39;3&#39;)">
+                        A(小)
+                    </a>
+                    <a style="display: inline-block; font-size: 18px" rt-cmd="fontSize(&#39;4&#39;)">
+                        A(中)
+                    </a>
+                    <a style="display: inline-block; font-size: 20px" rt-cmd="fontSize(&#39;5&#39;)">
+                        A(大)
+                    </a>
+                </div>
+            </tooltip>
+        </div>
+        <div class="cmd-button close-button" rt-cmd="close())">
+            完成编辑
+        </div>
+    </div>
+</div>
+</body>
 <script>
 
-
 </script>
-</body>
 </html>
