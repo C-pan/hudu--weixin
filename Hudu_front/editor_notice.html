@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-    <title>编辑器</title>
+    <title>编辑通知</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/editor_notice.css" charset="UTF-8">
@@ -15,8 +15,21 @@
 <body>
     <section class="section">
       <div class="section-header">
-        <img src="img/upaload_compamy_bg.png" alt="" id="upload_bg_img">
-        <input class="upload-file file" type="file" accept="image/*" capture="camera"/>
+          <div class="section-header-first">
+              <img src="img/upaload_compamy_bg.png"/>
+              <input class="upload-file" type="file" accept="image/*" capture="camera" id="file"/>
+          </div>
+          <ul class="clearfix">
+              <!--<li>-->
+                  <!--<span class="view1">-->
+                    <!--<img src="img/hudu_logo.png">-->
+                  <!--</span>-->
+                  <!--<img src="img/close_popup_btn.png" class="del_notice" onclick="delImg(this)">-->
+              <!--</li>-->
+              <!--<li class="add_img" onclick="addImg(this)">-->
+                  <!--<img src="img/add_ico.png" alt=""/>-->
+              <!--</li>-->
+          </ul>
       </div>
       <div class="section-title">
         <div>
@@ -28,7 +41,6 @@
       </div>
       <!-- 编辑器 -->
       <div id="editor">
-        <p>Hello World!</p>
       </div>
       <div class="section-paper">
         <p>简述</p>
@@ -36,22 +48,100 @@
       </div>
       <div class="section-addpersonnel">
         <p>
-          <img src="img/add_member_ico.png">
-          参会人员
+            <a href="choose_inform_staff.html">
+                <img src="img/add_member_ico.png"><br/>
+                <span>参会人员</span>
+            </a>
         </p>
-        <ul>
+        <ul class="clearfix">
           <li>
-            <img src="img/hudu_logo.png">
-            <img src="img/close_popup_btn.png">
+              <span>
+                <img src="img/hudu_logo.png">
+              </span>
+              <img src="img/close_popup_btn.png" class="del_notice">
           </li>
+            <li>
+              <span>
+                <img src="img/hudu_logo.png">
+              </span>
+              <img src="img/close_popup_btn.png" class="del_notice">
+            </li>
         </ul>
       </div>
     </section>
 
+    <div class="model-box" id="clipArea">
+        <p>
+            <span id="black">取消</span>
+            <span id="clipBtn">截取</span>
+        </p>
+    </div>
+
     <script src="js/public.js"></script>
     <script type="text/javascript" src="js/zepto.js" charset="UTF-8"></script>
     <script type="text/javascript" src="js/quill.js" charset="UTF-8"></script>
+    <!-- 图片剪切 --><script src="js/jquery-2.1.4.js"></script>
+    <script src="js/photoclip_js/iscroll-zoom.js"></script>
+    <script src="js/photoclip_js/hammer.js"></script>
+    <script src="js/photoclip_js/lrz.all.bundle.js"></script>
+    <script src="js/photoclip_js/jquery.photoClip.js"></script>
+
     <script>
+        // 取消截图
+        $('#black').on('click', function(){
+            $('#clipArea').css({display: 'none'})
+        })
+        // 上传企业封面
+        $('.section-header-first').on('click', addImg)
+        function addImg(e){
+            $('#file')[0].click()
+            $('#clipArea').css({display: 'block'})
+        }
+        // 截图插件
+        var clipArea = new bjj.PhotoClip("#clipArea", {
+            size: [260, 260],
+            outputSize: [640, 640],
+            file: "#file",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                $('.add_img').remove()
+                $('.section-header ul').append('<li><span><img src='+ dataURL +'></span><img onclick="delImg(this)" src="img/close_popup_btn.png" class="del_notice"></li><li class="add_img"><img onclick="addImg(this)" src="img/add_ico.png" alt=""/></li>')
+                $('.section-header-first').css({display: 'none'})
+                $('.section-header ul').css({display: 'block'})
+                $('#clipArea').css({display: 'none'})
+                num++
+            }
+        });
+
+        // 删除图片事件
+        function delImg(e){
+            $(e).parent().remove()
+//			$.ajax({
+//				url:'http://127.0.0.1/testAdjustImg/upload.php',
+//				type:"post",
+//				data:formData,
+//				processData:false,
+//				contentType: false,
+//				dataType:"json",
+//				success:function(data){
+//					console.log(data)
+//					if(data.result==1){
+//						console.log(data.imgPath)
+//					}
+//				}
+//			})
+        }
+        // 删除图片事件
+        $('.del_notice').on('click', function(e){
+            delImg(e.target)
+        })
+        // 编辑插件
       var toolbarOptions = [
         ['bold', 'italic', 'underline'],        // toggled buttons
         ['image'],
@@ -64,7 +154,8 @@
         theme: 'snow',
         modules: {
             toolbar: toolbarOptions
-        }
+        },
+        placeholder: '输入通知图文内容，吸引更多关注！'
       });
     </script>
 </body>

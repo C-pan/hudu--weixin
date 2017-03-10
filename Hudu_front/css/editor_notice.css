@@ -7,13 +7,30 @@
 }
 .section-header {
   width: 100%;
-  padding: 0.3rem 1.6rem;
+  padding: .1rem 0;
 }
-.section-header img {
+.section-header-first {
+  width: 100%;
+  padding: 0.3rem 2rem;
+}
+.section-header-first img {
   width: 100%;
 }
-.section-header input {
+.section-header-first input {
   display: none;
+}
+.section-header ul {
+  display: none;
+}
+.section-header ul li.add_img {
+  height: 1.4rem;
+  width: 25%;
+  padding: 0 0 0 .2rem;
+}
+.section-header ul li.add_img > img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #bbbbbd;
 }
 .section-title {
   padding: .05rem .1rem;
@@ -22,16 +39,110 @@
 .section-title > div {
   height: .75rem;
   line-height: .75rem;
-  padding-left: .1rem;
+  padding-left: .13rem;
   border-bottom: 1px solid #bbbbbd;
 }
 .section-title > div > span {
-  padding: .2rem 0;
+  float: left;
+  padding-top: .06rem;
 }
 .section-title > div > span img {
   width: .3rem;
 }
 .section-title > div input {
-  height: .6rem;
+  height: .75rem;
+  padding-left: .2rem;
+  float: left;
   font-size: .3rem;
+}
+.section #editor {
+  width: 100%;
+  min-height: 1.5rem;
+  background: #fff;
+}
+.section-paper p {
+  padding: .1rem .5rem;
+}
+.section-paper textarea {
+  width: 100%;
+  min-height: 1.2rem;
+  padding: .05rem .3rem;
+  background: #fff;
+  font-size: .34rem;
+}
+.section-addpersonnel p {
+  width: 100%;
+  padding-top: .05rem;
+  text-align: center;
+  color: #bbbbbd;
+}
+.section-addpersonnel p a {
+  display: block;
+  width: 100%;
+}
+.section-addpersonnel p a img {
+  display: inline-block;
+  width: .7rem;
+}
+.section-addpersonnel p a span {
+  position: relative;
+  top: -0.12rem;
+}
+ul.clearfix {
+  width: 100%;
+  min-height: 1rem;
+  padding: .3rem .2rem;
+  border-bottom: 1px solid #bbbbbd;
+  background: #fff;
+}
+ul.clearfix li {
+  float: left;
+  width: 25%;
+  padding-right: .3rem;
+  margin-bottom: .2rem;
+  position: relative;
+}
+ul.clearfix li span {
+  display: block;
+  width: 100%;
+  height: 1.4rem;
+  vertical-align: middle;
+}
+ul.clearfix li span img {
+  max-width: 100%;
+  max-height: 100%;
+}
+ul.clearfix li > img.del_notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: .3rem;
+}
+.model-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+.model-box > p {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 300;
+}
+.model-box > p > span {
+  display: inline-block;
+  width: 2rem;
+  padding: .1rem;
+  border-radius: 2px;
+  background: #f49e00;
+  text-align: center;
+}
+.model-box > p > span#black {
+  margin-right: .5rem;
 }
