@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+.section {
+  width: 7rem;
+  height: 100%;
+  margin: 0 auto;
+  background: #fff;
+}
+.section-header {
+  width: 100%;
+  padding: .2rem;
+}
+.section-header > p {
+  font-size: .35rem;
+}
+.section-header > p:first-child {
+  font-size: .4rem;
+}
+.section-header > p:last-child {
+  padding-left: 0.2rem;
+  padding-top: 0.2rem;
+}
+.section-header > p:last-child span {
+  color: #1b6994;
+}
+.section-header > p:last-child span.header-time {
+  color: #bbbbbd;
+}
+.section-main {
+  width: 100%;
+  border-top: 3px solid #f1f1f1;
+  padding: .1rem;
+}
+.section-main img {
+  width: 100%;
+}
+.section-main p {
+  padding: .1rem .15rem;
+  font-size: .35rem;
+}
+.section-footer {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.4rem;
+  color: #bbbbbd;
+  font-size: .3rem;
+}
+.section-footer > ul > li {
+  float: left;
+  margin-right: .5rem;
+}
+.section-footer > ul > li img {
+  width: .35rem;
+  vertical-align: top;
+}

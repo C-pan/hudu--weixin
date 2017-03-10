@@ -23,18 +23,22 @@
 				</li>
 				<li data-nav="list-3">
 					<img src="img/all_notcheekbox_ico2.png" data-checked="0" alt=""/>
+					<input type="checkbox"/>
 					<span>常务副会长</span>
 				</li>
 				<li data-nav="list-4">
 					<img src="img/all_notcheekbox_ico2.png" data-checked="0" alt=""/>
+					<input type="checkbox"/>
 					<span>常务副秘书长</span>
 				</li>
 				<li data-nav="list-5">
 					<img src="img/all_notcheekbox_ico2.png" data-checked="0" alt=""/>
+					<input type="checkbox"/>
 					<span>常务副会长</span>
 				</li>
 				<li data-nav="list-6">
 					<img src="img/all_notcheekbox_ico2.png" data-checked="0" alt=""/>
+					<input type="checkbox"/>
 					<span>监事长</span>
 				</li>
 			</ul>
@@ -69,6 +73,7 @@
 			<ul class="list-2">
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>2&</span>
 						<span>常务副会长</span>
@@ -76,13 +81,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
-					<p>
-						<span>傻逼&</span>
-						<span>常务副会长</span>
-					</p>
-				</li>
-				<li>
-					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -92,6 +91,7 @@
 			<ul class="list-3">
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>3&</span>
 						<span>常务副会长</span>
@@ -99,13 +99,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
-					<p>
-						<span>傻逼&</span>
-						<span>常务副会长</span>
-					</p>
-				</li>
-				<li>
-					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -115,6 +109,7 @@
 			<ul class="list-4">
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>4&</span>
 						<span>常务副会长</span>
@@ -122,13 +117,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
-					<p>
-						<span>傻逼&</span>
-						<span>常务副会长</span>
-					</p>
-				</li>
-				<li>
-					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -138,6 +127,7 @@
 			<ul class="list-5">
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>5&</span>
 						<span>常务副会长</span>
@@ -145,6 +135,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -152,6 +143,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -161,6 +153,7 @@
 			<ul class="list-6">
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>6&</span>
 						<span>常务副会长</span>
@@ -168,6 +161,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -175,6 +169,7 @@
 				</li>
 				<li>
 					<img src="img/cheekbox_no_bg.png">
+					<input type="checkbox"/>
 					<p>
 						<span>傻逼&</span>
 						<span>常务副会长</span>
@@ -197,7 +192,10 @@
 	<script src="js/zepto.js"></script>
 	<script src="js/public.js"></script>
 	<script type="text/javascript">
-		<!-- nav的切换 -->
+
+		console.log($('.section-header ul li[data-nav=list-1]'))
+
+		// nav的切换
 		$('.section-header ul li').on('click', function(e){
 			var $tar = $(e.target)
 			if(e.target.nodeName != 'LI'){
@@ -207,24 +205,49 @@
 			$('.section-list ul').css({display: 'none'})
 			$('.' +  $tar.attr('data-nav')).css({display: 'block'})
 		})
-		<!-- 选择 list 里面的职务人员-->
+		// header checked 的选中
+		$('.section-header ul li img').on('click', function(e){
+			var $tar = $(e.target)
+			$tar.next('input')[0].checked = !$tar.next('input')[0].checked
+			console.log($tar.next('input')[0].checked)
+			if($tar.next('input')[0].checked){
+				$tar.attr({src: 'img/all_cheekbox_ico2.png'})
+				$('.'+$tar.parent('li').attr('data-nav')+' li img').attr({src: 'img/cheekbox_bg.png'})
+				for(var i = 0; i < $('.'+$tar.parent('li').attr('data-nav')+' li input').length; i ++){
+					$('.'+$tar.parent('li').attr('data-nav')+' li input')[i].checked = true
+				}
+			}else{
+				$tar.attr({src: 'img/all_notcheekbox_ico2.png'})
+				$('.'+$tar.parent('li').attr('data-nav')+' li img').attr({src: 'img/cheekbox_no_bg.png'})
+				for(var i = 0; i < $('.'+$tar.parent('li').attr('data-nav')+' li input').length; i ++){
+					$('.'+$tar.parent('li').attr('data-nav')+' li input')[i].checked = false
+				}
+			}
+		})
+		// 选择 list 里面的职务人员
 		$('.section-list ul li').on('click', function(e){
 			var $tar = $(e.target)
 			if(e.target.nodeName != 'LI'){
 				$tar = $tar.parents('li')
 			}
-			console.log($tar.children('input')[0].checked)
-			if(!$tar.children('input')[0].checked){
+			$tar.children('input')[0].checked = !$tar.children('input')[0].checked
+
+			if($tar.children('input')[0].checked){
 				$tar.children('img').attr({src: 'img/cheekbox_bg.png'})
 			}else{
 				$tar.children('img').attr({src: 'img/cheekbox_no_bg.png'})
 			}
-			$tar.children('input')[0].checked = !$tar.children('input')[0].checked
-			for(var i in $('.section-list ul li input')){
-				if(!$('.section-list ul li input')[i].checked){
+
+			for(var i = 0; i < $tar.parent().find('input').length; i ++){
+				if(!$tar.parent().find('input')[i].checked){
+					$('.section-header ul li[data-nav='+$tar.parent().attr('class')+']').children('img').attr({src: 'img/all_notcheekbox_ico2.png'})
+					$('.section-header ul li[data-nav='+$tar.parent().attr('class')+']').children('input')[0].checked = false
 					return false
 				}
 			}
+
+			$('.section-header ul li[data-nav='+$tar.parent().attr('class')+']').children('img').attr({src: 'img/all_cheekbox_ico2.png'})
+			$('.section-header ul li[data-nav='+$tar.parent().attr('class')+']').children('input')[0].checked = true
 		})
 	</script>
 </body>

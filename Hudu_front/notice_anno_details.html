@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>通知公告详情</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/notice_anno_details.css">
+</head>
+<body>
+	<section class="section">
+		<div class="section-header">
+			<p>江门市2016年年会在金海忻国际宴会厅隆重举行，希望大家准时参加。</p>
+			<p>
+				<span class="header-time">2017-02-11</span>
+				<span>江门市电白商会</span>
+			</p>
+		</div>
+		<section class="section-main">
+			<img src="img/member_banner_1.jpg">
+			<p>
+				广东狐度网络科技有限公司是一家主要从事计算软件研发、软件销售、技术咨询、技术服务的科技公司，拥有一批专业精湛的研发团队，技术力量雄厚。
+			</p>
+		</section>
+		<div class="section-footer">
+			<ul class="clearfix">
+				<li>
+					阅读
+					<span>96</span>
+				</li>
+				<li class="thumb_up">
+					<img src="img/thumb_up.png">
+					<span class="thumb_up_num">136</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<script src="js/zepto.js"></script>
+	<script src="js/public.js"></script>
+	<script type="text/javascript">
+		$('.thumb_up').on('click', function(e){
+			$('.thumb_up_num').html(+$('.thumb_up_num').html()+1)
+			// $.ajax({
+//				url:'http://127.0.0.1/testAdjustImg/upload.php',
+//				type:"post",
+//				data:formData,
+//				processData:false,
+//				contentType: false,
+//				dataType:"json",
+//				success:function(data){
+//					console.log(data)
+//					if(data.result==1){
+//						console.log(data.imgPath)
+//					}
+//				}
+//			})
+		})
+	</script>
+</body>
+</html>

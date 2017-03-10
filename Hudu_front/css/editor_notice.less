@@ -1,0 +1,35 @@
+*{box-sizing: border-box;}
+.section{
+  width: 7rem;
+  margin: 0 auto;
+  &-header{
+    width: 100%;
+    padding: 0.3rem 1.6rem;
+    img{
+      width: 100%;
+    }
+    input{
+      display: none;
+    }
+  }
+  &-title{
+    padding: .05rem .1rem;
+    background: #fff;
+    >div{
+      height: .75rem;
+      line-height: .75rem;
+      padding-left: .1rem;
+      border-bottom: 1px solid #bbbbbd;
+      >span{
+        padding: .2rem 0;
+        img{
+          width: .3rem;
+        }
+      }
+      input{
+        height: .6rem;
+        font-size: .3rem;
+      }
+    }
+  }
+}
