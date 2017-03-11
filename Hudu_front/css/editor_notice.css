@@ -55,6 +55,25 @@
   float: left;
   font-size: .3rem;
 }
+.section #toolbar .toolbar-title {
+  float: left;
+  font-size: .29rem;
+  margin-right: .3rem;
+}
+.section #toolbar > button,
+.section #toolbar > span {
+  float: right;
+}
+.section #toolbar svg {
+  height: .4rem;
+}
+.section #toolbar button.ql-image {
+  background: url(../img/camera_01.png) no-repeat center center;
+  background-size: 100% 80%;
+}
+.section #toolbar button.ql-image svg {
+  display: none;
+}
 .section #editor {
   width: 100%;
   min-height: 1.5rem;

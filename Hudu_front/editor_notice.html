@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/editor_notice.css" charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/quill.snow.css" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/quill/quill.snow.css" charset="UTF-8">
     <style>
     </style>
 </head>
@@ -40,6 +40,32 @@
         </div>
       </div>
       <!-- 编辑器 -->
+        <div id="toolbar">
+            <!-- 自定义内容 -->
+            <span class="toolbar-title">详情内容：</span>
+            <!-- 字体大小 -->
+            <select class="ql-size">
+                <!--<option value="small"></option>-->
+                <!-- 默认选中 -->
+                <option selected></option>
+                <option value="large"></option>
+                <option value="huge"></option>
+            </select>
+            <!-- 字体颜色  可以自己调加 -->
+            <select class="ql-color">
+                <option value="red"></option>
+                <option value="blue"></option>
+                <option value="#bbbbbd"></option>
+                <option value="#f49e00"></option>
+                <option value="#231815"></option>
+            </select>
+            <!-- 字体粗体 -->
+            <button class="ql-bold"></button>
+            <!-- 上传照片 -->
+            <button class="ql-image">
+                <img src="img/camera.png" alt=""/>
+            </button>
+        </div>
       <div id="editor">
       </div>
       <div class="section-paper">
@@ -87,6 +113,7 @@
     <script src="js/photoclip_js/jquery.photoClip.js"></script>
 
     <script>
+        console.log($('.ql-toolbar'))
         // 取消截图
         $('#black').on('click', function(){
             $('#clipArea').css({display: 'none'})
@@ -143,6 +170,7 @@
         })
         // 编辑插件
       var toolbarOptions = [
+              [{ 'header': '3'}],
         ['bold', 'italic', 'underline'],        // toggled buttons
         ['image'],
         [{ 'color': [] }],    
@@ -153,7 +181,7 @@
       var quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
-            toolbar: toolbarOptions
+            toolbar: '#toolbar'
         },
         placeholder: '输入通知图文内容，吸引更多关注！'
       });
