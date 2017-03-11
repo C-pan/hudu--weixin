@@ -89,7 +89,7 @@
   background: #fff;
   font-size: .34rem;
 }
-.section-addpersonnel p {
+.section-addpersonnel>p {
   width: 100%;
   padding-top: .05rem;
   text-align: center;
@@ -100,43 +100,50 @@
   width: 100%;
 }
 .section-addpersonnel p a img {
-  display: inline-block;
   width: .7rem;
 }
 .section-addpersonnel p a span {
   position: relative;
   top: -0.12rem;
 }
-ul.clearfix {
+.section ul.clearfix {
   width: 100%;
   min-height: 1rem;
   padding: .3rem .2rem;
+  padding-bottom: 0;
   border-bottom: 1px solid #bbbbbd;
   background: #fff;
 }
-ul.clearfix li {
+.section ul.clearfix li {
   float: left;
   width: 25%;
   padding-right: .3rem;
-  margin-bottom: .2rem;
+  margin-bottom: .3rem;
   position: relative;
 }
-ul.clearfix li span {
-  display: block;
+.section ul.clearfix li div {
   width: 100%;
-  height: 1.4rem;
   vertical-align: middle;
+  text-align: center;
 }
-ul.clearfix li span img {
+.section ul.clearfix li div p span:first-child{
+  font-size: .3rem;
+}
+.section ul.clearfix li div p span:last-child{
+  font-size: .24rem;
+  color: #bbbbbd;
+}
+.section ul.clearfix li div>img {
   max-width: 100%;
   max-height: 100%;
 }
-ul.clearfix li > img.del_notice {
+.section ul.clearfix li > img.del_notice {
   position: absolute;
   top: 0;
   right: 0;
   width: .3rem;
 }
+/*µ¯¿ò*/
 .model-box {
   width: 100%;
   height: 100%;
@@ -164,4 +171,32 @@ ul.clearfix li > img.del_notice {
 }
 .model-box > p > span#black {
   margin-right: .5rem;
+}
+/*Î²²¿*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+}
+.footer > ul {
+  height: 100%;
+}
+.footer > ul > li {
+  float: left;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+.footer > ul > li:first-child {
+  width: 20%;
+  background: #bbbbbd;
+}
+.footer > ul > li:last-child {
+  width: 80%;
+  background: #f49e00;
+}
+.footer > ul > li a {
+  color: #fff;
 }
