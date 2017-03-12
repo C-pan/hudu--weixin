@@ -32,11 +32,11 @@
           </ul>
       </div>
       <div class="section-title">
-        <div>
+        <div class="clearfix">
           <span>
             <img src="img/Business_Association.jpg">
           </span>
-          <input type="text" name="" placeholder="标题">
+          <textarea type="text" name="" placeholder="标题"></textarea>
         </div>
       </div>
       <!-- 编辑器 -->
@@ -79,7 +79,7 @@
                 <span>参会人员</span>
             </a>
         </p>
-        <ul class="clearfix">
+        <ul class="clearfix notice-list">
           <li>
               <div>
                 <img src="img/hudu_logo.png">
@@ -88,22 +88,19 @@
                       <span>狐度董事长</span>
                   </p>
               </div>
-              <img src="img/close_popup_btn.png" class="del_notice">
           </li>
             <li>
                 <div>
                     <img src="img/hudu_logo.png">
                     <p>
-                        <span>吴易奇</span><br/>
+                        <span>汪涵</span><br/>
                         <span>狐度董事长</span>
                     </p>
                 </div>
-              <img src="img/close_popup_btn.png" class="del_notice">
             </li>
         </ul>
       </div>
     </section>
-
     <footer class="footer">
         <ul class="clearfix">
             <li>
@@ -114,6 +111,7 @@
             </li>
         </ul>
     </footer>
+    <!-- 截取图片尺寸——模态框 -->
     <div class="model-box" id="clipArea">
         <p>
             <span id="black">取消</span>
@@ -121,17 +119,64 @@
         </p>
     </div>
 
+    <!-- 取消通知人——模态框 -->
+    <div class="modal-box">
+        <div class="modal-position">
+            <div class="modal-content">
+                <p>取消通知人</p>
+                <div class="modal-content-body">
+                    您是否要取消通知此人？
+                </div>
+                <div class="modal-content-footer">
+                    <button onclick="_delNotice()">确定</button>
+                    <button onclick="$('.modal-box').css({display: 'none'})">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/public.js"></script>
     <script type="text/javascript" src="js/zepto.js" charset="UTF-8"></script>
     <script type="text/javascript" src="js/quill.js" charset="UTF-8"></script>
-    <!-- 图片剪切 --><script src="js/jquery-2.1.4.js"></script>
+    <!-- 图片剪切 -->
+    <script src="js/jquery-2.1.4.js"></script>
     <script src="js/photoclip_js/iscroll-zoom.js"></script>
     <script src="js/photoclip_js/hammer.js"></script>
     <script src="js/photoclip_js/lrz.all.bundle.js"></script>
     <script src="js/photoclip_js/jquery.photoClip.js"></script>
 
     <script>
-        console.log($('.ql-toolbar'))
+        function _monitorH (e) {
+            console.log(e.scrollHeight)
+            $(e).css({height: e.scrollHeight, overflow: 'hidden'})
+        }
+        $('textarea').on('input', function(e){
+            $(e.target).css({height: e.target.scrollHeight, overflow: 'hidden'})
+        })
+        var noticeDom = ''
+        // open 取消通知人员弹框
+        $('.notice-list li').on('click', function(e){
+            var $tar = $(e.target)
+            $('.modal-box').css('display', 'table')
+            if(e.target.nodeName != 'LI'){
+                $tar = $tar.parents('li')
+            }
+            noticeDom = $tar
+        })
+        // 确定取消通知人员
+        function _delNotice () {
+            noticeDom.remove()
+            $('.modal-box').css({display: 'none'})
+//            $.ajax({
+//                url: 'http//:',
+//                type: 'post',
+//                data: 'formData',
+//				dataType:"json",
+//                success: function(data){
+//                    console.log(data)
+//                }
+//            })
+        }
         // 取消截图
         $('#black').on('click', function(){
             $('#clipArea').css({display: 'none'})

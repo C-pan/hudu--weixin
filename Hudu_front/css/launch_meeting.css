@@ -1,0 +1,22 @@
+/* ͷ�� */
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.8rem;
+  padding: .13rem 0.3rem;
+  background: #f49e00;
+  z-index: 100;
+}
+.header span {
+  float: right;
+  height: .54rem;
+  line-height: .54rem;
+  padding: 0 .2rem;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+/* �������� */

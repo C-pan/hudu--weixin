@@ -37,23 +37,26 @@
   background: #fff;
 }
 .section-title > div {
-  height: .75rem;
-  line-height: .75rem;
+  /*height: .75rem;*/
+  /*line-height: .75rem;*/
   padding-left: .13rem;
   border-bottom: 1px solid #bbbbbd;
 }
 .section-title > div > span {
+  width: 5%;
   float: left;
-  padding-top: .06rem;
+  padding-top: .2rem;
 }
 .section-title > div > span img {
   width: .3rem;
 }
-.section-title > div input {
-  height: .75rem;
-  padding-left: .2rem;
+.section-title > div textarea {
+  width: 95%;
+  height: .8rem;
+  padding: .14rem .1rem;
   float: left;
   font-size: .3rem;
+  overflow: hidden;
 }
 .section #toolbar .toolbar-title {
   float: left;
@@ -134,7 +137,7 @@
   color: #bbbbbd;
 }
 .section ul.clearfix li div>img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 100%;
 }
 .section ul.clearfix li > img.del_notice {
@@ -199,4 +202,54 @@
 }
 .footer > ul > li a {
   color: #fff;
+}
+
+/*取消通知人——模态框 */
+.modal-box{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  z-index: 100;
+}
+.modal-position{
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-content{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 .15rem;
+  background: #fff;
+  border-radius: 2px;
+}
+.modal-content p{
+  padding: .15rem 0.1rem;
+  border-bottom: 1px solid #bbbbbd;
+  color: red;
+}
+.modal-content .modal-content-body{
+  margin: .6rem 0;
+  text-align: center;
+  color: red;
+}
+.modal-content .modal-content-footer{
+  padding: .15rem 0;
+  border-top: 1px solid #bbbbbd;
+  text-align: center;
+}
+.modal-content .modal-content-footer button{
+  padding: .1rem .5rem;
+  border: none;
+  color: #fff;
+}
+.modal-content .modal-content-footer button:first-child{
+  margin-right: .5rem;
+  background: #f49e00;
+}
+.modal-content .modal-content-footer button:last-child{
+  background: #bbbbbd;
 }
