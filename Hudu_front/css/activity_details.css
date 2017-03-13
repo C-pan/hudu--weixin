@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+/*��������*/
+.section {
+  width: 7rem;
+  margin: 0 auto;
+}
+.section-header {
+  width: 100%;
+  position: relative;
+}
+.section-header > img {
+  width: 100%;
+}
+.section-header > div {
+  position: absolute;
+  bottom: .2rem;
+  color: #fff;
+  font-size: .3rem;
+}
+.section-header > div > img {
+  width: .3rem;
+  vertical-align: middle;
+}
+.section-header-left {
+  left: .2rem;
+}
+.section-header-right {
+  right: .2rem;
+}
+.section-info > span {
+  display: inline-block;
+  width: 10%;
+  background: #f49e00;
+  text-align: center;
+}
+.section-info > div {
+  width: 90%;
+}
+/*β��*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+}
+.footer > ul {
+  height: 100%;
+}
+.footer > ul > li {
+  float: left;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+.footer > ul > li:first-child {
+  width: 20%;
+  background: #dcdddd;
+}
+.footer > ul > li:first-child img {
+  width: .4rem;
+  position: relative;
+  top: -0.05rem;
+}
+.footer > ul > li:first-child span {
+  display: block;
+  position: relative;
+  top: -0.7rem;
+  font-size: .26rem;
+  color: #f49e00;
+}
+.footer > ul > li:last-child {
+  width: 80%;
+  background: #f49e00;
+}
+.footer > ul > li a {
+  display: block;
+  color: #fff;
+}
