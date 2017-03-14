@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
 }
-/*��������*/
+/*主体内容*/
 .section {
   width: 7rem;
   margin: 0 auto;
+  padding-bottom: 1.2rem;
 }
 .section-header {
   width: 100%;
@@ -12,6 +13,7 @@
 }
 .section-header > img {
   width: 100%;
+  vertical-align: middle;
 }
 .section-header > div {
   position: absolute;
@@ -29,16 +31,155 @@
 .section-header-right {
   right: .2rem;
 }
-.section-info > span {
-  display: inline-block;
-  width: 10%;
+.section-title {
+  height: 1.3rem;
+}
+.section-title > b {
+  float: left;
+  height: 100%;
+  width: 15%;
+  padding: .16rem 0;
   background: #f49e00;
   text-align: center;
+  color: #fff;
 }
-.section-info > div {
-  width: 90%;
+.section-title > ul {
+  float: left;
+  height: 100%;
+  width: 85%;
+  padding: .1rem;
+  position: relative;
+  background: #fff;
+  font-size: .3rem;
 }
-/*β��*/
+.section-title > ul li:last-child {
+  position: absolute;
+  bottom: .1rem;
+  left: .2rem;
+  color: #bbbbbd;
+  font-size: .26rem;
+}
+.section-title > ul li:last-child > span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.section-content {
+  width: 100%;
+  padding-left: .1rem;
+  margin: .15rem 0;
+  background: #fff;
+}
+.section-content > p {
+  padding: .1rem .1rem;
+  border-bottom: 1px solid #bbbbbd;
+  font-size: .3rem;
+}
+.section-content > div {
+  padding-left: .1rem;
+  font-size: .26rem;
+  border-bottom: 1px solid transparent;
+}
+.section-content > div > ul {
+  margin: .25rem 0;
+}
+.section-those {
+  width: 100%;
+  height: 1.35rem;
+  margin: .15rem 0;
+  background: #fff;
+}
+.section-those > span {
+  float: left;
+  width: 8%;
+  height: 100%;
+  background: #f49e00;
+  color: #fff;
+  text-align: center;
+}
+.section-those > div {
+  position: relative;
+  float: left;
+  width: 92%;
+  height: 100%;
+  background: #fff;
+  padding: .2rem;
+}
+.section-those > div > b {
+  display: inline-block;
+  width: .7rem;
+  vertical-align: middle;
+}
+.section-those > div > b img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.section-those > div > p {
+  position: absolute;
+  bottom: .1rem;
+  right: .2rem;
+  font-size: .26rem;
+}
+.section-info {
+  width: 100%;
+  margin: .15rem 0;
+  background: #fff;
+  font-size: .3rem;
+}
+.section-info > li {
+  width: 100%;
+  padding: .2rem;
+  padding-right: 0;
+}
+.section-info > li img {
+  width: .3rem;
+  vertical-align: middle;
+}
+.section-info-address {
+  border-bottom: 1px solid #bbbbbd;
+}
+.section-logo {
+  position: relative;
+  padding-left: .2rem;
+}
+.section-logo > ul {
+  overflow: hidden;
+}
+.section-logo > ul > li {
+  float: left;
+}
+.section-logo > ul > li:first-child {
+  margin-right: .15rem;
+}
+.section-logo > ul > li:first-child img {
+  width: 1.2rem;
+}
+.section-logo > ul > li:last-child {
+  margin-top: .22rem;
+}
+.section-logo > ul > li:last-child b {
+  font-size: .3rem;
+}
+.section-logo > ul > li:last-child p {
+  font-size: .22rem;
+  color: #939393;
+}
+.section-logo > ul > li:last-child p img {
+  width: .25rem;
+  vertical-align: middle;
+}
+.section-logo > p {
+  position: absolute;
+  bottom: .13rem;
+  right: .27rem;
+  font-size: .22rem;
+  color: #fd7e29;
+}
+.section-logo > p img {
+  width: .34rem;
+  vertical-align: top;
+}
+/* 尾部 */
 .footer {
   position: fixed;
   bottom: 0;
