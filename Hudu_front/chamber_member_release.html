@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 	<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
-  <meta name="viewport" content="width=device-width,initial-scale=0.5, maximum-scale=0.6, user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>申请加入微商会</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/chamber_member_release.css">
@@ -29,17 +29,19 @@
   </header>
   <nav class="nav">
     <ul class="clearfix">
-      <li class="active">商会发布的</li>
-      <li>会员发布的</li>
+      <li class="active" data-open="section-chamber">商会发布的</li>
+      <li data-open="section-member">会员发布的</li>
     </ul>
   </nav>
   <section class="section">
     <ul class="section-chamber">
       <li>
-        <div>
+        <div class="list-main">
           <ul class="clearfix">
             <li>
-              <img src="img/member_01.jpg" alt=""/>
+              <span>
+                <img src="img/member_01.jpg" alt=""/>
+              </span>
             </li>
             <li>
               <p>本人求购液晶电视机多台，有生产相关的朋友请联系我！</p>
@@ -62,7 +64,7 @@
           </ul>
           <a href="#">求购</a>
         </div>
-        <div>
+        <div class="list-lianxi clearfix">
           <span>
             发布者
           </span>
@@ -72,18 +74,160 @@
               <span>吴易奇</span>
             </li>
             <li>
-              <a href="#">拒绝</a>
-              <a href="#">同意</a>
+              <a href="#" class="refuse">拒绝</a>
+              <a href="#" class="agree">同意</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="list-main">
+          <ul class="clearfix">
+            <li>
+              <span>
+                <img src="img/member_01.jpg" alt=""/>
+              </span>
+            </li>
+            <li>
+              <p>本人求购液晶电视机多台，有生产相关的朋友请联系我！</p>
+              <p>求购方：江门市电白商会</p>
+              <ul class="clearfix">
+                <li>
+                  <img src="img/address_ico.png" alt=""/>
+                  <span>江门</span>
+                </li>
+                <li>
+                  <img src="img/mailbox1.png" alt=""/>
+                  <span>02/03</span>
+                </li>
+                <li>
+                  <img src="img/watch_ico1.png" alt=""/>
+                  <span>134</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#">求购</a>
+        </div>
+        <div class="list-lianxi clearfix">
+          <span>
+            发布者
+          </span>
+          <ul>
+            <li>
+              <img src="img/my_photo.png" alt=""/>
+              <span>吴易奇</span>
+            </li>
+            <li>
+              <a href="#" class="refuse">拒绝</a>
+              <a href="#" class="agree">同意</a>
             </li>
           </ul>
         </div>
       </li>
     </ul>
-    <ul class="section-member"></ul>
+    <ul class="section-member">
+      <li>
+        <div class="list-main">
+          <ul class="clearfix">
+            <li>
+              <span>
+                <img src="img/top.jpg" alt=""/>
+              </span>
+            </li>
+            <li>
+              <p>本人求购液晶电视机多台，有生产相关的朋友请联系我！</p>
+              <p>求购方：江门市电白商会</p>
+              <ul class="clearfix">
+                <li>
+                  <img src="img/address_ico.png" alt=""/>
+                  <span>江门</span>
+                </li>
+                <li>
+                  <img src="img/mailbox1.png" alt=""/>
+                  <span>02/03</span>
+                </li>
+                <li>
+                  <img src="img/watch_ico1.png" alt=""/>
+                  <span>134</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#">求购</a>
+        </div>
+        <div class="list-lianxi clearfix">
+          <span>
+            发布者
+          </span>
+          <ul>
+            <li>
+              <img src="img/my_photo.png" alt=""/>
+              <span>吴奇隆</span>
+            </li>
+            <li>
+              <a href="#" class="refuse">删除</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="list-main">
+          <ul class="clearfix">
+            <li>
+              <span>
+                <img src="img/member_01.jpg" alt=""/>
+              </span>
+            </li>
+            <li>
+              <p>本人求购液晶电视机多台，有生产相关的朋友请联系我！</p>
+              <p>求购方：江门市电白商会</p>
+              <ul class="clearfix">
+                <li>
+                  <img src="img/address_ico.png" alt=""/>
+                  <span>江门</span>
+                </li>
+                <li>
+                  <img src="img/mailbox1.png" alt=""/>
+                  <span>02/03</span>
+                </li>
+                <li>
+                  <img src="img/watch_ico1.png" alt=""/>
+                  <span>134</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#">求购</a>
+        </div>
+        <div class="list-lianxi clearfix">
+          <span>
+            发布者
+          </span>
+          <ul>
+            <li>
+              <img src="img/my_photo.png" alt=""/>
+              <span>吴亦凡</span>
+            </li>
+            <li>
+              <a href="#" class="refuse">删除</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <script src="js/zepto.js"></script>
   <script src="js/public.js"></script>
-  <script></script>
+  <script>
+    $('.nav ul li').on('click', function(e){
+      var $tar = $(e.target)
+      if($tar.attr('class')  != 'active'){
+        $tar.addClass('active').siblings('.active').removeClass('active')
+        $('.'+$tar.attr('data-open')).css({display: 'block'}).siblings().css({display: 'none'})
+      }
+    })
+  </script>
 </body>
 </html>
