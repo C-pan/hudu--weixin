@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+/*主体内容*/
+.section{
+  width: 7rem;
+  margin: 0 auto;
+  padding-top: .7rem;
+  &-box{
+    &-list{
+      .list{
+        &-header{
+          margin: .4rem 0;
+          text-align: center;
+          color: #fff;
+          span{
+            padding: .1rem .15rem;
+            border-radius: 4px;
+            background: #a9a8ae;
+          }
+        }
+        &-body{
+          display: block;
+          width: 90%;
+          margin: 0 auto;
+          padding: .2rem;
+          border: 1px solid #bbbbbd;
+          border-radius: 5px;
+          background: #fff;
+          &-title{
+            font-size: .35rem;
+          }
+          &-time{
+            padding: .2rem 0;
+            color: #bbbbbd;
+            font-size: .28rem;
+          }
+          &-banner{
+            >div{
+              width: 90%;
+              height: 3rem;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              >img{
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+            >p{
+              padding-bottom: .2rem;
+              color: #bbbbbd;
+            }
+          }
+          &-footer{
+            padding: .1rem 0;
+            span{
+              float: left;
+              color: #1b01bc;
+            }
+            img{
+              float: right;
+              width: .3rem;
+              margin-top: .1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
