@@ -236,7 +236,7 @@
       }
       function paixu(ulEle, liEle){
 				new Sortable.create( $(ulEle)[0], {
-//					handle: liEle,
+					handle: liEle,
 					animation: 150,
 					preventOnFilter: true,
 					onEnd: function (evt){
@@ -254,7 +254,7 @@
                         })
 
 			    }
-				});
+			});
 	    }
       paixu( '.list_ul', '.list_ul_menu')
       paixu( '.list_ul1', '.list_ul1_menu')
